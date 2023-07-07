@@ -6,7 +6,7 @@
 <table border="0">
  <tr>
     <td><b style="font-size:30px">Title</b></td>
-    <td><p style="
+    <td><a style="
       display: block;
       white-space: pre-wrap;
       font-family: monospace;
@@ -39,7 +39,7 @@
     "replies_relation_target_url": "",
     "quotes_relation_target_id": "1379023875292430336",
     "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
-}</p></td>
+}</a></td>
  </tr>
  <tr>
     <td>Lorem ipsum ...</td>
