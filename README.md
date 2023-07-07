@@ -227,16 +227,12 @@
 
 <aside>
 ⚠️ Por favor, las ediciones que hagas hazlas en nuevas versiones. Así mantenemos un histórico y podemos recuperar cosas pasadas.
-
 </aside>
 
-El diagrama
+[LINK al diagrama](https://drive.google.com/file/d/1jqkuddvCnhahbEP4GWCa1DRpeCWbMX9M/view?usp=sharing)
 
-[DocumentOntology.drawio](https://drive.google.com/file/d/1jqkuddvCnhahbEP4GWCa1DRpeCWbMX9M/view?usp=sharing)
+Las propiedades y relaciones que tendrá el KG están definidas en la ontología, no tengo ningún documento escrito sobre eso.
 
-Las propiedades y relaciones que tendrá el KG (no vinculante)
-
-[SPEECH](https://docs.google.com/spreadsheets/d/1TE9Nk797GpbhVdRlf4FkwpORE19NsxwZQvJH11P36s0/edit?usp=sharing)
 
 ## Especificación
 
