@@ -4,7 +4,7 @@
 
 ### Para los tweets
 
-- Ejemplo 1
+#### Ejemplo 1
 ![1379024369574363139.png](readme_resources/1379024369574363139.png)
 ```json
 {
