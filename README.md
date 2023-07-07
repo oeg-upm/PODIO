@@ -181,7 +181,7 @@
 
 ### Diagrama
 
-![DocumentOntology-v10.drawio(2).png](Kick-Off%20documentation%2033aae9208e704682bc57db91714a6a80/DocumentOntology-v10.drawio(2).png)
+![DocumentOntology-v10.png](readme_resources/DocumentOntology-v10.png)
 
 <aside>
 ⚠️ Por favor, las ediciones que hagas hazlas en nuevas versiones. Así mantenemos un histórico y podemos recuperar cosas pasadas.
