@@ -184,34 +184,34 @@
 
 #### Para los tweeets
 
-- tweet_id —> ID del tweet
-- tweet_url —> URL del tweet
-- username —> Nick del autor (el @)
-- name —> El nombre de usuario que se pone el autor (Lo que NO es @)
-- profile_picture —> Imagen de perfil del usuario
-- replies —> Número de respuestas que tiene el tweet
-- views —> Número de visitas que tiene el tweet
-- retweets —> Número de retweets que tiene el tweet (NO CUENTAN LAS CITAS)
-- likes —> Número de likes del tweet
-- quotes —> Número de veces que ha sido citado el tweet
-- bookmarks —> Número de veces que se ha guardado el tweet
-- posted_time —> Fecha de publicación en formato ISO8601
-- content —> Contenido del tweet (texto).
-- hashtags —> Hashtags que aparecen en el contenido. Lista separada por comas.
-- menions —> Menciones que aparecen en el contenido. Lista separada por comas de los *username* mencionados.
-- images —> Imagenes adjuntadas en el tweet. Lista separada por comas con el link a la imagen.
-- videos —> Videos adjuntos al tweet. Lista separada por comas con el link al video.
-- link —> Link externos en el tweet. Una única URL. Hace referencia a cuando se publican noticias o enlaces a webs.
-- replies_relation_target_id —> Si es este tweet es una respuesta este campo será el ID del tweet al que se responde.
-- replies_relation_target_url —> Si es este tweet es una respuesta este campo será la URL del tweet al que se responde.
-- quotes_relation_target_id —> Si es este tweet es una cita este campo será el ID del tweet al que se cita.
-- quotes_relation_target_url —> Si es este tweet es una cita este campo será la URL del tweet al que se cita.
+- **tweet_id** —> ID del tweet
+- **tweet_url** —> URL del tweet
+- **username** —> Nick del autor (el @)
+- **name** —> El nombre de usuario que se pone el autor (Lo que NO es @)
+- **profile_picture** —> Imagen de perfil del usuario
+- **replies** —> Número de respuestas que tiene el tweet
+- **views** —> Número de visitas que tiene el tweet
+- **retweets** —> Número de retweets que tiene el tweet (NO CUENTAN LAS CITAS)
+- **likes** —> Número de likes del tweet
+- **quotes** —> Número de veces que ha sido citado el tweet
+- **bookmarks** —> Número de veces que se ha guardado el tweet
+- **posted_time** —> Fecha de publicación en formato ISO8601
+- **content** —> Contenido del tweet (texto).
+- **hashtags** —> Hashtags que aparecen en el contenido. Lista separada por comas.
+- **menions** —> Menciones que aparecen en el contenido. Lista separada por comas de los *username* mencionados.
+- **images** —> Imagenes adjuntadas en el tweet. Lista separada por comas con el link a la imagen.
+- **videos** —> Videos adjuntos al tweet. Lista separada por comas con el link al video.
+- **link** —> Link externos en el tweet. Una única URL. Hace referencia a cuando se publican noticias o enlaces a webs.
+- **replies_relation_target_id** —> Si es este tweet es una respuesta este campo será el ID del tweet al que se responde.
+- **replies_relation_target_url** —> Si es este tweet es una respuesta este campo será la URL del tweet al que se responde.
+- **quotes_relation_target_id** —> Si es este tweet es una cita este campo será el ID del tweet al que se cita.
+- **quotes_relation_target_url** —> Si es este tweet es una cita este campo será la URL del tweet al que se cita.
 
 #### Para los retweets
 
-- username —> @ de la cuenta que retwitea. (NO la retwiteada)
-- tweet_id —> ID del tweet retwiteado.
-- tweet_url —> URL del tweet retwiteado.
+- **username** —> @ de la cuenta que retwitea. (NO la retwiteada)
+- **tweet_id** —> ID del tweet retwiteado.
+- **tweet_url** —> URL del tweet retwiteado.
 
 ## Ontología
 
