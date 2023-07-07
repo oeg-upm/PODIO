@@ -3,6 +3,7 @@
 ## Estructura de los datos
 
 ### Para los tweets
+![1379024369574363139.png](readme_resources/1379024369574363139.png)
 
 ```json
 {
@@ -35,6 +36,8 @@
 }
 ```
 
+![1386791731417567234.png](readme_resources/1386791731417567234.png)
+
 ```json
 {
     "tweet_id": "1386791731417567234",
@@ -66,6 +69,7 @@
     "quotes_relation_target_url": ""
 }
 ```
+![1386647686997291015.png](readme_resources/1386647686997291015.png)
 
 ```json
 {
@@ -103,6 +107,7 @@
     "quotes_relation_target_url": ""
 }
 ```
+![1379020366828425218.png](readme_resources/1379020366828425218.png)
 
 ```json
 {
