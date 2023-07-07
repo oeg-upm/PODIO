@@ -5,23 +5,8 @@
 ### Para los tweets
 
 <details>
-  <summary>Click me</summary>
-  
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+  <summary>Ejemplo 1</summary>
 
-  ### Some Code
-  ```js
-  function logSomething(something) {
-    console.log('Something', something);
-  }
-  ```
-</details>
-
-#### Ejemplo 1
 ![1379024369574363139.png](readme_resources/1379024369574363139.png)
 
 ```json
@@ -53,9 +38,12 @@
     "quotes_relation_target_id": "1379023875292430336",
     "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
 }
-``` 
+```
+</details>
 
-#### Ejemplo 2
+<details>
+  <summary>Ejemplo 2</summary>
+
 ![1386791731417567234.png](readme_resources/1386791731417567234.png)
 ```json
 {
@@ -88,8 +76,11 @@
     "quotes_relation_target_url": ""
 }
 ```
+</details>
 
-#### Ejemplo 3
+<details>
+  <summary>Ejemplo 3</summary>
+	
 ![1386647686997291015.png](readme_resources/1386647686997291015.png)
 ```json
 {
@@ -127,8 +118,11 @@
     "quotes_relation_target_url": ""
 }
 ```
+</details>
 
-#### Ejemplo 4
+<details>
+  <summary>Ejemplo 4</summary>
+
 ![1379020366828425218.png](readme_resources/1379020366828425218.png)
 ```json
 {
@@ -159,6 +153,8 @@
     "quotes_relation_target_url": ""
 }
 ```
+
+</details>
 
 ### Para los retweets
 
