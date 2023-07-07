@@ -176,6 +176,7 @@
 ```
 
 ℹ️ Los detalles del tweet retwiteado son guardados siguiendo la estructura anterior. Sin embargo, como la estructura anterior no guarda la relación de retwitear, solo la de twitear, no podríamos relacionar a los partidos con estos tweets. Por eso, guardamos tanto la información del tweet por un lado, como la acción de retwitear por otro lado.
+
 ---
 </details>
 
