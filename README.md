@@ -7,17 +7,8 @@
 #### Ejemplo 1
 <table border="0">
  <tr>
-    <td><b style="font-size:30px">Title</b></td>
-    <td><b style="font-size:30px">Title 2</b></td>
- </tr>
- <tr>
-    <td>Lorem ipsum ...</td>
-    <td>Lorem ipsum ...</td>
- </tr>
-</table>
-
-![1379024369574363139.png](readme_resources/1379024369574363139.png)
-```json
+    <td>![1379024369574363139.png](readme_resources/1379024369574363139.png)</td>
+    <td> ```json
 {
     "tweet_id": "1379024369574363139",
     "tweet_url": "https:\/\/twitter.com\/ppmadrid\/status\/1379024369574363139",
@@ -46,7 +37,11 @@
     "quotes_relation_target_id": "1379023875292430336",
     "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
 }
-```
+``` </td>
+ </tr>
+</table>
+
+
 #### Ejemplo 2
 ![1386791731417567234.png](readme_resources/1386791731417567234.png)
 ```json
