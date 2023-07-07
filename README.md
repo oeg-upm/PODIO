@@ -158,6 +158,12 @@
 
 ### Para los retweets
 
+<details>
+	<summary>Ejemplo</summary>
+
+![1317811543774531584.png](readme_resources/1317811543774531584.png)
+![retweeted_1317811543774531584.png](readme_resources/retweeted_1317811543774531584.png)
+
 ```json
 {
     "username": "MasMadrid__",
@@ -165,6 +171,7 @@
     "tweet_url": "https://twitter.com/equomadrid/status/1317811543774531584"
 }
 ```
+</details>
 
 ### Explicación
 
