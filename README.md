@@ -3,8 +3,9 @@
 ## Estructura de los datos
 
 ### Para los tweets
-![1379024369574363139.png](readme_resources/1379024369574363139.png)
 
+#### Ejemplo 1
+![1379024369574363139.png](readme_resources/1379024369574363139.png)
 ```json
 {
     "tweet_id": "1379024369574363139",
@@ -35,9 +36,8 @@
     "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
 }
 ```
-
+#### Ejemplo 2
 ![1386791731417567234.png](readme_resources/1386791731417567234.png)
-
 ```json
 {
     "tweet_id": "1386791731417567234",
@@ -69,8 +69,9 @@
     "quotes_relation_target_url": ""
 }
 ```
-![1386647686997291015.png](readme_resources/1386647686997291015.png)
 
+#### Ejemplo 3
+![1386647686997291015.png](readme_resources/1386647686997291015.png)
 ```json
 {
     "tweet_id": "1386647686997291015",
@@ -107,8 +108,9 @@
     "quotes_relation_target_url": ""
 }
 ```
-![1379020366828425218.png](readme_resources/1379020366828425218.png)
 
+#### Ejemplo 4
+![1379020366828425218.png](readme_resources/1379020366828425218.png)
 ```json
 {
     "tweet_id": "1379020366828425218",
