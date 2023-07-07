@@ -3,51 +3,6 @@
 ## Estructura de los datos
 
 ### Para los tweets
-<table border="0">
- <tr>
-    <td><b style="font-size:30px">Title</b></td>
-    <td><a style="
-      display: block;
-      white-space: pre-wrap;
-      font-family: monospace;
-      background-color: #f4f4f4;
-      padding: 10px;
-      overflow-x: auto;">{
-    "tweet_id": "1379024369574363139",
-    "tweet_url": "https:\/\/twitter.com\/ppmadrid\/status\/1379024369574363139",
-    "username": "ppmadrid",
-    "name": "PP Comunidad de Madrid",
-    "profile_picture": "https:\/\/pbs.twimg.com\/profile_images\/1589390008389099521\/gLWMNjrk_normal.jpg",
-    "replies": 4.0,
-    "views": null,
-    "retweets": 36,
-    "likes": 75,
-    "quotes": 2,
-    "bookmarks": 0,
-    "posted_time": "2021-04-05T10:51:27+00:00",
-    "content": "#HuevosALoAyuso, no hay Tezanos que los pare ",
-    "hashtags": [
-        "HuevosALoAyuso"
-    ],
-    "mentions": [],
-    "images": [],
-    "videos": [
-        "blob:https:\/\/twitter.com\/5816da6e-c9e6-4954-85aa-6b86b499aed9"
-    ],
-    "link": "",
-    "replies_relation_target_id": "",
-    "replies_relation_target_url": "",
-    "quotes_relation_target_id": "1379023875292430336",
-    "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
-}</a></td>
- </tr>
- <tr>
-    <td>Lorem ipsum ...</td>
-    <td>Lorem ipsum ...</td>
- </tr>
-</table>
-
-
 
 #### Ejemplo 1
 ![1379024369574363139.png](readme_resources/1379024369574363139.png)
