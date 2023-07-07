@@ -182,7 +182,8 @@
 
 ### Explicación
 
-#### Para los tweeets
+<details>
+  <summary>Para los tweeets</summary>
 
 - **tweet_id** —> ID del tweet
 - **tweet_url** —> URL del tweet
@@ -207,11 +208,16 @@
 - **quotes_relation_target_id** —> Si es este tweet es una cita este campo será el ID del tweet al que se cita.
 - **quotes_relation_target_url** —> Si es este tweet es una cita este campo será la URL del tweet al que se cita.
 
-#### Para los retweets
+</details>
 
+<details>
+  <summary>Para los retweeets</summary>
+	
 - **username** —> @ de la cuenta que retwitea. (NO la retwiteada)
 - **tweet_id** —> ID del tweet retwiteado.
 - **tweet_url** —> URL del tweet retwiteado.
+
+</details>
 
 ## Ontología
 
