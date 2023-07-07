@@ -1,8 +1,8 @@
 # Kick-Off documentation
 
-# Estructura de los datos
+## Estructura de los datos
 
-## Para los tweets
+### Para los tweets
 
 ```json
 {
@@ -134,7 +134,7 @@
 }
 ```
 
-## Para los retweets
+### Para los retweets
 
 ```json
 {
@@ -144,9 +144,9 @@
 }
 ```
 
-## Explicación
+### Explicación
 
-### Para los tweeets
+#### Para los tweeets
 
 - tweet_id —> ID del tweet
 - tweet_url —> URL del tweet
@@ -171,15 +171,15 @@
 - quotes_relation_target_id —> Si es este tweet es una cita este campo será el ID del tweet al que se cita.
 - quotes_relation_target_url —> Si es este tweet es una cita este campo será la URL del tweet al que se cita.
 
-### Para los retweets
+#### Para los retweets
 
 - username —> @ de la cuenta que retwitea. (NO la retwiteada)
 - tweet_id —> ID del tweet retwiteado.
 - tweet_url —> URL del tweet retwiteado.
 
-# Ontología
+## Ontología
 
-## Diagrama
+### Diagrama
 
 ![DocumentOntology-v10.drawio(2).png](Kick-Off%20documentation%2033aae9208e704682bc57db91714a6a80/DocumentOntology-v10.drawio(2).png)
 
