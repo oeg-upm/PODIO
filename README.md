@@ -39,6 +39,7 @@
     "quotes_relation_target_url": "https:\/\/twitter.com\/pparganda\/status\/1379023875292430336"
 }
 ```
+---
 </details>
 
 <details>
@@ -76,6 +77,7 @@
     "quotes_relation_target_url": ""
 }
 ```
+---
 </details>
 
 <details>
@@ -118,6 +120,7 @@
     "quotes_relation_target_url": ""
 }
 ```
+---
 </details>
 
 <details>
@@ -153,7 +156,7 @@
     "quotes_relation_target_url": ""
 }
 ```
-
+---
 </details>
 
 ### Para los retweets
@@ -173,7 +176,7 @@
 ```
 
 ℹ️ Los detalles del tweet retwiteado son guardados siguiendo la estructura anterior. Sin embargo, como la estructura anterior no guarda la relación de retwitear, solo la de twitear, no podríamos relacionar a los partidos con estos tweets. Por eso, guardamos tanto la información del tweet por un lado, como la acción de retwitear por otro lado.
-
+---
 </details>
 
 ### Explicación
