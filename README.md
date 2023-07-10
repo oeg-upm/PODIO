@@ -238,10 +238,10 @@ Las propiedades y relaciones que tendrá el KG están definidas en la ontología
 
 ### Requisitos
 - Filtrar los discursos:
- - Por fecha.
- - Por tema.
- - Por ideología.
- - Por autor.
+  - Por fecha.
+  - Por tema.
+  - Por ideología.
+  - Por autor.
 - Conocer los periodos electorales
 - Conocer los partidos políticos
 - Recopilar todas las interacciones de cada canal de comunicación
