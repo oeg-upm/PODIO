@@ -238,14 +238,17 @@ Las propiedades y relaciones que tendrá el KG están definidas en la ontología
 
 ### Requisitos
 - Filtrar los discursos:
+  - Por autor.
   - Por fecha.
   - Por tema.
   - Por ideología.
-  - Por autor.
-- Conocer los periodos electorales
-- Conocer los partidos políticos
-- Recopilar todas las interacciones de cada canal de comunicación
-- Filtrar 
+- Conocer los periodos electorales.
+- Conocer los partidos políticos.
+- Recopilar todas las interacciones de cada canal de comunicación.
+- Conocer las cuentas en redes sociales de los partidos políticos.
+- Conocer los manifiestos políticos y las propuestas de los partidos.
+- Conocer el hashtag de la campaña electoral si lo hubiera.
+- Conocer las métricas del discurso.
 
 ### Preguntas de competencia
 1. Dame los **tweets del partido político Z que tengan relación con el transporte**.
