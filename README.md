@@ -242,13 +242,15 @@ Las propiedades y relaciones que tendrá el KG están definidas en la ontología
   - Por fecha.
   - Por tema.
   - Por ideología.
-- Conocer los periodos electorales.
-- Conocer los partidos políticos.
-- Recopilar todas las interacciones de cada canal de comunicación.
-- Conocer las cuentas en redes sociales de los partidos políticos.
-- Conocer los manifiestos políticos y las propuestas de los partidos.
-- Conocer el hashtag de la campaña electoral si lo hubiera.
-- Conocer las métricas del discurso.
+- Conocer:
+  - Los periodos electorales.
+  - Los partidos políticos.
+  - Las cuentas en redes sociales de los partidos políticos.
+  - Los manifiestos políticos y las propuestas de los partidos.
+  - El hashtag de la campaña electoral de cada partido (si lo hubiera).
+- Representar todas:
+  - Las interacciones de cada canal de comunicación.
+  - Las métricas del discurso.
 
 ### Preguntas de competencia
 1. Dame los **tweets del partido político Z que tengan relación con el transporte**.
