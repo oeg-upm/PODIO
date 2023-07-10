@@ -1,4 +1,4 @@
-# Kick-Off documentation
+# Documentation
 
 ## Estructura de los datos
 
@@ -236,4 +236,24 @@ Las propiedades y relaciones que tendrá el KG están definidas en la ontología
 
 ## Especificación
 
-[](https://github.com/Ibaii99/SPEECH)
+### Requisitos
+
+### Preguntas de competencia
+1. Dame los **tweets del partido político Z que tengan relación con el transporte**.
+2. *Dame los **tweets del partido político Z con más likes para cada medida de su programa político**.*
+3. Dame los **tweets citados por el partido político Z que se hayan incluido en un hilo y sean de otras cuentas**.
+4. Dame el **hilo** **previo** a las **elecciones** de **2021** de todos los partidos políticos.
+5. Dame el **tweet** **previo** a las **elecciones** de **2015** de todos los partidos políticos.
+6. Dame el **usuario** de twitter que **más veces** sea **mencionado** por el partido político Z.
+7. Dame el **usuario** de twitter que **más veces** sea **citado** por el partido político Z.
+8. Dame el tweet con **más citas** del partido político Z
+9. Dame los **tweets** que hayan sido **citados por al menos 2 partidos políticos**.
+    1. **Y la cuenta** que más veces los haya publicado
+10. Dame los **tweets** que hayan sido **retwitteados al menos por 2 partidos políticos**.
+    1. **Y la cuenta** que más veces los haya publicado
+11. Dame el **tweet citado o retwitteado por más partidos políticos**.
+12. Dame los **tweets de un partido político** que hayan sido **retwitteados por otro**.
+13. Dame el **hashtag más twitteado** por el partido político Z para las elecciones de 2019.
+14. Dame el **hashtag más retwitteado** por el partido político Z para las elecciones de 2019.
+15. Dame el **partido** político que **más** veces **haya twitteado** en 2021 **y** el que más haya **retwitteado**.
+16. Cómo ha cambiado el ODS X en las medidas propuestas por el partido político Z.
