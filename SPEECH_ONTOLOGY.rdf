@@ -1161,22 +1161,6 @@
     
 
 
-    <!-- http://rdfs.org/sioc/ns#Item -->
-
-    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Item">
-        <owl:equivalentClass rdf:resource="http://speech.linkeddata.es/Item"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://rdfs.org/sioc/ns#Post -->
-
-    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Post">
-        <owl:equivalentClass rdf:resource="http://speech.linkeddata.es/Post"/>
-    </rdf:Description>
-    
-
-
     <!-- http://schema.org/CreativeWork -->
 
     <owl:Class rdf:about="http://schema.org/CreativeWork"/>
@@ -1194,7 +1178,6 @@
     <!-- http://schema.org/PoliticalParty -->
 
     <owl:Class rdf:about="http://schema.org/PoliticalParty">
-        <owl:equivalentClass rdf:resource="http://speech.linkeddata.es/PoliticalParty"/>
         <rdfs:isDefinedBy rdf:resource="http://schema.org"/>
     </owl:Class>
     
@@ -1217,6 +1200,7 @@
     <!-- http://speech.linkeddata.es/Item -->
 
     <owl:Class rdf:about="http://speech.linkeddata.es/Item">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Item"/>
         <rdfs:subClassOf rdf:resource="http://speech.linkeddata.es/Speech"/>
     </owl:Class>
     
@@ -1225,6 +1209,7 @@
     <!-- http://speech.linkeddata.es/PoliticalParty -->
 
     <owl:Class rdf:about="http://speech.linkeddata.es/PoliticalParty">
+        <rdfs:subClassOf rdf:resource="http://schema.org/PoliticalParty"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
         <rdfs:comment>Organization that seeks to influence government policy and actions and be elected to directly take part on government or legislation.</rdfs:comment>
         <rdfs:label>political party</rdfs:label>
@@ -1256,6 +1241,7 @@
     <!-- http://speech.linkeddata.es/Post -->
 
     <owl:Class rdf:about="http://speech.linkeddata.es/Post">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Post"/>
         <rdfs:subClassOf rdf:resource="http://schema.org/SocialMediaPosting"/>
     </owl:Class>
     
