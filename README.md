@@ -223,7 +223,7 @@
 
 ### Diagrama
 
-![DocumentOntology-v10.png](readme_resources/DocumentOntology-v10.png)
+![DocumentOntology.png](readme_resources/DocumentOntology.png)
 
 <aside>
 ⚠️ Por favor, las ediciones que hagas hazlas en nuevas versiones. Así mantenemos un histórico y podemos recuperar cosas pasadas.
