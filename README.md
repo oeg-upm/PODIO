@@ -9,7 +9,7 @@ This repository contains the resources associated to the SPEECH ontology.
 * `resources/` contains additional resources needed for the documentation of this repository
 
 ## Authors
-* [Ibai Guillén-Pacho](https://github.com/Ibaii99) (mailto:ibai.guillen@upm.es)
+* [Ibai Guillén-Pacho](https://github.com/Ibaii99) ([ibai.guillen@upm.es](mailto:ibai.guillen@upm.es))
 * [Carlos Badenes-Olmedo](https://github.com/cbadenes)
 * [Ana Iglesias-Molina](https://github.com/anaigmo)
 * [Oscar Corcho](https://github.com/ocorcho)
