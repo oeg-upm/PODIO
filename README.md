@@ -8,7 +8,7 @@ This repository contains the resources associated to the SPEECH ontology.
 * `queries/` contains the SPARQL queries correspondent to the competency questions, used to evaluate the resources
 * `resources/` contains additional resources needed for the documentation of this repository
 
-## Authors
+## Authors
 * [Ibai Guillén-Pacho](https://github.com/Ibaii99) ([ibai.guillen@upm.es](mailto:ibai.guillen@upm.es))
 * [Carlos Badenes-Olmedo](https://github.com/cbadenes)
 * [Ana Iglesias-Molina](https://github.com/anaigmo)
