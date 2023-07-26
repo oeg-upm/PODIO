@@ -7,7 +7,6 @@ prefixes:
   dcterms: "http://purl.org/dc/terms/"
   #Ontology imports
   foaf: "http://xmlns.com/foaf/0.1/"
-  org: "http://www.w3.org/ns/org#"
   sioc: "http://rdfs.org/sioc/ns#"
   siocq: "http://rdfs.org/sioc/quotes#"
   #Knowledge graph domain declaration
