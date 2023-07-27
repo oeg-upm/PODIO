@@ -1,0 +1,113 @@
+[
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle de Génova, 13, 28004 Madrid",
+        "image": "https://ppmadrid.es/wp-content/uploads/2021/10/PP-Madrid.png",
+        "name": "PP Madrid",
+        "phone": "+34915577300",
+        "holds_twitter_account": "ppmadrid",
+        "sub_organization_of": "PP",
+        "url": "https://www.ppmadrid.es/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle de Génova, 13, 28004 Madrid",
+        "image": "https://www.pp.es/sites/all/themes/partidopopular/images/logotipo.png",
+        "name": "PP",
+        "phone": "+34915577200",
+        "holds_twitter_account": "ppopular",
+        "url": "https://www.pp.es/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Buen Suceso, 27 Madrid 28008",
+        "image": "https://www.psoemadrid.es/wp-content/uploads/001-Blanco-sin-fondo-1.png.webp",
+        "name": "PSOE Madrid",
+        "phone": "+34915820444",
+        "holds_twitter_account": "psoe_m",
+        "sub_organization_of": "PSOE",
+        "url": "https://www.psoemadrid.es/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Ferraz, Nº 68-70 - 28008 Madrid",
+        "image": "https://www.psoe.es/media-content/2021/09/logo_psoe.png?v=1690364454",
+        "name": "PSOE",
+        "phone": "+34915820444",
+        "holds_twitter_account": "PSOE",
+        "url": "http://www.psoe.es"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Ercilla 46, local 4, 28005. Madrid",
+        "image": "https://masmadrid.org/wp-content/uploads/2023/03/Mas-Madrid-600px_Mesa-de-trabajo-1-1.png",
+        "name": "Mas Madrid",
+        "holds_twitter_account": "MasMadrid__",
+        "url": "https://masmadrid.org/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Alcalá, 253, 28027 Madrid",
+        "image": "https://comunidaddemadrid.ciudadanos-cs.org/wp-content/uploads/sites/6/2023/04/com-madrid.png",
+        "name": "Ciudadanos Comunidad de Madrid",
+        "phone": "+34910063587",
+        "holds_twitter_account": "cs_madrid",
+        "sub_organization_of": "Ciudadanos",
+        "url": "https://comunidaddemadrid.ciudadanos-cs.org/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Alcalá 253, 28027 Madrid",
+        "image": "https://www.ciudadanos-cs.org/images/sections/header-logo/logo-ciudadanos.svg?__v=589_2",
+        "name": "Ciudadanos",
+        "holds_twitter_account": "Ciudadanoscs",
+        "url": "https://www.ciudadanos-cs.org/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Francisco Villaespesa, 18, 28017 Madrid",
+        "image": "https://cmadrid.podemos.info/wp-content/uploads/2021/01/LogoCMadrid2.png",
+        "name": "Podemos Comunidad de Madrid",
+        "holds_twitter_account": "PodemosCMadrid",
+        "sub_organization_of": "Podemos",
+        "url": "https://cmadrid.podemos.info/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Francisco Villaespesa, 18, 28017 Madrid",
+        "image": "https://podemos.info/wp-content/uploads/2022/11/logo-morado_WEB.png",
+        "name": "Podemos",
+        "holds_twitter_account": "podemos",
+        "url": "https://podemos.info/"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Bambú, 12. Madrid. 28036 ",
+        "image": "https://www.voxespana.es/wp-content/themes/voxespana/img/logos-provincias/Madrid.png",
+        "name": "VOX Madrid",
+        "phone": "+34911419607",
+        "holds_twitter_account": "madrid_vox",
+        "sub_organization_of": "VOX",
+        "url": "https://www.voxespana.es/madrid"
+    },
+
+    {
+        "jurisdiction": "https://www.wikidata.org/wiki/Q5756",
+        "address": "Calle Bambú, 12. Madrid. 28036 ",
+        "image": "https://www.voxespana.es/wp-content/uploads/2019/02/logo-vox-espana.png",
+        "name": "VOX",
+        "phone": "+34911419607",
+        "holds_twitter_account": "vox_es",
+        "url": "https://www.voxespana.es/"
+    }
+
+]
