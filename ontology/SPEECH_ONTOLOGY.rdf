@@ -17,12 +17,13 @@
      xmlns:schema="http://schema.org/"
      xmlns:speech="http://w3id.org/speech#"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://w3id.org/speech#">
+    <owl:Ontology rdf:about="http://rdfs.org/sioc/ns#">
         <owl:versionIRI rdf:resource="http://w3id.org/speech#"/>
         <owl:imports rdf:resource="http://rdfs.org/sioc/ns#"/>
         <owl:imports rdf:resource="http://rdfs.org/sioc/quotes#"/>
         <dc:contributor>Ana Iglesias-Molina</dc:contributor>
         <dc:contributor>Carlos Badenes-Olmedo</dc:contributor>
+        <dc:contributor>Oscar Corcho</dc:contributor>
         <dc:creator>Ibai Guillen-Pacho</dc:creator>
         <dc:description>Ontology for modelling political speech across channels and content.</dc:description>
         <dc:language>english</dc:language>

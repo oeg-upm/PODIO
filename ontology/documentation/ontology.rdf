@@ -15,6 +15,7 @@
         <owl:versionIRI rdf:resource="http://w3id.org/speech#"/>
         <dc:contributor>Ana Iglesias-Molina</dc:contributor>
         <dc:contributor>Carlos Badenes-Olmedo</dc:contributor>
+        <dc:contributor>Oscar Corcho</dc:contributor>
         <dc:creator>Ibai Guillen-Pacho</dc:creator>
         <dc:description>Ontology for modelling political speech across channels and content.</dc:description>
         <dc:language>english</dc:language>

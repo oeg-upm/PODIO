@@ -772,6 +772,8 @@
     "@value" : "Ana Iglesias-Molina"
   }, {
     "@value" : "Carlos Badenes-Olmedo"
+  }, {
+    "@value" : "Oscar Corcho"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@value" : "http://rdfs.org/sioc/ns#"

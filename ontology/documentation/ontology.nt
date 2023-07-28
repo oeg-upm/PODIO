@@ -2,6 +2,7 @@
 <http://w3id.org/speech#> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/speech#> .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/contributor> "Carlos Badenes-Olmedo" .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/contributor> "Oscar Corcho" .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political speech across channels and content." .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/language> "english" .

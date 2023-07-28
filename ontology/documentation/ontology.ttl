@@ -9,7 +9,8 @@
 <http://w3id.org/speech#> rdf:type owl:Ontology ;
                            owl:versionIRI <http://w3id.org/speech#> ;
                            <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" ,
-                                                                         "Carlos Badenes-Olmedo" ;
+                                                                         "Carlos Badenes-Olmedo",
+                                                                         "Oscar Corcho" ;
                            <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" ;
                            <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political speech across channels and content." ;
                            <http://purl.org/dc/elements/1.1/language> "english" ;
