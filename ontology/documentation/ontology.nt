@@ -1,0 +1,733 @@
+<http://w3id.org/speech#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/speech#> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/speech#> .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/contributor> "Carlos Badenes-Olmedo" .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political speech across channels and content." .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/language> "english" .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> .
+<http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/title> "SPEECH: Social media Published Entities Exploitable aCross cHannels" .
+<http://w3id.org/speech#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/speech#> <http://purl.org/dc/terms/modified> "2023-07-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/speech#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "speech" .
+<http://w3id.org/speech#> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/speech#> .
+<http://w3id.org/speech#> <http://www.w3.org/2002/07/owl#imports> <http://rdfs.org/sioc/ns#> .
+<http://w3id.org/speech#> <http://www.w3.org/2002/07/owl#imports> <http://rdfs.org/sioc/quotes#> .
+#
+#
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+#
+#
+# http://purl.org/dc/dcam/domainIncludes
+<http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/dcam/domainIncludes> <http://purl.org/dc/terms/issued> "2020-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/2000/01/rdf-schema#comment> "A suggested class for subjects of this property."@en .
+<http://purl.org/dc/dcam/domainIncludes> <http://www.w3.org/2000/01/rdf-schema#label> "Domain Includes"@en .
+#
+# http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/issued> "2020-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/2000/01/rdf-schema#comment> "A suggested class for values of this property."@en .
+<http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/2000/01/rdf-schema#label> "Range Includes"@en .
+#
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/coverage
+<http://purl.org/dc/elements/1.1/coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/format
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/relation
+<http://purl.org/dc/elements/1.1/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/subject
+<http://purl.org/dc/elements/1.1/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+#
+# http://purl.org/dc/terms/accessRights
+<http://purl.org/dc/terms/accessRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/accessRights> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/rights> .
+<http://purl.org/dc/terms/accessRights> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/rights> .
+#
+# http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/alternative> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+<http://purl.org/dc/terms/alternative> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/audience
+<http://purl.org/dc/terms/audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/conformsTo> <http://purl.org/dc/terms/issued> "2001-05-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "An established standard to which the described resource conforms."@en .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#label> "Conforms To"@en .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
+#
+# http://purl.org/dc/terms/coverage
+<http://purl.org/dc/terms/coverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/coverage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/coverage> .
+#
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+#
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/creator> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/contributor> .
+#
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/dateAccepted
+<http://purl.org/dc/terms/dateAccepted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/dateAccepted> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/dateAccepted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/dateCopyrighted
+<http://purl.org/dc/terms/dateCopyrighted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/dateCopyrighted> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/dateCopyrighted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+#
+# http://purl.org/dc/terms/educationLevel
+<http://purl.org/dc/terms/educationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/educationLevel> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/AgentClass> .
+<http://purl.org/dc/terms/educationLevel> <http://purl.org/dc/terms/issued> "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/educationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended."@en .
+<http://purl.org/dc/terms/educationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Audience Education Level"@en .
+<http://purl.org/dc/terms/educationLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/audience> .
+#
+# http://purl.org/dc/terms/extent
+<http://purl.org/dc/terms/extent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/format> .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
+#
+# http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/format> .
+#
+# http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isFormatOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isFormatOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isReferencedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/isReplacedBy
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/isRequiredBy
+<http://purl.org/dc/terms/isRequiredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/language> .
+#
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/rights> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/rights> .
+#
+# http://purl.org/dc/terms/mediator
+<http://purl.org/dc/terms/mediator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/mediator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/audience> .
+#
+# http://purl.org/dc/terms/medium
+<http://purl.org/dc/terms/medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/medium> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/medium> <http://www.w3.org/2000/01/rdf-schema#comment> "The material or physical carrier of the resource."@en .
+<http://purl.org/dc/terms/medium> <http://www.w3.org/2000/01/rdf-schema#label> "Medium"@en .
+<http://purl.org/dc/terms/medium> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/format> .
+<http://purl.org/dc/terms/medium> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
+#
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+#
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/publisher> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Agent> .
+<http://purl.org/dc/terms/publisher> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource available."@en .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher"@en .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/publisher> .
+#
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+#
+# http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/requires
+<http://purl.org/dc/terms/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/rights> .
+#
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/source> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+#
+# http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/spatial> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial characteristics of the resource."@en .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Coverage"@en .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/coverage> .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/coverage> .
+#
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/subject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/subject> .
+#
+# http://purl.org/dc/terms/tableOfContents
+<http://purl.org/dc/terms/tableOfContents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/tableOfContents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/description> .
+#
+# http://purl.org/dc/terms/temporal
+<http://purl.org/dc/terms/temporal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/temporal> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/temporal> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal characteristics of the resource."@en .
+<http://purl.org/dc/terms/temporal> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Coverage"@en .
+<http://purl.org/dc/terms/temporal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/coverage> .
+<http://purl.org/dc/terms/temporal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/coverage> .
+#
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> .
+#
+# http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/type> .
+#
+# http://purl.org/dc/terms/valid
+<http://purl.org/dc/terms/valid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/valid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> .
+<http://purl.org/dc/terms/valid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+#
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+#
+#
+#
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+#
+#
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+#
+#
+#
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+#
+#
+# http://purl.org/dc/dcam/memberOf
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/dcam/VocabularyEncodingScheme> .
+<http://purl.org/dc/dcam/memberOf> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a resource and a vocabulary encoding scheme which indicates that the resource is a member of a set."@en .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "Member Of"@en .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.dublincore.org/specifications/dublin-core/2007/06/04/abstract-model/> .
+#
+# http://schema.org/interactionStatistic
+<http://schema.org/interactionStatistic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/interactionStatistic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/interactionStatistic> .
+#
+# http://schema.org/sharedContent
+<http://schema.org/sharedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/sharedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://schema.org/text
+<http://schema.org/text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://w3id.org/speech#hasIdeology
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#ideologyOf> .
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/speech#TwitterUser> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/speech#Speech> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://skos.um.es/unescothes/> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2000/01/rdf-schema#comment> "The ideology an Agent or a Speech has." .
+<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2000/01/rdf-schema#label> "has ideology" .
+#
+# http://w3id.org/speech#hasOfficialHashtag
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#officialhashtagOf> .
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#PoliticalPartyManifesto> .
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#Hashtag> .
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/2000/01/rdf-schema#comment> "Official hashtag of the electoral campaign." .
+<http://w3id.org/speech#hasOfficialHashtag> <http://www.w3.org/2000/01/rdf-schema#label> "has official hashtag" .
+#
+# http://w3id.org/speech#hasPoliticalCategory
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#politicalCategoryOf> .
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#PoliticalProposal> .
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The category to which a political proposal belongs." .
+<http://w3id.org/speech#hasPoliticalCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has political category" .
+#
+# http://w3id.org/speech#ideologyOf
+<http://w3id.org/speech#ideologyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#ideologyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/speech#ideologyOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Agent> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/speech#TwitterUser> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/speech#Speech> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#ideologyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The elements that have this ideology. They can be both Agent-s and Speech-es." .
+<http://w3id.org/speech#ideologyOf> <http://www.w3.org/2000/01/rdf-schema#label> "ideology of" .
+#
+# http://w3id.org/speech#officialhashtagOf
+<http://w3id.org/speech#officialhashtagOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#officialhashtagOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#Hashtag> .
+<http://w3id.org/speech#officialhashtagOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#PoliticalPartyManifesto> .
+<http://w3id.org/speech#officialhashtagOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The political manifesto that officially proposes the hashtag for the electoral campaign." .
+<http://w3id.org/speech#officialhashtagOf> <http://www.w3.org/2000/01/rdf-schema#label> "official hashtag of" .
+#
+# http://w3id.org/speech#politicalCategoryOf
+<http://w3id.org/speech#politicalCategoryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#politicalCategoryOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/speech#politicalCategoryOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#PoliticalProposal> .
+<http://w3id.org/speech#politicalCategoryOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Political proposals that address this issue." .
+<http://w3id.org/speech#politicalCategoryOf> <http://www.w3.org/2000/01/rdf-schema#label> "political category of" .
+#
+# http://w3id.org/speech#proposedAsPoliticalCandidateBy
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#proposesPoliticalCandidate> .
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#PoliticalPartyManifesto> .
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The political manifesto that presents this agent as candidate to the elections." .
+<http://w3id.org/speech#proposedAsPoliticalCandidateBy> <http://www.w3.org/2000/01/rdf-schema#label> "proposed as political candidate by" .
+#
+# http://w3id.org/speech#proposesPoliticalCandidate
+<http://w3id.org/speech#proposesPoliticalCandidate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#proposesPoliticalCandidate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#PoliticalPartyManifesto> .
+<http://w3id.org/speech#proposesPoliticalCandidate> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://w3id.org/speech#proposesPoliticalCandidate> <http://www.w3.org/2000/01/rdf-schema#comment> "The political candidate presented by the political party in its manifesto for the electoral campaign." .
+<http://w3id.org/speech#proposesPoliticalCandidate> <http://www.w3.org/2000/01/rdf-schema#label> "proposes political candidate" .
+#
+# http://w3id.org/speech#retweetedBy
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#retweets> .
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#Tweet> .
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#TwitterUser> .
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The twitter account that retweeted this tweet." .
+<http://w3id.org/speech#retweetedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is retweeted by" .
+#
+# http://w3id.org/speech#retweets
+<http://w3id.org/speech#retweets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/speech#retweets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/speech#TwitterUser> .
+<http://w3id.org/speech#retweets> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/speech#Tweet> .
+<http://w3id.org/speech#retweets> <http://www.w3.org/2000/01/rdf-schema#comment> "This account has retweeted this tweet. A kind of sharing action." .
+<http://w3id.org/speech#retweets> <http://www.w3.org/2000/01/rdf-schema#label> "retweets" .
+#
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2000/01/rdf-schema#label> "is in scheme"@en .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource (for example a concept) to a concept scheme in which it is included."@en .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept may be a member of more than one concept scheme."@en .
+#
+# http://xmlns.com/foaf/0.1/accountServiceHomepage
+<http://xmlns.com/foaf/0.1/accountServiceHomepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/accountServiceHomepage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+#
+# http://xmlns.com/foaf/0.1/holdsAccount
+<http://xmlns.com/foaf/0.1/holdsAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/holdsAccount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+#
+#
+#
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+#
+#
+# http://schema.org/address
+<http://schema.org/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://schema.org/areaServed
+<http://schema.org/areaServed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/areaServed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://schema.org/image
+<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/image> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://schema.org/url
+<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://schema.org/wordCount
+<http://schema.org/wordCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/wordCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+#
+# http://xmlns.com/foaf/0.1/accountName
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the name (identifier) associated with this online account." .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/accountName> <http://www.w3.org/2000/01/rdf-schema#label> "account name" .
+#
+# http://xmlns.com/foaf/0.1/phone
+<http://xmlns.com/foaf/0.1/phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/phone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+#
+#
+#
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+#
+#
+# http://purl.org/dc/dcam/VocabularyEncodingScheme
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An enumerated set of resources."@en .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Vocabulary Encoding Scheme"@en .
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.dublincore.org/specifications/dublin-core/2007/06/04/abstract-model/> .
+#
+# http://purl.org/dc/terms/Agent
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/Agent> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource that acts or has the power to act."@en .
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+#
+# http://purl.org/dc/terms/AgentClass
+<http://purl.org/dc/terms/AgentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/AgentClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/dc/terms/AgentClass> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/AgentClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of agents."@en .
+<http://purl.org/dc/terms/AgentClass> <http://www.w3.org/2000/01/rdf-schema#label> "Agent Class"@en .
+#
+# http://purl.org/dc/terms/BibliographicResource
+<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/BibliographicResource> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A book, article, or other documentary resource."@en .
+<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Resource"@en .
+#
+# http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://schema.org/InteractionCounter
+<http://schema.org/InteractionCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/InteractionCounter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org> .
+#
+# http://schema.org/PoliticalParty
+<http://schema.org/PoliticalParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org> .
+#
+# http://schema.org/SocialMediaPosting
+<http://schema.org/SocialMediaPosting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/SocialMediaPosting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org> .
+#
+# http://w3id.org/speech#Container
+<http://w3id.org/speech#Container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://w3id.org/speech#Hashtag
+<http://w3id.org/speech#Hashtag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Container> .
+<http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#comment> "A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic" .
+<http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#label> "hashtag" .
+#
+# http://w3id.org/speech#PoliticalParty
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PoliticalParty> .
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#comment> "Organization that seeks to influence government policy and actions and be elected to directly take part on government or legislation." .
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#label> "political party" .
+<http://w3id.org/speech#PoliticalParty> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q7278> .
+#
+# http://w3id.org/speech#PoliticalPartyManifesto
+<http://w3id.org/speech#PoliticalPartyManifesto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#PoliticalPartyManifesto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Speech> .
+<http://w3id.org/speech#PoliticalPartyManifesto> <http://www.w3.org/2000/01/rdf-schema#comment> "Formal list of political goals that a political party or individual candidate seeks to enact. The goals are expressed as political proposals." .
+<http://w3id.org/speech#PoliticalPartyManifesto> <http://www.w3.org/2000/01/rdf-schema#label> "political party manifesto" .
+<http://w3id.org/speech#PoliticalPartyManifesto> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q1501855> .
+#
+# http://w3id.org/speech#PoliticalProposal
+<http://w3id.org/speech#PoliticalProposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#PoliticalProposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Intentions, opinions, proposals and actions contained in a political manifesto." .
+<http://w3id.org/speech#PoliticalProposal> <http://www.w3.org/2000/01/rdf-schema#label> "political proposal" .
+#
+# http://w3id.org/speech#Post
+<http://w3id.org/speech#Post> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://w3id.org/speech#Speech
+<http://w3id.org/speech#Speech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#Speech> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/BibliographicResource> .
+<http://w3id.org/speech#Speech> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> .
+<http://w3id.org/speech#Speech> <http://www.w3.org/2000/01/rdf-schema#comment> "Atomic unit of information that a political agent can generate." .
+<http://w3id.org/speech#Speech> <http://www.w3.org/2000/01/rdf-schema#label> "speech" .
+#
+# http://w3id.org/speech#Tweet
+<http://w3id.org/speech#Tweet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SocialMediaPosting> .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Post> .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Speech> .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#comment> "The message used to communicate on Twitter" .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#label> "Tweet" .
+#
+# http://w3id.org/speech#TwitterUser
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#UserAccount> .
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Twitter account of an agent." .
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#label> "twitter user" .
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q63976454> .
+#
+# http://w3id.org/speech#UserAccount
+<http://w3id.org/speech#UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://www.w3.org/2000/01/rdf-schema#Class
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+#
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
+#
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#example> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept scheme may be defined to include concepts from different sources."@en .
+#
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://xmlns.com/foaf/0.1/Agent
+#
+#
+#
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+#
+#
+# https://metadata.un.org/sdg/
+<https://metadata.un.org/sdg/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://metadata.un.org/sdg/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+#
+# https://skos.um.es/unescothes/
+<https://skos.um.es/unescothes/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://skos.um.es/unescothes/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+#
+#
+#
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+#
+#
+<http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/terms/issued> "1999-07-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the resource."@en .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+#
+<http://rdfs.org/sioc/quotes#block_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://rdfs.org/sioc/quotes#has_block> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://rdfs.org/sioc/quotes#has_quote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://rdfs.org/sioc/quotes#has_response> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://rdfs.org/sioc/quotes#quote_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://rdfs.org/sioc/quotes#response_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/quotes#> .
+#
+<http://xmlns.com/foaf/0.1/account> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+#
+<http://xmlns.com/foaf/0.1/depiction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+#
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

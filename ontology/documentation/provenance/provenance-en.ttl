@@ -1,0 +1,15 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://w3id.org/speech#> a prov:Entity;
+	 dc:title "SPEECH: Social media Published Entities Exploitable aCross cHannels";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2023-07-25T00:00:00";
+.
+:agent0 a prov:Agent; foaf:name "Ibai Guillen-Pacho".
+:agent1 a prov:Agent; foaf:name "Ana Iglesias-Molina".
+:agent2 a prov:Agent; foaf:name "Carlos Badenes-Olmedo".
