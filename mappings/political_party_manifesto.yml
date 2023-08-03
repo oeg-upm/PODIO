@@ -1,0 +1,111 @@
+prefixes:
+  #Core imports
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  #Vocabulary imports
+  schema: "http://schema.org/"
+  dctypes: "http://purl.org/dc/dcmitype/"
+  dcterms: "http://purl.org/dc/terms/"
+  #Ontology imports
+  foaf: "http://xmlns.com/foaf/0.1/"
+  org: "http://www.w3.org/ns/org#"
+  #Knowledge graph domain declaration
+  speech: "http://w3id.org/speech#" # URL to ontoology
+  speechi: "https://speech.linkeddata.es/i/" # URL to individuals
+  #SKOS list
+  sdg: "https://metadata.un.org/sdg/"
+
+sources:
+  #Set the MP_RESOURCESPATH to the correct path
+  proposals_csv: [$MP_RESOURCESPATH/plans_madrid.csv~csv]
+  manifestos_csv: [$MP_RESOURCESPATH/manifestos_madrid.csv~csv]
+  candidates_json: [$MP_RESOURCESPATH/candidates.json~jsonpath, "$.[*]"]
+
+mappings:
+
+  Candidate:
+    sources: 
+      - candidates_json
+    s: speechi:Person/$(name)
+    po:
+      - [a, foaf:Person]
+      - [foaf:name, $(name), xsd:string]
+      - [rdfs:seeAlso, "$(wikidata)~iri"]
+
+  holdsAccountCandidate:
+    sources: 
+      - candidates_json
+    s: speechi:Person/$(name)
+    po:
+      - [foaf:holdsAccount, "speechi:TwitterUser/$(twitter_account)~iri"]
+
+  #########
+
+  PoliticalPartyManifesto:
+    sources: 
+      - manifestos_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)
+    po:
+      - [a, speech:PoliticalPartyManifesto]
+      - [a, speech:Speech]
+      - [dcterms:language, $(Language), xsd:string ]
+      - [dcterms:identifier, "$(PoliticalParty)_$(Year)", xsd:string]
+      - [dcterms:created, $(Year), xsd:date]
+      - [dcterms:description, $(Description), xsd:string]
+      - [dcterms:type, "dctypes:Collection~iri"]
+      - [schema:url, "$(URL)~iri"]
+      - [schema:text, $(Slogan), xsd:string]
+
+  creator:
+    sources: 
+      - manifestos_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)
+    po:
+      - [dcterms:creator, "speechi:PoliticalParty/$(PoliticalParty)~iri" ]
+
+  proposesPoliticalCandidate:
+    sources: 
+      - manifestos_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)
+    po:
+      - [speech:proposesPoliticalCandidate, "speechi:Person/$(Candidate)~iri"]
+
+  hasOfficialHashtag:
+    sources: 
+      - candidates_json
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)
+    po:
+      - [speech:hasOfficialHashtag, speechi:Hashtag/$(Hashtag)]
+
+  hasPart:
+    sources: 
+      - proposals_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)
+    po:
+      - [dc:hasPart, "speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)/$(Number)~iri"]
+
+  #########
+
+  PoliticalProposal:
+    sources: 
+      - proposals_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)/$(Number)
+    po:
+      - [a, speech:PoliticalProposal]
+      - [schema:text, $(Plan_es)@es, xsd:string]
+      - [schema:text, $(Plan_en)@en, xsd:string]
+      - [dc:identifier, "$(PoliticalParty)_$(Year)_$(Number)"]
+
+  isPartOf:
+    sources: 
+      - proposals_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)/$(Number)
+    po:
+      - [dc:hasPart, "speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)~iri"]
+
+  subjectPoliticalProposal:
+    sources: 
+      - proposals_csv
+    s: speechi:PoliticalPartyManifesto/$(PoliticalParty)/$(Year)/$(Number)
+    po:
+      - [dc:subject, sdg:$(SDG)]
