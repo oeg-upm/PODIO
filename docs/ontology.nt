@@ -9,7 +9,7 @@
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> .
 <http://w3id.org/speech#> <http://purl.org/dc/elements/1.1/title> "SPEECH: Social media Published Entities Exploitable aCross cHannels" .
 <http://w3id.org/speech#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<http://w3id.org/speech#> <http://purl.org/dc/terms/modified> "2023-07-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://w3id.org/speech#> <http://purl.org/dc/terms/modified> "2023-08-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/speech#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "speech" .
 <http://w3id.org/speech#> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/speech#> .
 <http://w3id.org/speech#> <http://www.w3.org/2002/07/owl#imports> <http://rdfs.org/sioc/ns#> .
@@ -387,7 +387,6 @@
 #
 # http://w3id.org/speech#hasIdeology
 <http://w3id.org/speech#hasIdeology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/speech#hasIdeology> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/speech#ideologyOf> .
 <http://w3id.org/speech#hasIdeology> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
@@ -584,6 +583,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A book, article, or other documentary resource."@en .
 <http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Resource"@en .
 #
+# http://rdfs.org/sioc/ns#Container
+<http://rdfs.org/sioc/ns#Container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://rdfs.org/sioc/ns#Post
+<http://rdfs.org/sioc/ns#Post> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
+# http://rdfs.org/sioc/ns#UserAccount
+<http://rdfs.org/sioc/ns#UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
 # http://schema.org/CreativeWork
 <http://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 #
@@ -599,12 +607,9 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://schema.org/SocialMediaPosting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://schema.org/SocialMediaPosting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org> .
 #
-# http://w3id.org/speech#Container
-<http://w3id.org/speech#Container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-#
 # http://w3id.org/speech#Hashtag
 <http://w3id.org/speech#Hashtag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Container> .
+<http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/ns#Container> .
 <http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#comment> "A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic" .
 <http://w3id.org/speech#Hashtag> <http://www.w3.org/2000/01/rdf-schema#label> "hashtag" .
 #
@@ -628,9 +633,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://w3id.org/speech#PoliticalProposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Intentions, opinions, proposals and actions contained in a political manifesto." .
 <http://w3id.org/speech#PoliticalProposal> <http://www.w3.org/2000/01/rdf-schema#label> "political proposal" .
 #
-# http://w3id.org/speech#Post
-<http://w3id.org/speech#Post> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-#
 # http://w3id.org/speech#Speech
 <http://w3id.org/speech#Speech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/speech#Speech> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/BibliographicResource> .
@@ -640,21 +642,18 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 #
 # http://w3id.org/speech#Tweet
 <http://w3id.org/speech#Tweet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/ns#Post> .
 <http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SocialMediaPosting> .
-<http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Post> .
 <http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#Speech> .
 <http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#comment> "The message used to communicate on Twitter" .
 <http://w3id.org/speech#Tweet> <http://www.w3.org/2000/01/rdf-schema#label> "Tweet" .
 #
 # http://w3id.org/speech#TwitterUser
 <http://w3id.org/speech#TwitterUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/speech#UserAccount> .
+<http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/ns#UserAccount> .
 <http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Twitter account of an agent." .
 <http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#label> "twitter user" .
 <http://w3id.org/speech#TwitterUser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/wiki/Q63976454> .
-#
-# http://w3id.org/speech#UserAccount
-<http://w3id.org/speech#UserAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 #
 # http://www.w3.org/2000/01/rdf-schema#Class
 <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -24,7 +24,7 @@
         <dc:publisher rdf:resource="https://oeg.fi.upm.es/"/>
         <dc:title>SPEECH: Social media Published Entities Exploitable aCross cHannels</dc:title>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-25T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-14</terms:modified>
         <vann:preferredNamespacePrefix>speech</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="http://w3id.org/speech#"/>
     </owl:Ontology>
@@ -777,7 +777,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://w3id.org/speech#hasIdeology">
-        <owl:inverseOf rdf:resource="http://w3id.org/speech#ideologyOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1090,6 +1089,27 @@
 
 
 
+    <!-- http://rdfs.org/sioc/ns#Container -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Container"/>
+
+
+
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Post"/>
+
+
+
+    <!-- http://rdfs.org/sioc/ns#UserAccount -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#UserAccount"/>
+
+
+
     <!-- http://schema.org/CreativeWork -->
 
 
@@ -1124,18 +1144,11 @@
 
 
 
-    <!-- http://w3id.org/speech#Container -->
-
-
-    <owl:Class rdf:about="http://w3id.org/speech#Container"/>
-
-
-
     <!-- http://w3id.org/speech#Hashtag -->
 
 
     <owl:Class rdf:about="http://w3id.org/speech#Hashtag">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/speech#Container"/>
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Container"/>
         <rdfs:comment>A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic</rdfs:comment>
         <rdfs:label>hashtag</rdfs:label>
     </owl:Class>
@@ -1177,13 +1190,6 @@
 
 
 
-    <!-- http://w3id.org/speech#Post -->
-
-
-    <owl:Class rdf:about="http://w3id.org/speech#Post"/>
-
-
-
     <!-- http://w3id.org/speech#Speech -->
 
 
@@ -1200,8 +1206,8 @@
 
 
     <owl:Class rdf:about="http://w3id.org/speech#Tweet">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Post"/>
         <rdfs:subClassOf rdf:resource="http://schema.org/SocialMediaPosting"/>
-        <rdfs:subClassOf rdf:resource="http://w3id.org/speech#Post"/>
         <rdfs:subClassOf rdf:resource="http://w3id.org/speech#Speech"/>
         <rdfs:comment>The message used to communicate on Twitter</rdfs:comment>
         <rdfs:label>Tweet</rdfs:label>
@@ -1213,18 +1219,11 @@
 
 
     <owl:Class rdf:about="http://w3id.org/speech#TwitterUser">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/speech#UserAccount"/>
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#UserAccount"/>
         <rdfs:comment>Twitter account of an agent.</rdfs:comment>
         <rdfs:label>twitter user</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q63976454"/>
     </owl:Class>
-
-
-
-    <!-- http://w3id.org/speech#UserAccount -->
-
-
-    <owl:Class rdf:about="http://w3id.org/speech#UserAccount"/>
 
 
 

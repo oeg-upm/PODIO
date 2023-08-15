@@ -8,8 +8,10 @@
 
 <http://w3id.org/speech#> rdf:type owl:Ontology ;
                            owl:versionIRI <http://w3id.org/speech#> ;
+                           owl:imports sioc: ,
+                                       siocq: ;
                            <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" ,
-                                                                         "Carlos Badenes-Olmedo",
+                                                                         "Carlos Badenes-Olmedo" ,
                                                                          "Oscar Corcho" ;
                            <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" ;
                            <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political speech across channels and content." ;
@@ -17,9 +19,7 @@
                            <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> ;
                            <http://purl.org/dc/elements/1.1/title> "SPEECH: Social media Published Entities Exploitable aCross cHannels" ;
                            <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                           <http://purl.org/dc/terms/modified> "2023-07-25T00:00:00"^^xsd:dateTime ;
-                           owl:imports <http://rdfs.org/sioc/ns#> ,
-                                       <http://rdfs.org/sioc/quotes#> ;
+                           <http://purl.org/dc/terms/modified> "2023-08-14"^^xsd:date ;
                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "speech" ;
                            <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/speech#> .
 
@@ -458,7 +458,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/speech#hasIdeology
 :hasIdeology rdf:type owl:ObjectProperty ;
-             owl:inverseOf :ideologyOf ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :Speech
                                          :TwitterUser
@@ -652,6 +651,18 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:label "Bibliographic Resource"@en .
 
 
+###  http://rdfs.org/sioc/ns#Container
+<http://rdfs.org/sioc/ns#Container> rdf:type owl:Class .
+
+
+###  http://rdfs.org/sioc/ns#Post
+<http://rdfs.org/sioc/ns#Post> rdf:type owl:Class .
+
+
+###  http://rdfs.org/sioc/ns#UserAccount
+<http://rdfs.org/sioc/ns#UserAccount> rdf:type owl:Class .
+
+
 ###  http://schema.org/CreativeWork
 <http://schema.org/CreativeWork> rdf:type owl:Class .
 
@@ -671,13 +682,9 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:isDefinedBy <http://schema.org> .
 
 
-###  http://w3id.org/speech#Container
-:Container rdf:type owl:Class .
-
-
 ###  http://w3id.org/speech#Hashtag
 :Hashtag rdf:type owl:Class ;
-         rdfs:subClassOf :Container ;
+         rdfs:subClassOf <http://rdfs.org/sioc/ns#Container> ;
          rdfs:comment "A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic" ;
          rdfs:label "hashtag" .
 
@@ -705,10 +712,6 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:label "political proposal" .
 
 
-###  http://w3id.org/speech#Post
-:Post rdf:type owl:Class .
-
-
 ###  http://w3id.org/speech#Speech
 :Speech rdf:type owl:Class ;
         rdfs:subClassOf <http://purl.org/dc/terms/BibliographicResource> ,
@@ -719,8 +722,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/speech#Tweet
 :Tweet rdf:type owl:Class ;
-       rdfs:subClassOf <http://schema.org/SocialMediaPosting> ,
-                       :Post ,
+       rdfs:subClassOf <http://rdfs.org/sioc/ns#Post> ,
+                       <http://schema.org/SocialMediaPosting> ,
                        :Speech ;
        rdfs:comment "The message used to communicate on Twitter" ;
        rdfs:label "Tweet" .
@@ -728,14 +731,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/speech#TwitterUser
 :TwitterUser rdf:type owl:Class ;
-             rdfs:subClassOf :UserAccount ;
+             rdfs:subClassOf <http://rdfs.org/sioc/ns#UserAccount> ;
              rdfs:comment "Twitter account of an agent." ;
              rdfs:label "twitter user" ;
              rdfs:seeAlso <https://www.wikidata.org/wiki/Q63976454> .
-
-
-###  http://w3id.org/speech#UserAccount
-:UserAccount rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class

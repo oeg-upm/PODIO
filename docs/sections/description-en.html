@@ -1,7 +1,41 @@
-<h2 id="desc" class="list">SPEECH: Social media Published Entities Exploitable aCross cHannels: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="desc" class="list">Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+The overview of the ontology is depicted in **Figure 1**. In order to build
+the model, we import the [SIOC ontology](http://rdfs.org/sioc/spec/) and reuse several additional
+ontologies (SCHEMA, ORG, DC). The ontology revolves around the concept of
+_Speech_ (`speech:Speech`), that represents both _Tweets_
+(`speech:Tweet`) and _Political Party Manifestos_
+(`PoliticalPartyManifesto`). A _Speech_ has a creator (`foaf:Agent`),
+that may hold an online account (`foaf:OnlineAccount`); may be associated with
+an ideology (extracted from the [UNESCO SKOS Theraurus](https://skos.um.es/unescothes/))
+and a subject (i.e. Sustainable Development Goal (SDG) extracted from the [SDG SKOS
+Taxonomy](https://metadata.un.org/sdg/)); and may have interaction
+statistics (`schema:InteractionCounter`), that represents metrics such as number
+of retweets and likes for _Tweets_.
+
+The SIOC ontology is imported to leverage the representation of _Tweets_
+(as subclass of `sioc:Post`), _Twitter Users_ (`speech:TwitterUser`
+as subclass of `sioc:UserAccount`), quoted tweets (with `sioc: quote\_of`)
+and _Containers_ with threads and hashtags (`sioc:Container`).
+We extend `speech:Tweet` w.r.t. `sioc:Post` to include shared content,
+e.g. images, videos (`schema:sharedContent`) and be able to have retweeted
+`Tweets` by _Twitter Users_ (using `speech:retweets`).
+In addition, a _Twitter User_ may be associated with an ideology, in the
+same way as _Speech_.
+
+_Political Party Manifestos_ may include several _olitical Proposals_
+(`speech:PoliticalProposal`), that can be associated with a SDG, in the
+same way as _Speech_. _Political Party Manifestos_ may also propose
+a candidate (with `speech:proposesPoliticalCandidate`) and have an official
+_Hashtag_ (`speech:Hashtag`). Lastly, _Political Parties_
+(`speech:PoliticalParty`) are represented as subclasses of `org:Organization`.
+The local and regional subsidiaries of _Political Parties_ are defined as
+suborganizations of the national-level party (with `org:subOrganizationOf`).
+
+
+
+</span>
 
 <center>
-  <img src="images/speech_diagram.svg" alt="General overview of the EBOCA Evidences Ontology." width="90%"> <figcaption><b>Figure 1.</b> - General overview of the SPEECH Ontology.</figcaption>
+  <img src="images/speech_diagram.svg" alt="General overview of the SPEECH Ontology." width="90%"> <figcaption><b>Figure 1.</b> - General overview of the SPEECH Ontology.</figcaption>
 </center>

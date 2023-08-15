@@ -667,6 +667,15 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://rdfs.org/sioc/ns#Container",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://rdfs.org/sioc/ns#Post",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://rdfs.org/sioc/ns#UserAccount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://rdfs.org/sioc/quotes#block_of",
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rdfs.org/sioc/quotes#"
@@ -799,8 +808,8 @@
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-07-25T00:00:00"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-08-14"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "speech"
@@ -812,9 +821,6 @@
     "@id" : "http://w3id.org/speech#"
   } ]
 }, {
-  "@id" : "http://w3id.org/speech#Container",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://w3id.org/speech#Hashtag",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -824,7 +830,7 @@
     "@value" : "hashtag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/speech#Container"
+    "@id" : "http://rdfs.org/sioc/ns#Container"
   } ]
 }, {
   "@id" : "http://w3id.org/speech#PoliticalParty",
@@ -868,9 +874,6 @@
     "@value" : "political proposal"
   } ]
 }, {
-  "@id" : "http://w3id.org/speech#Post",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://w3id.org/speech#Speech",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -894,9 +897,9 @@
     "@value" : "Tweet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://schema.org/SocialMediaPosting"
+    "@id" : "http://rdfs.org/sioc/ns#Post"
   }, {
-    "@id" : "http://w3id.org/speech#Post"
+    "@id" : "http://schema.org/SocialMediaPosting"
   }, {
     "@id" : "http://w3id.org/speech#Speech"
   } ]
@@ -913,11 +916,8 @@
     "@id" : "https://www.wikidata.org/wiki/Q63976454"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/speech#UserAccount"
+    "@id" : "http://rdfs.org/sioc/ns#UserAccount"
   } ]
-}, {
-  "@id" : "http://w3id.org/speech#UserAccount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://w3id.org/speech#hasIdeology",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -932,9 +932,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid5"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://w3id.org/speech#ideologyOf"
   } ]
 }, {
   "@id" : "http://w3id.org/speech#hasOfficialHashtag",
