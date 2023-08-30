@@ -9,10 +9,14 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?speech ?creator  
+SELECT DISTINCT ?creator_name ?speech ?speech_text
 WHERE {
     ?speech a speech:Speech ;
-       dc:creator ?creator .
+       schema:text ?speech_text ;
+       ?p_creator ?creator .
+    ?creator ?p_name ?creator_name .
+   VALUES ?p_creator {dc:creator sioc:has_creator}
+   VALUES ?p_name {foaf:name sioc:name}
 }
 ```
 
@@ -25,9 +29,10 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?speech ?date  
+SELECT DISTINCT ?date  ?speech ?speech_text
 WHERE {
     ?speech a speech:Speech ;
+       schema:text ?speech_text ;
        dc:created ?date .
 }
 ```
@@ -41,10 +46,12 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?speech ?subject  
+SELECT DISTINCT ?subject  ?speech ?speech_text
 WHERE {
     ?speech a speech:Speech ;
-       dc:subject ?subject .
+        dc:hasPart ?proposal .
+    ?proposal dc:subject ?subject ;
+       schema:text ?speech_text .
 }
 ```
 
@@ -57,9 +64,10 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?pparty ?ideology  
+SELECT DISTINCT ?pparty_name ?ideology  
 WHERE {
     ?pparty a speech:PoliticalParty ;
+       foaf:name ?pparty_name ;
        speech:hasIdeology ?ideology .
 }
 ```
@@ -73,9 +81,10 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?pparty ?account  
+SELECT DISTINCT ?pparty_name ?account  
 WHERE {
     ?pparty a speech:PoliticalParty ;
+       foaf:name ?pparty_name ;
        foaf:holdsAccount ?account .
 }
 ```
@@ -89,10 +98,12 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?pparty ?manifesto
+SELECT DISTINCT ?pparty_name ?manifesto
 WHERE {
     ?manifesto a speech:PoliticalPartyManifesto ;
        dc:creator ?pparty .
+    ?pparty a speech:PoliticalParty ;
+       foaf:name ?pparty_name .
 }
 ```
 
@@ -105,11 +116,14 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?pparty ?proposal
+SELECT DISTINCT ?pparty_name ?proposal ?proposal_text
 WHERE {
     ?manifesto a speech:PoliticalPartyManifesto ;
        dc:creator ?pparty ;
        dc:hasPart ?proposal .
+    ?proposal schema:text ?proposal_text .
+    ?pparty a speech:PoliticalParty ;
+       foaf:name ?pparty_name .
 }
 ```
 
@@ -122,12 +136,15 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?speech ?pparty ?hashtag
+SELECT DISTINCT ?pparty_name ?hashtag_label ?speech_text
 WHERE {
-    ?pparty foaf:holdsAccount ?account .
+    ?pparty foaf:holdsAccount ?account ;
+       foaf:name ?pparty_name .
     ?account sioc:creator_of ?speech .
-    ?speech sioc:has_container ?hashtag .
-}  
+    ?speech sioc:has_container ?hashtag ;
+       schema:text ?speech_text .
+    ?hashtag rdfs:label ?hashtag_label.
+}   
 ```
 
 ### QR9 - An speech may have interaction metrics
@@ -139,10 +156,13 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?interactions
+SELECT DISTINCT ?speech ?interaction_type ?interaction_count ?speech_text
 WHERE {
-    ?speech schema:interactionStatistic ?interactions .
-}   
+    ?speech schema:interactionStatistic ?interactions ;
+       schema:text ?speech_text .
+    ?interactions schema:interactionType ?interaction_type;
+       schema:userInteractionCount ?interaction_count .
+}  
 ```
 
 ### QR10 - Which are the posts of a political party related to the transport domain?
@@ -173,6 +193,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
+PREFIX org: <http://www.w3.org/ns/org#>
 
 SELECT DISTINCT ?sub_pparty_name ?pparty_name
 WHERE {
@@ -241,7 +262,7 @@ WHERE {
        sioc:has_creator ?account .
  ?pparty foaf:holdsAccount ?account ;
      foaf:name ?pparty_name .
-} GROUP BY ?pparty ?mentioned_account
+} GROUP BY ?pparty_name ?mentioned_account
 ```
 
 ### QR15 - Which is the user most quoted by a political party?
@@ -250,6 +271,7 @@ WHERE {
 PREFIX speech: <http://w3id.org/speech#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX siocq: <http://rdfs.org/sioc/quotes#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
@@ -275,6 +297,7 @@ ORDER BY DESC (?count_quotes)
 PREFIX speech: <http://w3id.org/speech#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX siocq: <http://rdfs.org/sioc/quotes#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
@@ -298,6 +321,7 @@ ORDER BY DESC (?count_quotes)
 PREFIX speech: <http://w3id.org/speech#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX siocq: <http://rdfs.org/sioc/quotes#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
@@ -336,7 +360,7 @@ WHERE {
 HAVING (COUNT (DISTINCT ?pparty) > 1)
 ```
 
-### QR20 - Which are the tweets of a political party retweeted by another political party?
+### QR19 - Which are the tweets of a political party retweeted by another political party?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -360,7 +384,7 @@ WHERE {
 }
 ```
 
-### QR21 - Which is the hashtag most tweeted by a political party in the 2019 Madrid elections?
+### QR20 - Which is the hashtag most tweeted by a political party in the 2019 Madrid elections?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -385,7 +409,7 @@ WHERE {
 ORDER BY DESC (?count_hashtag)
 ```
 
-### QR22 - Which is the hashtag most retweeted by a political party in the 2019 Madrid elections?
+### QR21 - Which is the hashtag most retweeted by a political party in the 2019 Madrid elections?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -410,7 +434,7 @@ WHERE {
 ORDER BY DESC (?count_hashtag)
 ```
 
-### QR23 - Which is the political party that has tweeted the most in 2021?
+### QR22 - Which is the political party that has tweeted the most in 2021?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -432,7 +456,7 @@ WHERE {
 ORDER BY DESC (?count_tweets)
 ```
 
-### QR24 - Which is the political party that has been retweeted the most in 2021?
+### QR23 - Which is the political party that has been retweeted the most in 2021?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -455,7 +479,7 @@ WHERE {
 ORDER BY DESC (?count_retweets)
 ```
 
-### QR25 - How have ODS changed in the proposals of a manifesto of a political party?
+### QR24 - How have ODS changed in the proposals of a manifesto of a political party?
 
 ```
 PREFIX speech: <http://w3id.org/speech#>
@@ -464,12 +488,12 @@ PREFIX sioc: <http://rdfs.org/sioc/ns#>
 PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 
-SELECT DISTINCT ?manifesto_id ?ods (COUNT (?proposal) as ?count_proposal)
+SELECT DISTINCT ?manifesto_id ?sdg (COUNT (?proposal) as ?count_proposal)
 WHERE {
     ?manifesto a speech:PoliticalPartyManifesto ;
             dc:identifier ?manifesto_id ;
             dc:hasPart ?proposal .
-    ?proposal dc:subject ?ods .
-} GROUP BY ?manifesto_id ?ods
-ORDER BY DESC (?ods)
+    ?proposal dc:subject ?sdg .
+} GROUP BY ?manifesto_id ?sdg
+ORDER BY DESC (?sdg)
 ```

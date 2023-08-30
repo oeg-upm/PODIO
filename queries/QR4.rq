@@ -1,0 +1,12 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?pparty_name ?ideology
+WHERE {
+    ?pparty a speech:PoliticalParty ;
+       foaf:name ?pparty_name ;
+       speech:hasIdeology ?ideology .
+}

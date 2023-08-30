@@ -1,0 +1,20 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?pparty_name ?hashtag_label (COUNT (?tweet) as ?count_hashtag)
+WHERE {
+    ?pparty a speech:PoliticalParty ;
+      foaf:name ?pparty_name ;
+      foaf:holdsAccount ?account .
+    ?tweet a speech:Tweet ;
+       sioc:has_container ?hashtag ;
+       sioc:has_creator ?account ;
+       dc:created ?date .
+    ?hashtag a speech:Hashtag ;
+       rdfs:label ?hashtag_label .
+    FILTER(year(?date) = 2019)
+} GROUP BY ?pparty_name ?hashtag_label
+ORDER BY DESC (?count_hashtag)

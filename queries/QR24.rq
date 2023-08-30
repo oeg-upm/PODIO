@@ -1,0 +1,14 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?manifesto_id ?sdg (COUNT (?proposal) as ?count_proposal)
+WHERE {
+    ?manifesto a speech:PoliticalPartyManifesto ;
+            dc:identifier ?manifesto_id ;
+            dc:hasPart ?proposal .
+    ?proposal dc:subject ?sdg .
+} GROUP BY ?manifesto_id ?sdg
+ORDER BY DESC (?sdg)

@@ -1,0 +1,19 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX siocq: <http://rdfs.org/sioc/quotes#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?quoted_tweet_text ?quoted_account
+WHERE {
+ ?quoted_tweet a speech:Tweet ;
+       siocq:quote_of ?tweet ;
+       schema:text ?quoted_tweet_text ;
+       sioc:has_creator ?quoted_account .
+ ?tweet a speech:Tweet ;
+       sioc:has_creator ?account .
+ ?pparty a speech:PoliticalParty ;
+      foaf:holdsAccount ?account .
+} GROUP BY ?quoted_tweet_text ?quoted_account
+HAVING (COUNT (DISTINCT ?pparty) > 1)

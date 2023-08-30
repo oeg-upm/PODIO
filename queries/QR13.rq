@@ -1,0 +1,14 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?date ?tweet_text
+WHERE {
+ ?tweet a speech:Tweet ;
+       dc:created ?date ;
+       schema:text ?tweet_text .
+ FILTER(?date < "2015-05-23"^^xsd:date)
+}
+ORDER BY DESC (?date)

@@ -1,0 +1,17 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?pparty_name (COUNT (?tweet) as ?count_tweets)
+WHERE {
+    ?pparty a speech:PoliticalParty ;
+      foaf:name ?pparty_name ;
+      foaf:holdsAccount ?account .
+    ?tweet a speech:Tweet ;
+       dc:created ?date ;
+       sioc:has_creator ?account.
+    FILTER(year(?date) = 2021)
+} GROUP BY ?pparty_name
+ORDER BY DESC (?count_tweets)

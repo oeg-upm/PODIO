@@ -1,0 +1,13 @@
+PREFIX speech: <http://w3id.org/speech#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?subject  ?speech ?speech_text
+WHERE {
+    ?speech a speech:Speech ;
+        dc:hasPart ?proposal .
+    ?proposal dc:subject ?subject ;
+       schema:text ?speech_text .
+}
