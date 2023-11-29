@@ -1,82 +1,233 @@
-<h2 id="overv" class="list">Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">PODIO: POlitical DIscourse Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
    <li>
-      <a href="#http://purl.org/dc/terms/Agent" title="http://purl.org/dc/terms/Agent">Agent</a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/AgentClass" title="http://purl.org/dc/terms/AgentClass">Agent Class</a>
+      <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">Agent</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Bibliographic Resource</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#Collection" title="http://www.w3.org/2004/02/skos/core#Collection">
-         <span>collection</span>
+      <a href="#http://rdfs.org/sioc/ns#Community" title="http://rdfs.org/sioc/ns#Community">Community</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Container" title="http://rdfs.org/sioc/ns#Container">Container</a>
+   </li>
+   <li>
+      <a href="#Conversational" title="http://w3id.org/podio#Conversational">Conversational</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/CreativeWork" title="http://schema.org/CreativeWork">Creative Work</a>
+   </li>
+   <li>
+      <a href="#Discourse" title="http://w3id.org/podio#Discourse">Discourse</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Document" title="http://xmlns.com/foaf/0.1/Document">Document</a>
+   </li>
+   <li>
+      <a href="#Expository" title="http://w3id.org/podio#Expository">Expository</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Forum" title="http://rdfs.org/sioc/ns#Forum">Forum</a>
+   </li>
+   <li>
+      <a href="#Hashtag" title="http://w3id.org/podio#Hashtag">Hashtag</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/InteractionCounter" title="http://schema.org/InteractionCounter">Interaction Counter</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Item" title="http://rdfs.org/sioc/ns#Item">Item</a>
+   </li>
+   <li>
+      <a href="#http://lkg.lynx-project.eu/def/Legislation" title="http://lkg.lynx-project.eu/def/Legislation">Legislation</a>
+   </li>
+   <li>
+      <a href="#http://lkg.lynx-project.eu/def/LynxDocument" title="http://lkg.lynx-project.eu/def/LynxDocument">Lynx Document</a>
+   </li>
+   <li>
+      <a href="#http://lkg.lynx-project.eu/def/Metadata" title="http://lkg.lynx-project.eu/def/Metadata">Metadata</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/OnlineAccount" title="http://xmlns.com/foaf/0.1/OnlineAccount">Online Account</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/Policy" title="http://purl.org/dc/terms/Policy">Policy</a>
+   </li>
+   <li>
+      <a href="#Policy" title="http://w3id.org/podio#Policy">Policy</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/PoliticalParty" title="http://schema.org/PoliticalParty">Political Party</a>
+   </li>
+   <li>
+      <a href="#PartyManifesto" title="http://w3id.org/podio#PartyManifesto">Political Party Manifesto</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Post" title="http://rdfs.org/sioc/ns#Post">Post</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Role" title="http://rdfs.org/sioc/ns#Role">Role</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Site" title="http://rdfs.org/sioc/ns#Site">Site</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/SocialMediaPosting" title="http://schema.org/SocialMediaPosting">Social Media Posting</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Space" title="http://rdfs.org/sioc/ns#Space">Space</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Thread" title="http://rdfs.org/sioc/ns#Thread">Thread</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#UserAccount" title="http://rdfs.org/sioc/ns#UserAccount">User Account</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#Usergroup" title="http://rdfs.org/sioc/ns#Usergroup">Usergroup</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#about" title="http://rdfs.org/sioc/ns#about">about</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/account" title="http://xmlns.com/foaf/0.1/account">
+         <span>account</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+      <a href="#http://rdfs.org/sioc/ns#account_of" title="http://rdfs.org/sioc/ns#account_of">account of</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
-         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
-   </li>
-   <li>
-      <a href="#Hashtag" title="http://w3id.org/speech#Hashtag">hashtag</a>
-   </li>
-   <li>
-      <a href="#http://schema.org/InteractionCounter" title="http://schema.org/InteractionCounter">
-         <span>interaction counter</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://schema.org/PoliticalParty" title="http://schema.org/PoliticalParty">
-         <span>political party</span>
-      </a>
-   </li>
-   <li>
-      <a href="#PoliticalParty" title="http://w3id.org/speech#PoliticalParty">political party</a>
-   </li>
-   <li>
-      <a href="#PoliticalPartyManifesto" title="http://w3id.org/speech#PoliticalPartyManifesto">political party manifesto</a>
-   </li>
-   <li>
-      <a href="#PoliticalProposal" title="http://w3id.org/speech#PoliticalProposal">political proposal</a>
-   </li>
-   <li>
-      <a href="#http://schema.org/SocialMediaPosting" title="http://schema.org/SocialMediaPosting">
-         <span>social media posting</span>
-      </a>
-   </li>
-   <li>
-      <a href="#Speech" title="http://w3id.org/speech#Speech">speech</a>
-   </li>
-   <li>
-      <a href="#Tweet" title="http://w3id.org/speech#Tweet">Tweet</a>
-   </li>
-   <li>
-      <a href="#TwitterUser" title="http://w3id.org/speech#TwitterUser">twitter user</a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/dcam/VocabularyEncodingScheme" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">Vocabulary Encoding Scheme</a>
-   </li>
-</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#http://xmlns.com/foaf/0.1/accountServiceHomepage" title="http://xmlns.com/foaf/0.1/accountServiceHomepage">
+      <a href="#http://xmlns.com/foaf/0.1/accountServiceHomepage"
+         title="http://xmlns.com/foaf/0.1/accountServiceHomepage">
          <span>account service homepage</span>
       </a>
    </li>
    <li>
-      <a href="#hasIdeology" title="http://w3id.org/speech#hasIdeology">has ideology</a>
+      <a href="#http://rdfs.org/sioc/ns#addressed_to" title="http://rdfs.org/sioc/ns#addressed_to">addressed to</a>
    </li>
    <li>
-      <a href="#hasOfficialHashtag" title="http://w3id.org/speech#hasOfficialHashtag">has official hashtag</a>
+      <a href="#http://rdfs.org/sioc/ns#administrator_of" title="http://rdfs.org/sioc/ns#administrator_of">administrator of</a>
    </li>
    <li>
-      <a href="#hasPoliticalCategory" title="http://w3id.org/speech#hasPoliticalCategory">has political category</a>
+      <a href="#http://rdfs.org/sioc/ns#attachment" title="http://rdfs.org/sioc/ns#attachment">attachment</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#avatar" title="http://rdfs.org/sioc/ns#avatar">avatar</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#container_of" title="http://rdfs.org/sioc/ns#container_of">container of</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#creator_of" title="http://rdfs.org/sioc/ns#creator_of">creator of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#delivered_at" title="http://rdfs.org/sioc/ns#delivered_at">
+         <span>delivered at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/depiction" title="http://xmlns.com/foaf/0.1/depiction">
+         <span>depiction</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#discussion_of" title="http://rdfs.org/sioc/ns#discussion_of">discussion of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#earlier_version" title="http://rdfs.org/sioc/ns#earlier_version">earlier version</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#email" title="http://rdfs.org/sioc/ns#email">email</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#embeds_knowledge" title="http://rdfs.org/sioc/ns#embeds_knowledge">embeds knowledge</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#feed" title="http://rdfs.org/sioc/ns#feed">feed</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#follows" title="http://rdfs.org/sioc/ns#follows">follows</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#function_of" title="http://rdfs.org/sioc/ns#function_of">function of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#generator" title="http://rdfs.org/sioc/ns#generator">generator</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#group_of" title="http://rdfs.org/sioc/ns#group_of">group of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_administrator" title="http://rdfs.org/sioc/ns#has_administrator">has administrator</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_container" title="http://rdfs.org/sioc/ns#has_container">has container</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_creator" title="http://rdfs.org/sioc/ns#has_creator">has creator</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_discussion" title="http://rdfs.org/sioc/ns#has_discussion">has discussion</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_function" title="http://rdfs.org/sioc/ns#has_function">has function</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_group" title="http://rdfs.org/sioc/ns#has_group">has group</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_host" title="http://rdfs.org/sioc/ns#has_host">has host</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_member" title="http://rdfs.org/sioc/ns#has_member">has member</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_moderator" title="http://rdfs.org/sioc/ns#has_moderator">has moderator</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_modifier" title="http://rdfs.org/sioc/ns#has_modifier">has modifier</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_owner" title="http://rdfs.org/sioc/ns#has_owner">has owner</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_parent" title="http://rdfs.org/sioc/ns#has_parent">has parent</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_part" title="http://rdfs.org/sioc/ns#has_part">has part</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_reply" title="http://rdfs.org/sioc/ns#has_reply">has reply</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_scope" title="http://rdfs.org/sioc/ns#has_scope">has scope</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_space" title="http://rdfs.org/sioc/ns#has_space">has space</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_subscriber" title="http://rdfs.org/sioc/ns#has_subscriber">has subscriber</a>
+   </li>
+   <li>
+      <a href="#hasTarget" title="http://w3id.org/podio#hasTarget">has target</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#has_usergroup" title="http://rdfs.org/sioc/ns#has_usergroup">has usergroup</a>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/holdsAccount" title="http://xmlns.com/foaf/0.1/holdsAccount">
@@ -84,7 +235,7 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#ideologyOf" title="http://w3id.org/speech#ideologyOf">ideology of</a>
+      <a href="#http://rdfs.org/sioc/ns#host_of" title="http://rdfs.org/sioc/ns#host_of">host of</a>
    </li>
    <li>
       <a href="#http://schema.org/interactionStatistic" title="http://schema.org/interactionStatistic">
@@ -92,30 +243,92 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a>
+      <a href="#repostedBy" title="http://w3id.org/podio#repostedBy">is reposted by</a>
    </li>
    <li>
-      <a href="#retweetedBy" title="http://w3id.org/speech#retweetedBy">is retweeted by</a>
+      <a href="#http://rdfs.org/sioc/ns#later_version" title="http://rdfs.org/sioc/ns#later_version">later version</a>
    </li>
    <li>
-      <a href="#http://purl.org/dc/dcam/memberOf" title="http://purl.org/dc/dcam/memberOf">Member Of</a>
+      <a href="#http://rdfs.org/sioc/ns#latest_version" title="http://rdfs.org/sioc/ns#latest_version">latest version</a>
    </li>
    <li>
-      <a href="#officialhashtagOf" title="http://w3id.org/speech#officialhashtagOf">official hashtag of</a>
+      <a href="#http://rdfs.org/sioc/ns#likes" title="http://rdfs.org/sioc/ns#likes">likes</a>
    </li>
    <li>
-      <a href="#politicalCategoryOf" title="http://w3id.org/speech#politicalCategoryOf">political category of</a>
+      <a href="#http://rdfs.org/sioc/ns#link" title="http://rdfs.org/sioc/ns#link">link</a>
    </li>
    <li>
-      <a href="#proposedAsPoliticalCandidateBy"
-         title="http://w3id.org/speech#proposedAsPoliticalCandidateBy">proposed as political candidate by</a>
+      <a href="#http://rdfs.org/sioc/ns#links_to" title="http://rdfs.org/sioc/ns#links_to">
+         <span>links to</span>
+      </a>
    </li>
    <li>
-      <a href="#proposesPoliticalCandidate"
-         title="http://w3id.org/speech#proposesPoliticalCandidate">proposes political candidate</a>
+      <a href="#http://rdfs.org/sioc/ns#member_of" title="http://rdfs.org/sioc/ns#member_of">member of</a>
    </li>
    <li>
-      <a href="#retweets" title="http://w3id.org/speech#retweets">retweets</a>
+      <a href="#http://rdfs.org/sioc/ns#mentions" title="http://rdfs.org/sioc/ns#mentions">mentions</a>
+   </li>
+   <li>
+      <a href="#http://lkg.lynx-project.eu/def/metadata" title="http://lkg.lynx-project.eu/def/metadata">metadata</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#moderator_of" title="http://rdfs.org/sioc/ns#moderator_of">moderator of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#modifier_of" title="http://rdfs.org/sioc/ns#modifier_of">modifier of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#next_by_date" title="http://rdfs.org/sioc/ns#next_by_date">next by date</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#next_version" title="http://rdfs.org/sioc/ns#next_version">next version</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#owner_of" title="http://rdfs.org/sioc/ns#owner_of">owner of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#parent_of" title="http://rdfs.org/sioc/ns#parent_of">parent of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#part_of" title="http://rdfs.org/sioc/ns#part_of">part of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#previous_by_date" title="http://rdfs.org/sioc/ns#previous_by_date">previous by date</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#previous_version" title="http://rdfs.org/sioc/ns#previous_version">previous version</a>
+   </li>
+   <li>
+      <a href="#proposedAsCandidateBy" title="http://w3id.org/podio#proposedAsCandidateBy">proposed as candidate by</a>
+   </li>
+   <li>
+      <a href="#proposesCandidate" title="http://w3id.org/podio#proposesCandidate">proposes candidate</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#read_at" title="http://rdfs.org/sioc/ns#read_at">
+         <span>read at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#reference" title="http://rdfs.org/sioc/ns#reference">reference</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#related_to" title="http://rdfs.org/sioc/ns#related_to">related to</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#reply_of" title="http://rdfs.org/sioc/ns#reply_of">reply of</a>
+   </li>
+   <li>
+      <a href="#repost" title="http://w3id.org/podio#repost">repost</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#respond_to" title="http://rdfs.org/sioc/ns#respond_to">respond to</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#scope_of" title="http://rdfs.org/sioc/ns#scope_of">scope of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#shared_by" title="http://rdfs.org/sioc/ns#shared_by">shared by</a>
    </li>
    <li>
       <a href="#http://schema.org/sharedContent" title="http://schema.org/sharedContent">
@@ -123,33 +336,109 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://rdfs.org/sioc/ns#sibling" title="http://rdfs.org/sioc/ns#sibling">sibling</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#space_of" title="http://rdfs.org/sioc/ns#space_of">space of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#subscriber_of" title="http://rdfs.org/sioc/ns#subscriber_of">subscriber of</a>
+   </li>
+   <li>
+      <a href="#targetOf" title="http://w3id.org/podio#targetOf">taget of</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#topic" title="http://rdfs.org/sioc/ns#topic">topic</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#usergroup_of" title="http://rdfs.org/sioc/ns#usergroup_of">usergroup of</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#content" title="http://rdfs.org/sioc/ns#content">content</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#content_encoded" title="http://rdfs.org/sioc/ns#content_encoded">content encoded</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#created_at" title="http://rdfs.org/sioc/ns#created_at">created at</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#delivered_at" title="http://rdfs.org/sioc/ns#delivered_at">
+         <span>delivered at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#description" title="http://rdfs.org/sioc/ns#description">description</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#email_sha1" title="http://rdfs.org/sioc/ns#email_sha1">email sha1</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#first_name" title="http://rdfs.org/sioc/ns#first_name">first name</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#id" title="http://rdfs.org/sioc/ns#id">id</a>
+   </li>
+   <li>
+      <a href="#ideology" title="http://w3id.org/podio#ideology">ideology</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#ip_address" title="http://rdfs.org/sioc/ns#ip_address">ip address</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#last_activity_date" title="http://rdfs.org/sioc/ns#last_activity_date">last activity date</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#last_item_date" title="http://rdfs.org/sioc/ns#last_item_date">last item date</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#last_name" title="http://rdfs.org/sioc/ns#last_name">last name</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#last_reply_date" title="http://rdfs.org/sioc/ns#last_reply_date">last reply date</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#modified_at" title="http://rdfs.org/sioc/ns#modified_at">modified at</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#name" title="http://rdfs.org/sioc/ns#name">name</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#note" title="http://rdfs.org/sioc/ns#note">note</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#num_authors" title="http://rdfs.org/sioc/ns#num_authors">num authors</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#num_items" title="http://rdfs.org/sioc/ns#num_items">num items</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#num_replies" title="http://rdfs.org/sioc/ns#num_replies">num replies</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#num_threads" title="http://rdfs.org/sioc/ns#num_threads">num threads</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#num_views" title="http://rdfs.org/sioc/ns#num_views">num views</a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#read_at" title="http://rdfs.org/sioc/ns#read_at">
+         <span>read at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://rdfs.org/sioc/ns#subject" title="http://rdfs.org/sioc/ns#subject">subject</a>
+   </li>
+   <li>
       <a href="#http://schema.org/text" title="http://schema.org/text">
          <span>text</span>
       </a>
    </li>
-</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#http://xmlns.com/foaf/0.1/accountName" title="http://xmlns.com/foaf/0.1/accountName">account name</a>
-   </li>
-   <li>
-      <a href="#http://schema.org/address" title="http://schema.org/address">
-         <span>address</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://schema.org/areaServed" title="http://schema.org/areaServed">
-         <span>area served</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://schema.org/image" title="http://schema.org/image">
-         <span>image</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://xmlns.com/foaf/0.1/phone" title="http://xmlns.com/foaf/0.1/phone">
-         <span>phone</span>
-      </a>
+      <a href="#http://rdfs.org/sioc/ns#title" title="http://rdfs.org/sioc/ns#title">title</a>
    </li>
    <li>
       <a href="#http://schema.org/url" title="http://schema.org/url">
@@ -159,17 +448,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://schema.org/wordCount" title="http://schema.org/wordCount">
          <span>word count</span>
-      </a>
-   </li>
-</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#https://metadata.un.org/sdg/" title="https://metadata.un.org/sdg/">
-         <span>https://metadata.un.org/sdg/</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://skos.um.es/unescothes/" title="https://skos.um.es/unescothes/">
-         <span>https://skos.um.es/unescothes/</span>
       </a>
    </li>
 </ul>

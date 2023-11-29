@@ -1,27 +1,29 @@
-@prefix : <http://w3id.org/speech#> .
+@prefix : <https://w3id.org/podio#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://w3id.org/speech#> .
+@base <https://w3id.org/podio#> .
 
-<http://w3id.org/speech#> rdf:type owl:Ontology ;
-                           owl:versionIRI <http://w3id.org/speech#> ;
-                           owl:imports sioc: ,
-                                       siocq: ;
-                           <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" ,
-                                                                         "Carlos Badenes-Olmedo" ,
-                                                                         "Oscar Corcho" ;
-                           <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" ;
-                           <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political speech across channels and content." ;
-                           <http://purl.org/dc/elements/1.1/language> "english" ;
-                           <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> ;
-                           <http://purl.org/dc/elements/1.1/title> "SPEECH: Social media Published Entities Exploitable aCross cHannels" ;
-                           <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                           <http://purl.org/dc/terms/modified> "2023-08-14"^^xsd:date ;
-                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "speech" ;
-                           <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/speech#> .
+<https://w3id.org/podio> rdf:type owl:Ontology ;
+                          owl:versionIRI <https://w3id.org/podio/v1.0> ;
+                          owl:imports <http://rdfs.org/sioc/ns#> ;
+                          <http://purl.org/dc/elements/1.1/contributor> "Ana Iglesias-Molina" ,
+                                                                        "Carlos Badenes-Olmedo" ,
+                                                                        "Oscar Corcho" ;
+                          <http://purl.org/dc/elements/1.1/creator> "Ibai Guillen-Pacho" ;
+                          <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political discourse across channels and content." ;
+                          <http://purl.org/dc/elements/1.1/language> "english" ;
+                          <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> ;
+                          <http://purl.org/dc/elements/1.1/title> "PODIO: POlitical DIscourse Ontology" ;
+                          <http://purl.org/dc/terms/abstract> "This research addresses the need for the systematic organization and integration of political discourse, regardless of the communication channels employed, whether rooted in social platforms or dissemination channels. The aim is to facilitate nuanced and advanced analyses that consider specific aspects of the political domain, including the persuasive nature of discourse, the ideological basis of the messages, the targeted audience (wether groups or comcommunities), and the temporal context of communication. The resulting ontology, named PODIO (POlitical DIscourse Ontology), offers a structured framework to enhance the understanding of political debate." ;
+                          <http://purl.org/dc/terms/created> "2023-11-27" ;
+                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                          <http://purl.org/dc/terms/modified> "2023-11-29" ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "podio" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/podio#> ;
+                          owl:versionInfo "v1.0" .
 
 #################################################################
 #    Annotation properties
@@ -119,7 +121,8 @@
 
 
 ###  http://purl.org/dc/terms/audience
-<http://purl.org/dc/terms/audience> rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/audience> rdf:type owl:AnnotationProperty ;
+                                    rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
 
 
 ###  http://purl.org/dc/terms/available
@@ -160,8 +163,7 @@
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> ,
-                                                      <http://purl.org/dc/terms/contributor> .
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
 
 
 ###  http://purl.org/dc/terms/date
@@ -194,12 +196,7 @@
 
 
 ###  http://purl.org/dc/terms/educationLevel
-<http://purl.org/dc/terms/educationLevel> rdf:type owl:AnnotationProperty ;
-                                          <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/AgentClass> ;
-                                          <http://purl.org/dc/terms/issued> "2002-07-13"^^xsd:date ;
-                                          rdfs:comment "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended."@en ;
-                                          rdfs:label "Audience Education Level"@en ;
-                                          rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+<http://purl.org/dc/terms/educationLevel> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/extent
@@ -291,8 +288,7 @@
 
 
 ###  http://purl.org/dc/terms/mediator
-<http://purl.org/dc/terms/mediator> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+<http://purl.org/dc/terms/mediator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/medium
@@ -311,7 +307,6 @@
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty ;
-                                     <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Agent> ;
                                      <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
                                      rdfs:comment "An entity responsible for making the resource available."@en ;
                                      rdfs:label "Publisher"@en ;
@@ -404,20 +399,8 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#definition
-<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#example
-<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2004/02/skos/core#note
 <http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -432,13 +415,622 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://purl.org/dc/dcam/memberOf
-<http://purl.org/dc/dcam/memberOf> rdf:type owl:ObjectProperty ;
-                                   rdfs:range <http://purl.org/dc/dcam/VocabularyEncodingScheme> ;
-                                   <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
-                                   rdfs:comment "A relationship between a resource and a vocabulary encoding scheme which indicates that the resource is a member of a set."@en ;
-                                   rdfs:label "Member Of"@en ;
-                                   rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/2007/06/04/abstract-model/> .
+###  http://lkg.lynx-project.eu/def/metadata
+<http://lkg.lynx-project.eu/def/metadata> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://lkg.lynx-project.eu/def/LynxDocument> ;
+                                          rdfs:range <http://lkg.lynx-project.eu/def/Metadata> ;
+                                          rdfs:isDefinedBy <http://lkg.lynx-project.eu/def/> ;
+                                          rdfs:label "metadata" .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/audience
+<http://purl.org/dc/terms/audience> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> .
+
+
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> owl:inverseOf <http://purl.org/dc/terms/isPartOf> .
+
+
+###  http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:ObjectProperty .
+
+
+###  http://rdfs.org/sioc/ns#about
+<http://rdfs.org/sioc/ns#about> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                rdfs:comment "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "about"@en .
+
+
+###  http://rdfs.org/sioc/ns#account_of
+<http://rdfs.org/sioc/ns#account_of> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <http://xmlns.com/foaf/0.1/account> ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                     rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                     rdfs:comment "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "account of"@en .
+
+
+###  http://rdfs.org/sioc/ns#addressed_to
+<http://rdfs.org/sioc/ns#addressed_to> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:comment "Refers to who (e.g. a UserAccount, e-mail address, etc.) a particular Item is addressed to."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "addressed to"@en .
+
+
+###  http://rdfs.org/sioc/ns#administrator_of
+<http://rdfs.org/sioc/ns#administrator_of> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                           rdfs:range <http://rdfs.org/sioc/ns#Site> ;
+                                           rdfs:comment "A Site that the UserAccount is an administrator of."@en ;
+                                           rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                           rdfs:label "administrator of"@en .
+
+
+###  http://rdfs.org/sioc/ns#attachment
+<http://rdfs.org/sioc/ns#attachment> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                     rdfs:comment "The URI of a file attached to an Item."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "attachment"@en .
+
+
+###  http://rdfs.org/sioc/ns#avatar
+<http://rdfs.org/sioc/ns#avatar> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/depiction> ;
+                                 rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                 rdfs:comment "An image or depiction used to represent this UserAccount."@en ;
+                                 rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                 rdfs:label "avatar"@en .
+
+
+###  http://rdfs.org/sioc/ns#container_of
+<http://rdfs.org/sioc/ns#container_of> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/terms/hasPart> ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:comment "An Item that this Container contains."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "container of"@en .
+
+
+###  http://rdfs.org/sioc/ns#creator_of
+<http://rdfs.org/sioc/ns#creator_of> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <http://rdfs.org/sioc/ns#has_creator> ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                     rdfs:comment "A resource that the UserAccount is a creator of."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "creator of"@en .
+
+
+###  http://rdfs.org/sioc/ns#delivered_at
+<http://rdfs.org/sioc/ns#delivered_at> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Item> .
+
+
+###  http://rdfs.org/sioc/ns#discussion_of
+<http://rdfs.org/sioc/ns#discussion_of> rdf:type owl:ObjectProperty ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                        rdfs:comment "The Item that this discussion is about."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "discussion of"@en .
+
+
+###  http://rdfs.org/sioc/ns#earlier_version
+<http://rdfs.org/sioc/ns#earlier_version> rdf:type owl:ObjectProperty ,
+                                                   owl:TransitiveProperty ;
+                                          rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                          rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                          rdfs:comment "Links to a previous (older) revision of this Item or Post."@en ;
+                                          rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                          rdfs:label "earlier version"@en .
+
+
+###  http://rdfs.org/sioc/ns#email
+<http://rdfs.org/sioc/ns#email> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                rdfs:comment "An electronic mail address of the UserAccount."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "email"@en .
+
+
+###  http://rdfs.org/sioc/ns#embeds_knowledge
+<http://rdfs.org/sioc/ns#embeds_knowledge> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                           rdfs:range <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+                                           rdfs:comment "This links Items to embedded statements, facts and structured content."@en ;
+                                           rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                           rdfs:label "embeds knowledge"@en .
+
+
+###  http://rdfs.org/sioc/ns#feed
+<http://rdfs.org/sioc/ns#feed> rdf:type owl:ObjectProperty ;
+                               rdfs:comment "A feed (e.g. RSS, Atom, etc.) pertaining to this resource (e.g. for a Forum, Site, UserAccount, etc.)."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "feed"@en .
+
+
+###  http://rdfs.org/sioc/ns#follows
+<http://rdfs.org/sioc/ns#follows> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                  rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                  rdfs:comment "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates)."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "follows"@en .
+
+
+###  http://rdfs.org/sioc/ns#function_of
+<http://rdfs.org/sioc/ns#function_of> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://rdfs.org/sioc/ns#Role> ;
+                                      rdfs:comment "A UserAccount that has this Role."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "function of"@en .
+
+
+###  http://rdfs.org/sioc/ns#generator
+<http://rdfs.org/sioc/ns#generator> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                    rdfs:comment "A URI for the application used to generate this Item."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "generator"@en .
+
+
+###  http://rdfs.org/sioc/ns#group_of
+<http://rdfs.org/sioc/ns#group_of> rdf:type owl:ObjectProperty ;
+                                   rdfs:label "group of"@en ;
+                                   owl:deprecated "true"^^xsd:boolean ;
+                                   owl:versionInfo "This property has been renamed. Use sioc:usergroup_of instead." .
+
+
+###  http://rdfs.org/sioc/ns#has_administrator
+<http://rdfs.org/sioc/ns#has_administrator> rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf <http://rdfs.org/sioc/ns#administrator_of> ;
+                                            rdfs:domain <http://rdfs.org/sioc/ns#Site> ;
+                                            rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                            rdfs:comment "A UserAccount that is an administrator of this Site."@en ;
+                                            rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                            rdfs:label "has administrator"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_container
+<http://rdfs.org/sioc/ns#has_container> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/partOf> ;
+                                        owl:inverseOf <http://rdfs.org/sioc/ns#container_of> ;
+                                        rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#Container> ;
+                                        rdfs:comment "The Container to which this Item belongs."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "has container"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_creator
+<http://rdfs.org/sioc/ns#has_creator> rdf:type owl:ObjectProperty ;
+                                      rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                      rdfs:comment "This is the UserAccount that made this resource."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "has creator"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_discussion
+<http://rdfs.org/sioc/ns#has_discussion> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://rdfs.org/sioc/ns#discussion_of> ;
+                                         rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                         rdfs:comment "A discussion that is related to this Item. The discussion can be anything, for example, a sioc:Forum or sioc:Thread, a sioct:WikiArticle or simply a foaf:Document."@en ;
+                                         rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                         rdfs:label "has discussion"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_function
+<http://rdfs.org/sioc/ns#has_function> rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf <http://rdfs.org/sioc/ns#function_of> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Role> ;
+                                       rdfs:comment "A Role that this UserAccount has."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "has function"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_group
+<http://rdfs.org/sioc/ns#has_group> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <http://rdfs.org/sioc/ns#group_of> ;
+                                    rdfs:label "has group"@en ;
+                                    owl:deprecated "true"^^xsd:boolean ;
+                                    owl:versionInfo "This property has been renamed. Use sioc:has_usergroup instead." .
+
+
+###  http://rdfs.org/sioc/ns#has_host
+<http://rdfs.org/sioc/ns#has_host> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://rdfs.org/sioc/ns#has_space> ;
+                                   owl:inverseOf <http://rdfs.org/sioc/ns#host_of> ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                   rdfs:range <http://rdfs.org/sioc/ns#Site> ;
+                                   rdfs:comment "The Site that hosts this Container."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "has host"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_member
+<http://rdfs.org/sioc/ns#has_member> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <http://rdfs.org/sioc/ns#member_of> ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#Usergroup> ;
+                                     rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                     rdfs:comment "A UserAccount that is a member of this Usergroup."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "has member"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_moderator
+<http://rdfs.org/sioc/ns#has_moderator> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://rdfs.org/sioc/ns#Forum> ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                        rdfs:comment "A UserAccount that is a moderator of this Forum."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "has moderator"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_modifier
+<http://rdfs.org/sioc/ns#has_modifier> rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf <http://rdfs.org/sioc/ns#modifier_of> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                       rdfs:comment "A UserAccount that modified this resource (e.g. Item, Container, Space)."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "has modifier"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_owner
+<http://rdfs.org/sioc/ns#has_owner> rdf:type owl:ObjectProperty ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                    rdfs:comment "A UserAccount that this resource is owned by."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "has owner"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_parent
+<http://rdfs.org/sioc/ns#has_parent> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/terms/partOf> ;
+                                     owl:inverseOf <http://rdfs.org/sioc/ns#parent_of> ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                     rdfs:range <http://rdfs.org/sioc/ns#Container> ;
+                                     rdfs:comment "A Container or Forum that this Container or Forum is a child of."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "has parent"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_part
+<http://rdfs.org/sioc/ns#has_part> rdf:type owl:ObjectProperty ;
+                                   rdfs:comment "An resource that is a part of this subject."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "has part"@en ;
+                                   owl:deprecated "true"^^xsd:boolean ;
+                                   owl:versionInfo "This property is deprecated. Use dcterms:hasPart from the Dublin Core ontology instead." .
+
+
+###  http://rdfs.org/sioc/ns#has_reply
+<http://rdfs.org/sioc/ns#has_reply> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://rdfs.org/sioc/ns#related_to> ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                    rdfs:comment "Points to an Item or Post that is a reply or response to this Item or Post."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "has reply"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_scope
+<http://rdfs.org/sioc/ns#has_scope> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Role> ;
+                                    rdfs:comment "A resource that this Role applies to."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "has scope"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_space
+<http://rdfs.org/sioc/ns#has_space> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/partOf> ;
+                                    owl:inverseOf <http://rdfs.org/sioc/ns#space_of> ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#Space> ;
+                                    rdfs:comment "A data Space which this resource is a part of."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "has space"@en .
+
+
+###  http://rdfs.org/sioc/ns#has_subscriber
+<http://rdfs.org/sioc/ns#has_subscriber> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://rdfs.org/sioc/ns#subscriber_of> ;
+                                         rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                         rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                         rdfs:comment "A UserAccount that is subscribed to this Container."@en ;
+                                         rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                         rdfs:label "has subscriber"@en ;
+                                         rdfs:seeAlso <http://rdfs.org/sioc/ns#feed> .
+
+
+###  http://rdfs.org/sioc/ns#has_usergroup
+<http://rdfs.org/sioc/ns#has_usergroup> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://rdfs.org/sioc/ns#usergroup_of> ;
+                                        rdfs:domain <http://rdfs.org/sioc/ns#Space> ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#Usergroup> ;
+                                        rdfs:comment "Points to a Usergroup that has certain access to this Space."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "has usergroup"@en .
+
+
+###  http://rdfs.org/sioc/ns#host_of
+<http://rdfs.org/sioc/ns#host_of> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <http://rdfs.org/sioc/ns#space_of> ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#Site> ;
+                                  rdfs:range <http://rdfs.org/sioc/ns#Container> ;
+                                  rdfs:comment "A Container that is hosted on this Site."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "host of"@en .
+
+
+###  http://rdfs.org/sioc/ns#later_version
+<http://rdfs.org/sioc/ns#later_version> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://rdfs.org/sioc/ns#earlier_version> ;
+                                        rdf:type owl:TransitiveProperty ;
+                                        rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                        rdfs:comment "Links to a later (newer) revision of this Item or Post."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "later version"@en .
+
+
+###  http://rdfs.org/sioc/ns#latest_version
+<http://rdfs.org/sioc/ns#latest_version> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                         rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                         rdfs:comment "Links to the latest revision of this Item or Post."@en ;
+                                         rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                         rdfs:label "latest version"@en .
+
+
+###  http://rdfs.org/sioc/ns#likes
+<http://rdfs.org/sioc/ns#likes> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "Used to indicate some form of endorsement by a UserAccount or Agent of an Item, Container, Space, UserAccount, etc."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "likes"@en .
+
+
+###  http://rdfs.org/sioc/ns#link
+<http://rdfs.org/sioc/ns#link> rdf:type owl:ObjectProperty ;
+                               rdfs:comment "A URI of a document which contains this SIOC object."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "link"@en .
+
+
+###  http://rdfs.org/sioc/ns#links_to
+<http://rdfs.org/sioc/ns#links_to> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/references> .
+
+
+###  http://rdfs.org/sioc/ns#member_of
+<http://rdfs.org/sioc/ns#member_of> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#Usergroup> ;
+                                    rdfs:comment "A Usergroup that this UserAccount is a member of."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "member of"@en .
+
+
+###  http://rdfs.org/sioc/ns#mentions
+<http://rdfs.org/sioc/ns#mentions> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                   rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                   rdfs:comment "Refers to a UserAccount that a particular Item mentions."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "mentions"@en .
+
+
+###  http://rdfs.org/sioc/ns#moderator_of
+<http://rdfs.org/sioc/ns#moderator_of> rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf <http://rdfs.org/sioc/ns#has_moderator> ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Forum> ;
+                                       rdfs:comment "A Forum that a UserAccount is a moderator of."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "moderator of"@en .
+
+
+###  http://rdfs.org/sioc/ns#modifier_of
+<http://rdfs.org/sioc/ns#modifier_of> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                      rdfs:comment "A resource that this UserAccount has modified."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "modifier of"@en .
+
+
+###  http://rdfs.org/sioc/ns#next_by_date
+<http://rdfs.org/sioc/ns#next_by_date> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:comment "Next Item or Post in a given Container sorted by date."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "next by date"@en .
+
+
+###  http://rdfs.org/sioc/ns#next_version
+<http://rdfs.org/sioc/ns#next_version> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://rdfs.org/sioc/ns#later_version> ;
+                                       owl:inverseOf <http://rdfs.org/sioc/ns#previous_version> ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                       rdfs:comment "Links to the next revision of this Item or Post."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "next version"@en .
+
+
+###  http://rdfs.org/sioc/ns#owner_of
+<http://rdfs.org/sioc/ns#owner_of> rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf <http://rdfs.org/sioc/ns#has_owner> ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                   rdfs:comment "A resource owned by a particular UserAccount, for example, a weblog or image gallery."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "owner of"@en .
+
+
+###  http://rdfs.org/sioc/ns#parent_of
+<http://rdfs.org/sioc/ns#parent_of> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/hasPart> ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#Container> ;
+                                    rdfs:comment "A child Container or Forum that this Container or Forum is a parent of."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "parent of"@en .
+
+
+###  http://rdfs.org/sioc/ns#part_of
+<http://rdfs.org/sioc/ns#part_of> rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf <http://rdfs.org/sioc/ns#has_part> ;
+                                  rdfs:comment "A resource that the subject is a part of."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "part of"@en ;
+                                  owl:deprecated "true"^^xsd:boolean ;
+                                  owl:versionInfo "This property is deprecated. Use dcterms:isPartOf from the Dublin Core ontology instead." .
+
+
+###  http://rdfs.org/sioc/ns#previous_by_date
+<http://rdfs.org/sioc/ns#previous_by_date> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <http://rdfs.org/sioc/ns#next_by_date> ;
+                                           rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                           rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                           rdfs:comment "Previous Item or Post in a given Container sorted by date."@en ;
+                                           rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                           rdfs:label "previous by date"@en .
+
+
+###  http://rdfs.org/sioc/ns#previous_version
+<http://rdfs.org/sioc/ns#previous_version> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://rdfs.org/sioc/ns#earlier_version> ;
+                                           rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                           rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                           rdfs:comment "Links to the previous revision of this Item or Post."@en ;
+                                           rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                           rdfs:label "previous version"@en .
+
+
+###  http://rdfs.org/sioc/ns#read_at
+<http://rdfs.org/sioc/ns#read_at> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#Item> .
+
+
+###  http://rdfs.org/sioc/ns#reference
+<http://rdfs.org/sioc/ns#reference> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                    rdfs:comment "Links either created explicitly or extracted implicitly on the HTML level from the Post."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "reference"@en ;
+                                    owl:deprecated "true"^^xsd:boolean ;
+                                    owl:versionInfo "Renamed to sioc:links_to." .
+
+
+###  http://rdfs.org/sioc/ns#related_to
+<http://rdfs.org/sioc/ns#related_to> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "Related resources for this resource, e.g. for Posts, perhaps determined implicitly from topics or references."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "related to"@en .
+
+
+###  http://rdfs.org/sioc/ns#reply_of
+<http://rdfs.org/sioc/ns#reply_of> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://rdfs.org/sioc/ns#related_to> ;
+                                   owl:inverseOf <http://rdfs.org/sioc/ns#has_reply> ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                   rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                   rdfs:comment "Links to an Item or Post which this Item or Post is a reply to."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "reply of"@en .
+
+
+###  http://rdfs.org/sioc/ns#respond_to
+<http://rdfs.org/sioc/ns#respond_to> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                     rdfs:comment "For the reply-to address set in email messages, IMs, etc. The property name was chosen to avoid confusion with has_reply/reply_of (the reply graph)."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "respond to"@en .
+
+
+###  http://rdfs.org/sioc/ns#scope_of
+<http://rdfs.org/sioc/ns#scope_of> rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf <http://rdfs.org/sioc/ns#has_scope> ;
+                                   rdfs:range <http://rdfs.org/sioc/ns#Role> ;
+                                   rdfs:comment "A Role that has a scope of this resource."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "scope of"@en .
+
+
+###  http://rdfs.org/sioc/ns#shared_by
+<http://rdfs.org/sioc/ns#shared_by> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                    rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                    rdfs:comment "For shared Items where there is a certain creator_of and an intermediary who shares or forwards it (e.g. as a sibling Item)."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "shared by"@en ;
+                                    rdfs:seeAlso <http://rdfs.org/sioc/ns#sibling> .
+
+
+###  http://rdfs.org/sioc/ns#sibling
+<http://rdfs.org/sioc/ns#sibling> rdf:type owl:ObjectProperty ,
+                                           owl:SymmetricProperty ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                  rdfs:range <http://rdfs.org/sioc/ns#Item> ;
+                                  rdfs:comment "An Item may have a sibling or a twin that exists in a different Container, but the siblings may differ in some small way (for example, language, category, etc.). The sibling of this Item should be self-describing (that is, it should contain all available information)."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "sibling"@en .
+
+
+###  http://rdfs.org/sioc/ns#space_of
+<http://rdfs.org/sioc/ns#space_of> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/hasPart> ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#Space> ;
+                                   rdfs:comment "A resource which belongs to this data Space."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "space of"@en .
+
+
+###  http://rdfs.org/sioc/ns#subscriber_of
+<http://rdfs.org/sioc/ns#subscriber_of> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                        rdfs:range <http://rdfs.org/sioc/ns#Container> ;
+                                        rdfs:comment "A Container that a UserAccount is subscribed to."@en ;
+                                        rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                        rdfs:label "subscriber of"@en ;
+                                        rdfs:seeAlso <http://rdfs.org/sioc/ns#feed> .
+
+
+###  http://rdfs.org/sioc/ns#topic
+<http://rdfs.org/sioc/ns#topic> rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://purl.org/dc/terms/subject> ;
+                                rdfs:comment "A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "topic"@en .
+
+
+###  http://rdfs.org/sioc/ns#usergroup_of
+<http://rdfs.org/sioc/ns#usergroup_of> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://rdfs.org/sioc/ns#Usergroup> ;
+                                       rdfs:range <http://rdfs.org/sioc/ns#Space> ;
+                                       rdfs:comment "A Space that the Usergroup has access to."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "usergroup of"@en .
 
 
 ###  http://schema.org/interactionStatistic
@@ -451,124 +1043,70 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:isDefinedBy <http://schema.org/> .
 
 
-###  http://schema.org/text
-<http://schema.org/text> rdf:type owl:ObjectProperty ;
-                         rdfs:isDefinedBy <http://schema.org/> .
+###  http://w3id.org/podio#hasTarget
+<http://w3id.org/podio#hasTarget> rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf <http://w3id.org/podio#targetOf> ;
+                                  rdfs:domain <http://w3id.org/podio#Discourse> ;
+                                  rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                  rdfs:comment "Target of the discourse." ;
+                                  rdfs:label "has target" .
 
 
-###  http://w3id.org/speech#hasIdeology
-:hasIdeology rdf:type owl:ObjectProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Speech
-                                         :TwitterUser
-                                         <http://xmlns.com/foaf/0.1/Agent>
-                                       )
-                         ] ;
-             rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                 owl:hasValue <https://skos.um.es/unescothes/>
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
-                        ] ;
-             rdfs:comment "The ideology an Agent or a Speech has." ;
-             rdfs:label "has ideology" .
+###  http://w3id.org/podio#proposedAsCandidateBy
+<http://w3id.org/podio#proposedAsCandidateBy> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <http://w3id.org/podio#proposesCandidate> ;
+                                              rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                                              rdfs:range <http://w3id.org/podio#PartyManifesto> ;
+                                              rdfs:comment "The political manifesto that presents this agent as candidate to the elections." ;
+                                              rdfs:label "proposed as candidate by" .
 
 
-###  http://w3id.org/speech#hasOfficialHashtag
-:hasOfficialHashtag rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :officialhashtagOf ;
-                    rdfs:domain :PoliticalPartyManifesto ;
-                    rdfs:range :Hashtag ;
-                    rdfs:comment "Official hashtag of the electoral campaign." ;
-                    rdfs:label "has official hashtag" .
+###  http://w3id.org/podio#proposesCandidate
+<http://w3id.org/podio#proposesCandidate> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://w3id.org/podio#PartyManifesto> ;
+                                          rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                          rdfs:comment "The political candidate presented by the political party in its manifesto for the electoral campaign." ;
+                                          rdfs:label "proposes candidate" .
 
 
-###  http://w3id.org/speech#hasPoliticalCategory
-:hasPoliticalCategory rdf:type owl:ObjectProperty ;
-                      owl:inverseOf :politicalCategoryOf ;
-                      rdfs:domain :PoliticalProposal ;
-                      rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                      rdfs:comment "The category to which a political proposal belongs." ;
-                      rdfs:label "has political category" .
+###  http://w3id.org/podio#repost
+<http://w3id.org/podio#repost> rdf:type owl:ObjectProperty ;
+                               owl:inverseOf <http://w3id.org/podio#repostedBy> ;
+                               rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                               rdfs:range <http://rdfs.org/sioc/ns#Post> ;
+                               rdfs:comment "This account has reposted this post. A kind of sharing action." ;
+                               rdfs:label "repost" .
 
 
-###  http://w3id.org/speech#ideologyOf
-:ideologyOf rdf:type owl:ObjectProperty ;
-            rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-            rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :Speech
-                                       :TwitterUser
-                                       <http://xmlns.com/foaf/0.1/Agent>
-                                     )
-                       ] ;
-            rdfs:comment "The elements that have this ideology. They can be both Agent-s and Speech-es." ;
-            rdfs:label "ideology of" .
+###  http://w3id.org/podio#repostedBy
+<http://w3id.org/podio#repostedBy> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                   rdfs:range <http://rdfs.org/sioc/ns#UserAccount> ;
+                                   rdfs:comment "The  account that reposted this post." ;
+                                   rdfs:label "is reposted by" .
 
 
-###  http://w3id.org/speech#officialhashtagOf
-:officialhashtagOf rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Hashtag ;
-                   rdfs:range :PoliticalPartyManifesto ;
-                   rdfs:comment "The political manifesto that officially proposes the hashtag for the electoral campaign." ;
-                   rdfs:label "official hashtag of" .
+###  http://w3id.org/podio#targetOf
+<http://w3id.org/podio#targetOf> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                                 rdfs:range <http://w3id.org/podio#Discourse> ;
+                                 rdfs:comment "Discourse of which the agent is the target." ;
+                                 rdfs:label "taget of" .
 
 
-###  http://w3id.org/speech#politicalCategoryOf
-:politicalCategoryOf rdf:type owl:ObjectProperty ;
-                     rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-                     rdfs:range :PoliticalProposal ;
-                     rdfs:comment "Political proposals that address this issue." ;
-                     rdfs:label "political category of" .
-
-
-###  http://w3id.org/speech#proposedAsPoliticalCandidateBy
-:proposedAsPoliticalCandidateBy rdf:type owl:ObjectProperty ;
-                                owl:inverseOf :proposesPoliticalCandidate ;
-                                rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
-                                rdfs:range :PoliticalPartyManifesto ;
-                                rdfs:comment "The political manifesto that presents this agent as candidate to the elections." ;
-                                rdfs:label "proposed as political candidate by" .
-
-
-###  http://w3id.org/speech#proposesPoliticalCandidate
-:proposesPoliticalCandidate rdf:type owl:ObjectProperty ;
-                            rdfs:domain :PoliticalPartyManifesto ;
-                            rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
-                            rdfs:comment "The political candidate presented by the political party in its manifesto for the electoral campaign." ;
-                            rdfs:label "proposes political candidate" .
-
-
-###  http://w3id.org/speech#retweetedBy
-:retweetedBy rdf:type owl:ObjectProperty ;
-             owl:inverseOf :retweets ;
-             rdfs:domain :Tweet ;
-             rdfs:range :TwitterUser ;
-             rdfs:comment "The twitter account that retweeted this tweet." ;
-             rdfs:label "is retweeted by" .
-
-
-###  http://w3id.org/speech#retweets
-:retweets rdf:type owl:ObjectProperty ;
-          rdfs:domain :TwitterUser ;
-          rdfs:range :Tweet ;
-          rdfs:comment "This account has retweeted this tweet. A kind of sharing action." ;
-          rdfs:label "retweets" .
-
-
-###  http://www.w3.org/2004/02/skos/core#inScheme
-<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
-                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "is in scheme"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept may be a member of more than one concept scheme."@en .
+###  http://xmlns.com/foaf/0.1/account
+<http://xmlns.com/foaf/0.1/account> rdf:type owl:ObjectProperty ;
+                                    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
 
 
 ###  http://xmlns.com/foaf/0.1/accountServiceHomepage
 <http://xmlns.com/foaf/0.1/accountServiceHomepage> rdf:type owl:ObjectProperty ;
                                                    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
 
 
 ###  http://xmlns.com/foaf/0.1/holdsAccount
@@ -580,19 +1118,263 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://schema.org/address
-<http://schema.org/address> rdf:type owl:DatatypeProperty ;
-                            rdfs:isDefinedBy <http://schema.org/> .
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty .
 
 
-###  http://schema.org/areaServed
-<http://schema.org/areaServed> rdf:type owl:DatatypeProperty ;
-                               rdfs:isDefinedBy <http://schema.org/> .
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty .
 
 
-###  http://schema.org/image
-<http://schema.org/image> rdf:type owl:DatatypeProperty ;
-                          rdfs:isDefinedBy <http://schema.org/> .
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:DatatypeProperty .
+
+
+###  http://rdfs.org/sioc/ns#content
+<http://rdfs.org/sioc/ns#content> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#Item> ;
+                                  rdfs:range rdfs:Literal ;
+                                  rdfs:comment "The content of the Item in plain text format."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "content"@en .
+
+
+###  http://rdfs.org/sioc/ns#content_encoded
+<http://rdfs.org/sioc/ns#content_encoded> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                          rdfs:range rdfs:Literal ;
+                                          rdfs:comment "The encoded content of the Post, contained in CDATA areas."@en ;
+                                          rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                          rdfs:label "content encoded"@en ;
+                                          owl:deprecated "true"^^xsd:boolean ;
+                                          owl:versionInfo "This property is deprecated. Use content:encoded from the RSS 1.0 content module instead." .
+
+
+###  http://rdfs.org/sioc/ns#created_at
+<http://rdfs.org/sioc/ns#created_at> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                     rdfs:range rdfs:Literal ;
+                                     rdfs:comment "When this was created, in ISO 8601 format."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "created at"@en ;
+                                     owl:deprecated "true"^^xsd:boolean ;
+                                     owl:versionInfo "This property is deprecated. Use dcterms:created from the Dublin Core ontology instead." .
+
+
+###  http://rdfs.org/sioc/ns#delivered_at
+<http://rdfs.org/sioc/ns#delivered_at> rdf:type owl:DatatypeProperty ;
+                                       rdfs:range rdfs:Literal .
+
+
+###  http://rdfs.org/sioc/ns#description
+<http://rdfs.org/sioc/ns#description> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                      rdfs:range rdfs:Literal ;
+                                      rdfs:comment "The content of the Post."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "description"@en ;
+                                      owl:deprecated "true"^^xsd:boolean ;
+                                      owl:versionInfo "This property is deprecated. Use sioc:content or other methods (AtomOwl, content:encoded from RSS 1.0, etc.) instead." .
+
+
+###  http://rdfs.org/sioc/ns#email_sha1
+<http://rdfs.org/sioc/ns#email_sha1> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                     rdfs:range rdfs:Literal ;
+                                     rdfs:comment "An electronic mail address of the UserAccount, encoded using SHA1."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "email sha1"@en .
+
+
+###  http://rdfs.org/sioc/ns#first_name
+<http://rdfs.org/sioc/ns#first_name> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                     rdfs:range rdfs:Literal ;
+                                     rdfs:comment "First (real) name of this User. Synonyms include given name or christian name."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "first name"@en ;
+                                     owl:deprecated "true"^^xsd:boolean ;
+                                     owl:versionInfo "This property is deprecated. Use foaf:name or foaf:firstName from the FOAF vocabulary instead." .
+
+
+###  http://rdfs.org/sioc/ns#id
+<http://rdfs.org/sioc/ns#id> rdf:type owl:DatatypeProperty ;
+                             rdfs:range rdfs:Literal ;
+                             rdfs:comment "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site."@en ;
+                             rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                             rdfs:label "id"@en .
+
+
+###  http://rdfs.org/sioc/ns#ip_address
+<http://rdfs.org/sioc/ns#ip_address> rdf:type owl:DatatypeProperty ;
+                                     rdfs:range rdfs:Literal ;
+                                     rdfs:comment "The IP address used when creating this Item, UserAccount, etc. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent."@en ;
+                                     rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                     rdfs:label "ip address"@en .
+
+
+###  http://rdfs.org/sioc/ns#last_activity_date
+<http://rdfs.org/sioc/ns#last_activity_date> rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                             rdfs:range rdfs:Literal ;
+                                             rdfs:comment "The date and time of the last activity associated with a SIOC concept instance, and expressed in ISO 8601 format. This could be due to a reply Post or Comment, a modification to an Item, etc."@en ;
+                                             rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                             rdfs:label "last activity date"@en .
+
+
+###  http://rdfs.org/sioc/ns#last_item_date
+<http://rdfs.org/sioc/ns#last_item_date> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                         rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                         rdfs:range rdfs:Literal ;
+                                         rdfs:comment "The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format."@en ;
+                                         rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                         rdfs:label "last item date"@en .
+
+
+###  http://rdfs.org/sioc/ns#last_name
+<http://rdfs.org/sioc/ns#last_name> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#UserAccount> ;
+                                    rdfs:range rdfs:Literal ;
+                                    rdfs:comment "Last (real) name of this user. Synonyms include surname or family name."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "last name"@en ;
+                                    owl:deprecated "true"^^xsd:boolean ;
+                                    owl:versionInfo "This property is deprecated. Use foaf:name or foaf:surname from the FOAF vocabulary instead." .
+
+
+###  http://rdfs.org/sioc/ns#last_reply_date
+<http://rdfs.org/sioc/ns#last_reply_date> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+                                          rdfs:range rdfs:Literal ;
+                                          rdfs:comment "The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format."@en ;
+                                          rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                          rdfs:label "last reply date"@en .
+
+
+###  http://rdfs.org/sioc/ns#links_to
+<http://rdfs.org/sioc/ns#links_to> rdf:type owl:DatatypeProperty .
+
+
+###  http://rdfs.org/sioc/ns#modified_at
+<http://rdfs.org/sioc/ns#modified_at> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                      rdfs:range rdfs:Literal ;
+                                      rdfs:comment "When this was modified, in ISO 8601 format."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "modified at"@en ;
+                                      owl:deprecated "true"^^xsd:boolean ;
+                                      owl:versionInfo "This property is deprecated. Use dcterms:modified from the Dublin Core ontology instead." .
+
+
+###  http://rdfs.org/sioc/ns#name
+<http://rdfs.org/sioc/ns#name> rdf:type owl:DatatypeProperty ;
+                               rdfs:range rdfs:Literal ;
+                               rdfs:comment "The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "name"@en .
+
+
+###  http://rdfs.org/sioc/ns#note
+<http://rdfs.org/sioc/ns#note> rdf:type owl:DatatypeProperty ;
+                               rdfs:range rdfs:Literal ;
+                               rdfs:comment "A note associated with this resource, for example, if it has been edited by a UserAccount."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "note"@en .
+
+
+###  http://rdfs.org/sioc/ns#num_authors
+<http://rdfs.org/sioc/ns#num_authors> rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:nonNegativeInteger ;
+                                      rdfs:comment "The number of unique authors (UserAccounts and unregistered posters) who have contributed to this Item, Thread, Post, etc."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "num authors"@en .
+
+
+###  http://rdfs.org/sioc/ns#num_items
+<http://rdfs.org/sioc/ns#num_items> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://rdfs.org/sioc/ns#Container> ;
+                                    rdfs:range xsd:nonNegativeInteger ;
+                                    rdfs:comment "The number of Posts (or Items) in a Forum (or a Container)."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "num items"@en .
+
+
+###  http://rdfs.org/sioc/ns#num_replies
+<http://rdfs.org/sioc/ns#num_replies> rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:nonNegativeInteger ;
+                                      rdfs:comment "The number of replies that this Item, Thread, Post, etc. has. Useful for when the reply structure is absent."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "num replies"@en .
+
+
+###  http://rdfs.org/sioc/ns#num_threads
+<http://rdfs.org/sioc/ns#num_threads> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://rdfs.org/sioc/ns#Forum> ;
+                                      rdfs:range xsd:nonNegativeInteger ;
+                                      rdfs:comment "The number of Threads (AKA discussion topics) in a Forum."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "num threads"@en .
+
+
+###  http://rdfs.org/sioc/ns#num_views
+<http://rdfs.org/sioc/ns#num_views> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:nonNegativeInteger ;
+                                    rdfs:comment "The number of times this Item, Thread, UserAccount profile, etc. has been viewed."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "num views"@en .
+
+
+###  http://rdfs.org/sioc/ns#read_at
+<http://rdfs.org/sioc/ns#read_at> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range rdfs:Literal .
+
+
+###  http://rdfs.org/sioc/ns#subject
+<http://rdfs.org/sioc/ns#subject> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                  rdfs:range rdfs:Literal ;
+                                  rdfs:comment "Keyword(s) describing subject of the Post."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "subject"@en ;
+                                  owl:deprecated "true"^^xsd:boolean ;
+                                  owl:versionInfo "This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead." .
+
+
+###  http://rdfs.org/sioc/ns#title
+<http://rdfs.org/sioc/ns#title> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://rdfs.org/sioc/ns#Post> ;
+                                rdfs:range rdfs:Literal ;
+                                rdfs:comment "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "title"@en ;
+                                owl:deprecated "true"^^xsd:boolean ;
+                                owl:versionInfo "This property is deprecated. Use dcterms:title from the Dublin Core ontology instead." .
+
+
+###  http://schema.org/text
+<http://schema.org/text> rdf:type owl:DatatypeProperty ;
+                         rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/url
@@ -605,43 +1387,39 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:isDefinedBy <http://schema.org/> .
 
 
-###  http://xmlns.com/foaf/0.1/accountName
-<http://xmlns.com/foaf/0.1/accountName> rdf:type owl:DatatypeProperty ;
-                                        rdfs:comment "Indicates the name (identifier) associated with this online account." ;
-                                        rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
-                                        rdfs:label "account name" .
-
-
-###  http://xmlns.com/foaf/0.1/phone
-<http://xmlns.com/foaf/0.1/phone> rdf:type owl:DatatypeProperty ;
-                                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+###  http://w3id.org/podio#ideology
+<http://w3id.org/podio#ideology> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain [ owl:intersectionOf ( <http://w3id.org/podio#Discourse>
+                                                                    <http://w3id.org/podio#PartyManifesto>
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "Ideology to which the text is related" ;
+                                 rdfs:label "ideology" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.org/dc/dcam/VocabularyEncodingScheme
-<http://purl.org/dc/dcam/VocabularyEncodingScheme> rdf:type owl:Class ;
-                                                   <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
-                                                   rdfs:comment "An enumerated set of resources."@en ;
-                                                   rdfs:label "Vocabulary Encoding Scheme"@en ;
-                                                   rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/2007/06/04/abstract-model/> .
+###  http://lkg.lynx-project.eu/def/Legislation
+<http://lkg.lynx-project.eu/def/Legislation> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://lkg.lynx-project.eu/def/LynxDocument> ;
+                                             rdfs:isDefinedBy <http://lkg.lynx-project.eu/def/> ;
+                                             rdfs:label "Legislation" .
 
 
-###  http://purl.org/dc/terms/Agent
-<http://purl.org/dc/terms/Agent> rdf:type owl:Class ;
-                                 <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
-                                 rdfs:comment "A resource that acts or has the power to act."@en ;
-                                 rdfs:label "Agent"@en .
+###  http://lkg.lynx-project.eu/def/LynxDocument
+<http://lkg.lynx-project.eu/def/LynxDocument> rdf:type owl:Class ;
+                                              rdfs:isDefinedBy <http://lkg.lynx-project.eu/def/> ;
+                                              rdfs:label "Lynx Document" .
 
 
-###  http://purl.org/dc/terms/AgentClass
-<http://purl.org/dc/terms/AgentClass> rdf:type owl:Class ;
-                                      rdfs:subClassOf rdfs:Class ;
-                                      <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
-                                      rdfs:comment "A group of agents."@en ;
-                                      rdfs:label "Agent Class"@en .
+###  http://lkg.lynx-project.eu/def/Metadata
+<http://lkg.lynx-project.eu/def/Metadata> rdf:type owl:Class ;
+                                          rdfs:isDefinedBy <http://lkg.lynx-project.eu/def/> ;
+                                          rdfs:label "Metadata" .
 
 
 ###  http://purl.org/dc/terms/BibliographicResource
@@ -651,149 +1429,277 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:label "Bibliographic Resource"@en .
 
 
+###  http://purl.org/dc/terms/Policy
+<http://purl.org/dc/terms/Policy> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/> ;
+                                  rdfs:label "Policy" .
+
+
+###  http://rdfs.org/sioc/ns#Community
+<http://rdfs.org/sioc/ns#Community> rdf:type owl:Class ;
+                                    owl:disjointWith <http://rdfs.org/sioc/ns#Item> ,
+                                                     <http://rdfs.org/sioc/ns#Role> ,
+                                                     <http://rdfs.org/sioc/ns#UserAccount> ;
+                                    rdfs:comment "Community is a high-level concept that defines an online community and what it consists of."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "Community"@en .
+
+
 ###  http://rdfs.org/sioc/ns#Container
-<http://rdfs.org/sioc/ns#Container> rdf:type owl:Class .
+<http://rdfs.org/sioc/ns#Container> rdf:type owl:Class ;
+                                    owl:disjointWith <http://rdfs.org/sioc/ns#Item> ,
+                                                     <http://rdfs.org/sioc/ns#Role> ,
+                                                     <http://rdfs.org/sioc/ns#User> ,
+                                                     <http://rdfs.org/sioc/ns#UserAccount> ,
+                                                     <http://rdfs.org/sioc/ns#Usergroup> ;
+                                    rdfs:comment "An area in which content Items are contained."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "Container"@en .
+
+
+###  http://rdfs.org/sioc/ns#Forum
+<http://rdfs.org/sioc/ns#Forum> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://rdfs.org/sioc/ns#Container> ;
+                                rdfs:comment "A discussion area on which Posts or entries are made."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "Forum"@en .
+
+
+###  http://rdfs.org/sioc/ns#Item
+<http://rdfs.org/sioc/ns#Item> rdf:type owl:Class ;
+                               owl:disjointWith <http://rdfs.org/sioc/ns#Role> ,
+                                                <http://rdfs.org/sioc/ns#Space> ,
+                                                <http://rdfs.org/sioc/ns#User> ,
+                                                <http://rdfs.org/sioc/ns#UserAccount> ,
+                                                <http://rdfs.org/sioc/ns#Usergroup> ;
+                               rdfs:comment "An Item is something which can be in a Container."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "Item"@en .
 
 
 ###  http://rdfs.org/sioc/ns#Post
-<http://rdfs.org/sioc/ns#Post> rdf:type owl:Class .
+<http://rdfs.org/sioc/ns#Post> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://rdfs.org/sioc/ns#Item> ,
+                                               <http://xmlns.com/foaf/0.1/Document> ;
+                               rdfs:comment "An article or message that can be posted to a Forum."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "Post"@en .
+
+
+###  http://rdfs.org/sioc/ns#Role
+<http://rdfs.org/sioc/ns#Role> rdf:type owl:Class ;
+                               owl:disjointWith <http://rdfs.org/sioc/ns#Space> ,
+                                                <http://rdfs.org/sioc/ns#User> ,
+                                                <http://rdfs.org/sioc/ns#UserAccount> ,
+                                                <http://rdfs.org/sioc/ns#Usergroup> ;
+                               rdfs:comment "A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "Role"@en .
+
+
+###  http://rdfs.org/sioc/ns#Site
+<http://rdfs.org/sioc/ns#Site> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://rdfs.org/sioc/ns#Space> ;
+                               rdfs:comment "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "Site"@en .
+
+
+###  http://rdfs.org/sioc/ns#Space
+<http://rdfs.org/sioc/ns#Space> rdf:type owl:Class ;
+                                owl:disjointWith <http://rdfs.org/sioc/ns#User> ,
+                                                 <http://rdfs.org/sioc/ns#UserAccount> ,
+                                                 <http://rdfs.org/sioc/ns#Usergroup> ;
+                                rdfs:comment "A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc."@en ;
+                                rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                rdfs:label "Space"@en .
+
+
+###  http://rdfs.org/sioc/ns#Thread
+<http://rdfs.org/sioc/ns#Thread> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://rdfs.org/sioc/ns#Container> ;
+                                 rdfs:comment "A container for a series of threaded discussion Posts or Items."@en ;
+                                 rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                 rdfs:label "Thread"@en .
+
+
+###  http://rdfs.org/sioc/ns#User
+<http://rdfs.org/sioc/ns#User> owl:equivalentClass <http://rdfs.org/sioc/ns#UserAccount> ;
+                               rdfs:subClassOf <http://xmlns.com/foaf/0.1/OnlineAccount> ;
+                               owl:disjointWith <http://rdfs.org/sioc/ns#Usergroup> ;
+                               rdfs:comment "UserAccount is now preferred. This is a deprecated class for a User in an online community site."@en ;
+                               rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                               rdfs:label "User"@en ;
+                               owl:deprecated "true"^^xsd:boolean ;
+                               owl:versionInfo "This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead." .
 
 
 ###  http://rdfs.org/sioc/ns#UserAccount
-<http://rdfs.org/sioc/ns#UserAccount> rdf:type owl:Class .
+<http://rdfs.org/sioc/ns#UserAccount> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://xmlns.com/foaf/0.1/OnlineAccount> ;
+                                      owl:disjointWith <http://rdfs.org/sioc/ns#Usergroup> ;
+                                      rdfs:comment "A user account in an online community site."@en ;
+                                      rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                      rdfs:label "User Account"@en .
+
+
+###  http://rdfs.org/sioc/ns#Usergroup
+<http://rdfs.org/sioc/ns#Usergroup> rdf:type owl:Class ;
+                                    rdfs:comment "A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes."@en ;
+                                    rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                    rdfs:label "Usergroup"@en .
 
 
 ###  http://schema.org/CreativeWork
-<http://schema.org/CreativeWork> rdf:type owl:Class .
+<http://schema.org/CreativeWork> rdf:type owl:Class ;
+                                 rdfs:isDefinedBy <https://schema.org> ;
+                                 rdfs:label "Creative Work" .
 
 
 ###  http://schema.org/InteractionCounter
 <http://schema.org/InteractionCounter> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy <https://schema.org> .
+                                       rdfs:isDefinedBy <https://schema.org> ;
+                                       rdfs:label "Interaction Counter" .
 
 
 ###  http://schema.org/PoliticalParty
 <http://schema.org/PoliticalParty> rdf:type owl:Class ;
-                                   rdfs:isDefinedBy <http://schema.org> .
+                                   rdfs:isDefinedBy <http://schema.org> ;
+                                   rdfs:label "Political Party" .
 
 
 ###  http://schema.org/SocialMediaPosting
 <http://schema.org/SocialMediaPosting> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy <http://schema.org> .
+                                       rdfs:isDefinedBy <http://schema.org> ;
+                                       rdfs:label "Social Media Posting" .
 
 
-###  http://w3id.org/speech#Hashtag
-:Hashtag rdf:type owl:Class ;
-         rdfs:subClassOf <http://rdfs.org/sioc/ns#Container> ;
-         rdfs:comment "A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic" ;
-         rdfs:label "hashtag" .
+###  http://w3id.org/podio#Conversational
+<http://w3id.org/podio#Conversational> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://rdfs.org/sioc/ns#Post> ,
+                                                       <http://schema.org/SocialMediaPosting> ,
+                                                       <http://w3id.org/podio#Discourse> ;
+                                       rdfs:comment "Discourse that enables direct replies and interactions with the audience." ;
+                                       rdfs:label "Conversational" .
 
 
-###  http://w3id.org/speech#PoliticalParty
-:PoliticalParty rdf:type owl:Class ;
-                rdfs:subClassOf <http://schema.org/PoliticalParty> ,
-                                <http://www.w3.org/ns/org#Organization> ;
-                rdfs:comment "Organization that seeks to influence government policy and actions and be elected to directly take part on government or legislation." ;
-                rdfs:label "political party" ;
-                rdfs:seeAlso <https://www.wikidata.org/wiki/Q7278> .
+###  http://w3id.org/podio#Discourse
+<http://w3id.org/podio#Discourse> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://schema.org/CreativeWork> ;
+                                  rdfs:comment "Atomic unit of political information that an agent can generate." ;
+                                  rdfs:label "Discourse" .
 
 
-###  http://w3id.org/speech#PoliticalPartyManifesto
-:PoliticalPartyManifesto rdf:type owl:Class ;
-                         rdfs:subClassOf :Speech ;
-                         rdfs:comment "Formal list of political goals that a political party or individual candidate seeks to enact. The goals are expressed as political proposals." ;
-                         rdfs:label "political party manifesto" ;
-                         rdfs:seeAlso <https://www.wikidata.org/wiki/Q1501855> .
+###  http://w3id.org/podio#Expository
+<http://w3id.org/podio#Expository> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://w3id.org/podio#Discourse> ;
+                                   rdfs:comment "Discourse in which the content aims to inform about a specific topic with an ordered and hierarchical structure. It is not possible to reply or interact directly with the audience." ;
+                                   rdfs:label "Expository" .
 
 
-###  http://w3id.org/speech#PoliticalProposal
-:PoliticalProposal rdf:type owl:Class ;
-                   rdfs:comment "Intentions, opinions, proposals and actions contained in a political manifesto." ;
-                   rdfs:label "political proposal" .
+###  http://w3id.org/podio#Hashtag
+<http://w3id.org/podio#Hashtag> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://rdfs.org/sioc/ns#Container> ;
+                                rdfs:comment "A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic" ;
+                                rdfs:label "Hashtag" .
 
 
-###  http://w3id.org/speech#Speech
-:Speech rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/dc/terms/BibliographicResource> ,
-                        <http://schema.org/CreativeWork> ;
-        rdfs:comment "Atomic unit of information that a political agent can generate." ;
-        rdfs:label "speech" .
+###  http://w3id.org/podio#PartyManifesto
+<http://w3id.org/podio#PartyManifesto> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.org/dc/terms/BibliographicResource> ,
+                                                       <http://schema.org/CreativeWork> ;
+                                       rdfs:comment "Formal list of political goals that a political party or individual candidate seeks to enact. The goals are expressed as political proposals." ;
+                                       rdfs:label "Political Party Manifesto" ;
+                                       rdfs:seeAlso <https://www.wikidata.org/wiki/Q1501855> .
 
 
-###  http://w3id.org/speech#Tweet
-:Tweet rdf:type owl:Class ;
-       rdfs:subClassOf <http://rdfs.org/sioc/ns#Post> ,
-                       <http://schema.org/SocialMediaPosting> ,
-                       :Speech ;
-       rdfs:comment "The message used to communicate on Twitter" ;
-       rdfs:label "Tweet" .
-
-
-###  http://w3id.org/speech#TwitterUser
-:TwitterUser rdf:type owl:Class ;
-             rdfs:subClassOf <http://rdfs.org/sioc/ns#UserAccount> ;
-             rdfs:comment "Twitter account of an agent." ;
-             rdfs:label "twitter user" ;
-             rdfs:seeAlso <https://www.wikidata.org/wiki/Q63976454> .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Class
-rdfs:Class rdf:type owl:Class .
-
-
-###  http://www.w3.org/2004/02/skos/core#Collection
-<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:Class ;
-                                                 owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
-                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "Concept"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                    rdfs:label "Concept Scheme"@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#example> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept scheme may be defined to include concepts from different sources."@en .
-
-
-###  http://www.w3.org/ns/org#Organization
-<http://www.w3.org/ns/org#Organization> rdf:type owl:Class .
+###  http://w3id.org/podio#Policy
+<http://w3id.org/podio#Policy> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://purl.org/dc/terms/Policy> ,
+                                               <http://w3id.org/podio#Expository> ;
+                               rdfs:comment "A plan or course of action by a Political Party. Part of or relating to legislation." ;
+                               rdfs:label "Policy" .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
-<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                  rdfs:label "Agent" .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                     rdfs:label "Document" .
+
+
+###  http://xmlns.com/foaf/0.1/OnlineAccount
+<http://xmlns.com/foaf/0.1/OnlineAccount> rdf:type owl:Class ;
+                                          rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                          rdfs:label "Online Account" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://metadata.un.org/sdg/
-<https://metadata.un.org/sdg/> rdf:type owl:NamedIndividual ,
-                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-
-
-###  https://skos.um.es/unescothes/
-<https://skos.um.es/unescothes/> rdf:type owl:NamedIndividual ,
-                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+###  http://rdfs.org/sioc/ns#
+<http://rdfs.org/sioc/ns#> rdf:type owl:Thing ;
+                           <http://purl.org/dc/terms/description> """SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. 
+This information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels."""@en ;
+                           <http://purl.org/dc/terms/title> "SIOC Core Ontology Namespace"@en .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
+<http://purl.org/dc/elements/1.1/creator> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
 <http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
                                         rdfs:comment "A name given to the resource."@en ;
                                         rdfs:label "Title"@en ;
                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/terms/audience> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/identifier> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/isPartOf> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/language> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/source> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://purl.org/dc/terms/type> rdfs:isDefinedBy <http://purl.org/dc/> .
+
+
+<http://rdfs.org/sioc/spec> rdfs:label "SIOC Core Ontology Specification" .
+
+
+<http://rdfs.org/sioc/ns#delivered_at> rdfs:comment "When this was delivered, in ISO 8601 format."@en ;
+                                       rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                       rdfs:label "delivered at"@en .
+
+
+<http://rdfs.org/sioc/ns#links_to> rdfs:comment "Links extracted from hyperlinks within a SIOC concept, e.g. Post or Site."@en ;
+                                   rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                   rdfs:label "links to"@en .
+
+
+<http://rdfs.org/sioc/ns#read_at> rdfs:comment "When this was read, in ISO 8601 format."@en ;
+                                  rdfs:isDefinedBy <http://rdfs.org/sioc/ns#> ;
+                                  rdfs:label "read at"@en .
 
 
 <http://rdfs.org/sioc/quotes#block_of> rdfs:isDefinedBy <http://rdfs.org/sioc/quotes#> .
@@ -812,12 +1718,6 @@ rdfs:Class rdf:type owl:Class .
 
 
 <http://rdfs.org/sioc/quotes#response_of> rdfs:isDefinedBy <http://rdfs.org/sioc/quotes#> .
-
-
-<http://xmlns.com/foaf/0.1/account> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
-
-
-<http://xmlns.com/foaf/0.1/depiction> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
