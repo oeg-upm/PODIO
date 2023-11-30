@@ -1,6 +1,6 @@
-# SPEECH
+# PODIO
 
-This repository contains the resources associated to the SPEECH ontology.
+This repository contains the resources associated to the PODIO ontology.
 
 ## Structure
 * `ontology/` contains the SPEECH ontology, its requirements and the resources to generate its documentation
