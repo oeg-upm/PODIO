@@ -64,6 +64,9 @@
 }, {
   "@id" : "http://lkg.lynx-project.eu/def/metadata",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Document metadata. See the properties under this elements in http://lynx-project.eu/doc/lkg/#idtablemetadataelements"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://lkg.lynx-project.eu/def/LynxDocument"
   } ],
@@ -244,8 +247,14 @@
 }, {
   "@id" : "http://purl.org/dc/terms/audience",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An entity responsible for making the resource available."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "publisher"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Agent"
@@ -387,6 +396,15 @@
 }, {
   "@id" : "http://purl.org/dc/terms/hasPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A related resource that is included either physically or logically in the described resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has part"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/relation"
   }, {
@@ -426,8 +444,14 @@
 }, {
   "@id" : "http://purl.org/dc/terms/isPartOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A related resource in which the described resource is physically or logically included."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is part of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/relation"
@@ -755,14 +779,26 @@
 }, {
   "@id" : "http://schema.org/interactionStatistic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The number of interactions for the CreativeWork."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org/interactionStatistic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "interaction statistic"
   } ]
 }, {
   "@id" : "http://schema.org/sharedContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A CreativeWork such as an image, video, or audio clip shared as part of this posting."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://schema.org/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "shared content"
   } ]
 }, {
   "@id" : "http://schema.org/wordCount",

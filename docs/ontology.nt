@@ -371,6 +371,7 @@
 <http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lkg.lynx-project.eu/def/LynxDocument> .
 <http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://lkg.lynx-project.eu/def/Metadata> .
+<http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Document metadata. See the properties under this elements in http://lynx-project.eu/doc/lkg/#idtablemetadataelements" .
 <http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lkg.lynx-project.eu/def/> .
 <http://lkg.lynx-project.eu/def/metadata> <http://www.w3.org/2000/01/rdf-schema#label> "metadata" .
 # 
@@ -395,11 +396,15 @@
 # 
 # http://schema.org/interactionStatistic
 <http://schema.org/interactionStatistic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/interactionStatistic> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of interactions for the CreativeWork." .
 <http://schema.org/interactionStatistic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/interactionStatistic> .
+<http://schema.org/interactionStatistic> <http://www.w3.org/2000/01/rdf-schema#label> "interaction statistic" .
 # 
 # http://schema.org/sharedContent
 <http://schema.org/sharedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/sharedContent> <http://www.w3.org/2000/01/rdf-schema#comment> "A CreativeWork such as an image, video, or audio clip shared as part of this posting." .
 <http://schema.org/sharedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+<http://schema.org/sharedContent> <http://www.w3.org/2000/01/rdf-schema#label> "shared content" .
 # 
 # http://w3id.org/podio#hasTarget
 <http://w3id.org/podio#hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -694,13 +699,21 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 # 
+<http://purl.org/dc/terms/audience> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource available." .
 <http://purl.org/dc/terms/audience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
+<http://purl.org/dc/terms/audience> <http://www.w3.org/2000/01/rdf-schema#label> "publisher" .
 # 
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
 # 
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "A related resource that is included either physically or logically in the described resource." .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part" .
+# 
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
 # 
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A related resource in which the described resource is physically or logically included." .
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of" .
 # 
 <http://purl.org/dc/terms/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/> .
 # 

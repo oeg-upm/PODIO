@@ -441,6 +441,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://lkg.lynx-project.eu/def/metadata> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <http://lkg.lynx-project.eu/def/LynxDocument> ;
                                           rdfs:range <http://lkg.lynx-project.eu/def/Metadata> ;
+                                          rdfs:comment "Document metadata. See the properties under this elements in http://lynx-project.eu/doc/lkg/#idtablemetadataelements" ;
                                           rdfs:isDefinedBy <http://lkg.lynx-project.eu/def/> ;
                                           rdfs:label "metadata" .
 
@@ -472,12 +473,16 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://schema.org/interactionStatistic
 <http://schema.org/interactionStatistic> rdf:type owl:ObjectProperty ;
-                                         rdfs:isDefinedBy <http://schema.org/interactionStatistic> .
+                                         rdfs:comment "The number of interactions for the CreativeWork." ;
+                                         rdfs:isDefinedBy <http://schema.org/interactionStatistic> ;
+                                         rdfs:label "interaction statistic" .
 
 
 ###  http://schema.org/sharedContent
 <http://schema.org/sharedContent> rdf:type owl:ObjectProperty ;
-                                  rdfs:isDefinedBy <http://schema.org/> .
+                                  rdfs:comment "A CreativeWork such as an image, video, or audio clip shared as part of this posting." ;
+                                  rdfs:isDefinedBy <http://schema.org/> ;
+                                  rdfs:label "shared content" .
 
 
 ###  http://w3id.org/podio#hasTarget
@@ -793,16 +798,25 @@ xsd:date rdf:type rdfs:Datatype .
                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 
 
-<http://purl.org/dc/terms/audience> rdfs:isDefinedBy <http://purl.org/dc/> .
+<http://purl.org/dc/terms/audience> rdfs:comment "An entity responsible for making the resource available." ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/> ;
+                                    rdfs:label "publisher" .
 
 
 <http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/> .
 
 
+<http://purl.org/dc/terms/hasPart> rdfs:comment "A related resource that is included either physically or logically in the described resource." ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/> ;
+                                   rdfs:label "has part" .
+
+
 <http://purl.org/dc/terms/identifier> rdfs:isDefinedBy <http://purl.org/dc/> .
 
 
-<http://purl.org/dc/terms/isPartOf> rdfs:isDefinedBy <http://purl.org/dc/> .
+<http://purl.org/dc/terms/isPartOf> rdfs:comment "A related resource in which the described resource is physically or logically included." ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/> ;
+                                    rdfs:label "is part of" .
 
 
 <http://purl.org/dc/terms/language> rdfs:isDefinedBy <http://purl.org/dc/> .

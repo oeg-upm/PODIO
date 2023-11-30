@@ -753,6 +753,7 @@
     <owl:ObjectProperty rdf:about="http://lkg.lynx-project.eu/def/metadata">
         <rdfs:domain rdf:resource="http://lkg.lynx-project.eu/def/LynxDocument"/>
         <rdfs:range rdf:resource="http://lkg.lynx-project.eu/def/Metadata"/>
+        <rdfs:comment>Document metadata. See the properties under this elements in http://lynx-project.eu/doc/lkg/#idtablemetadataelements</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
         <rdfs:label>metadata</rdfs:label>
     </owl:ObjectProperty>
@@ -809,7 +810,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://schema.org/interactionStatistic">
+        <rdfs:comment>The number of interactions for the CreativeWork.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://schema.org/interactionStatistic"/>
+        <rdfs:label>interaction statistic</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -818,7 +821,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://schema.org/sharedContent">
+        <rdfs:comment>A CreativeWork such as an image, video, or audio clip shared as part of this posting.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label>shared content</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1342,16 +1347,25 @@
         <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/audience">
+        <rdfs:comment>An entity responsible for making the resource available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>publisher</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/created">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:comment>A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>has part</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:comment>A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>is part of</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/language">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
