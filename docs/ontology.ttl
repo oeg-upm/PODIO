@@ -19,7 +19,7 @@
                           <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political discourse across channels and content." ;
                           <http://purl.org/dc/elements/1.1/language> "english" ;
                           <http://purl.org/dc/elements/1.1/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                          <http://purl.org/dc/elements/1.1/modified> "2023-11-29" ;
+                          <http://purl.org/dc/elements/1.1/modified> "2023-11-30" ;
                           <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> ;
                           <http://purl.org/dc/elements/1.1/title> "PODIO: POlitical DIscourse Ontology" ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "podio" ;
@@ -533,7 +533,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
                                  rdfs:range <http://w3id.org/podio#Discourse> ;
                                  rdfs:comment "Discourse of which the agent is the target." ;
-                                 rdfs:label "taget of" .
+                                 rdfs:label "target of" .
 
 
 ###  http://xmlns.com/foaf/0.1/accountServiceHomepage
@@ -757,8 +757,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/podio#content
-:content rdf:type owl:NamedIndividual .
-
 
 ###  http://rdfs.org/sioc/ns#content
 <http://rdfs.org/sioc/ns#content> rdf:type owl:NamedIndividual ;
@@ -766,8 +764,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  https://w3id.org/podio#content
-:content rdf:type owl:NamedIndividual .
-
 
 ###  https://w3id.org/podio#content
 :content rdf:type owl:NamedIndividual ;
@@ -775,8 +771,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  nif-core:isString
-<nif-core:isString> rdf:type owl:NamedIndividual .
-
 
 ###  nif-core:isString
 <nif-core:isString> rdf:type owl:NamedIndividual .

@@ -1014,7 +1014,7 @@
     "@id" : "http://xmlns.com/foaf/0.1/Agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "taget of"
+    "@value" : "target of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/podio#Discourse"
@@ -1104,7 +1104,7 @@
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://purl.org/dc/elements/1.1/modified" : [ {
-    "@value" : "2023-11-29"
+    "@value" : "2023-11-30"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@id" : "https://oeg.fi.upm.es/"

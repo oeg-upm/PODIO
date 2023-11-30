@@ -11,7 +11,7 @@
 <https://w3id.org/podio> <http://purl.org/dc/elements/1.1/description> "Ontology for modelling political discourse across channels and content." .
 <https://w3id.org/podio> <http://purl.org/dc/elements/1.1/language> "english" .
 <https://w3id.org/podio> <http://purl.org/dc/elements/1.1/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://w3id.org/podio> <http://purl.org/dc/elements/1.1/modified> "2023-11-29" .
+<https://w3id.org/podio> <http://purl.org/dc/elements/1.1/modified> "2023-11-30" .
 <https://w3id.org/podio> <http://purl.org/dc/elements/1.1/publisher> <https://oeg.fi.upm.es/> .
 <https://w3id.org/podio> <http://purl.org/dc/elements/1.1/title> "PODIO: POlitical DIscourse Ontology" .
 <https://w3id.org/podio> <http://purl.org/vocab/vann/preferredNamespacePrefix> "podio" .
@@ -449,7 +449,7 @@
 <http://w3id.org/podio#targetOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
 <http://w3id.org/podio#targetOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/podio#Discourse> .
 <http://w3id.org/podio#targetOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Discourse of which the agent is the target." .
-<http://w3id.org/podio#targetOf> <http://www.w3.org/2000/01/rdf-schema#label> "taget of" .
+<http://w3id.org/podio#targetOf> <http://www.w3.org/2000/01/rdf-schema#label> "target of" .
 # 
 # http://xmlns.com/foaf/0.1/accountServiceHomepage
 <http://xmlns.com/foaf/0.1/accountServiceHomepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -663,7 +663,6 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2002/07/owl#sameAs> <https://w3id.org/podio#content> .
-<https://w3id.org/podio#content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://w3id.org/podio#content
 # 
@@ -674,12 +673,13 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/podio#content
 # 
 # https://w3id.org/podio#content
+<https://w3id.org/podio#content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/podio#content> <http://www.w3.org/2002/07/owl#sameAs> <nif-core:isString> .
+# 
+# nif-core:isString
+# 
+# nif-core:isString
 <nif-core:isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
-# nif-core:isString
-# 
-# nif-core:isString
 # 
 # 
 # 

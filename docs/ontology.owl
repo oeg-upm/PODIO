@@ -25,7 +25,7 @@
         <dc:description>Ontology for modelling political discourse across channels and content.</dc:description>
         <dc:language>english</dc:language>
         <dc:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <dc:modified>2023-11-29</dc:modified>
+        <dc:modified>2023-11-30</dc:modified>
         <dc:publisher rdf:resource="https://oeg.fi.upm.es/"/>
         <dc:title>PODIO: POlitical DIscourse Ontology</dc:title>
         <vann:preferredNamespacePrefix>podio</vann:preferredNamespacePrefix>
@@ -898,7 +898,7 @@
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:range rdf:resource="http://w3id.org/podio#Discourse"/>
         <rdfs:comment>Discourse of which the agent is the target.</rdfs:comment>
-        <rdfs:label>taget of</rdfs:label>
+        <rdfs:label>target of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1282,7 +1282,7 @@
     <!-- https://w3id.org/podio#content -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/podio#content"/>
+    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
     
 
 
@@ -1298,7 +1298,7 @@
     <!-- https://w3id.org/podio#content -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/podio#content"/>
+    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
     
 
 
@@ -1314,7 +1314,7 @@
     <!-- nif-core:isString -->
 
 
-    <owl:NamedIndividual rdf:about="nif-core:isString"/>
+    <rdf:Description rdf:about="nif-core:isString"/>
     
 
 
