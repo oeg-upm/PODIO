@@ -687,8 +687,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/podio#ApprovedPolicy
 <http://w3id.org/podio#ApprovedPolicy> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://lkg.lynx-project.eu/def/Legislation> ,
-                                                       <http://purl.org/dc/terms/Policy> ,
+                                       owl:equivalentClass <http://lkg.lynx-project.eu/def/Legislation> ;
+                                       rdfs:subClassOf <http://purl.org/dc/terms/Policy> ,
                                                        <http://w3id.org/podio#Expository> ;
                                        rdfs:comment "Plan or course of action in a legislative document approved by a competent authority." ;
                                        rdfs:label "Approved Policy" .

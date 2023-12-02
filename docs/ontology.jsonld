@@ -815,9 +815,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Approved Policy"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://lkg.lynx-project.eu/def/Legislation"
-  }, {
+  }  ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/dc/terms/Policy"
   }, {
     "@id" : "http://w3id.org/podio#Expository"
