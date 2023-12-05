@@ -1,0 +1,1424 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/podio#"
+     xml:base="https://w3id.org/podio"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontology="http://data.europa.eu/eli/ontology#">
+    <owl:Ontology rdf:about="https://w3id.org/podio">
+        <owl:versionIRI rdf:resource="https://w3id.org/podio/v1.0"/>
+        <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+        <owl:imports rdf:resource="http://rdfs.org/sioc/ns#"/>
+        <dc:abstract>This research addresses the need for the systematic organization and integration of political discourse, regardless of the communication channels employed, whether rooted in social platforms or dissemination channels. The aim is to facilitate nuanced and advanced analyses that consider specific aspects of the political domain, including the persuasive nature of discourse, the ideological basis of the messages, the targeted audience (wether groups or comcommunities), and the temporal context of communication. The resulting ontology, named PODIO (POlitical DIscourse Ontology), offers a structured framework to enhance the understanding of political debate.</dc:abstract>
+        <dc:contributor>Ana Iglesias-Molina</dc:contributor>
+        <dc:contributor>Carlos Badenes-Olmedo</dc:contributor>
+        <dc:contributor>Oscar Corcho</dc:contributor>
+        <dc:created>2023-11-27</dc:created>
+        <dc:creator>Ibai Guillen-Pacho</dc:creator>
+        <dc:description>Ontology for modelling political discourse across channels and content.</dc:description>
+        <dc:language>english</dc:language>
+        <dc:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <dc:modified>2023-11-30</dc:modified>
+        <dc:publisher rdf:resource="https://oeg.fi.upm.es/"/>
+        <dc:title>PODIO: POlitical DIscourse Ontology</dc:title>
+        <vann:preferredNamespacePrefix>podio</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://w3id.org/podio#"/>
+        <owl:versionInfo>v1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/dcam/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-20</dc:issued>
+        <rdfs:comment xml:lang="en">A suggested class for subjects of this property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Domain Includes</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/dcam/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-20</dc:issued>
+        <rdfs:comment xml:lang="en">A suggested class for values of this property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Range Includes</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/coverage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/relation"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accessRights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/alternative">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/audience -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/audience">
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/available -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/available">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dc:issued>
+        <rdfs:comment xml:lang="en">An established standard to which the described resource conforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Conforms To</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/coverage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/coverage">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateAccepted -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateAccepted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateCopyrighted -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateSubmitted -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/educationLevel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/educationLevel"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/extent -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/extent">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isFormatOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isFormatOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReferencedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReplacedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReplacedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isRequiredBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isRequiredBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/mediator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/mediator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/medium -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/medium">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/replaces -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/requires">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/spatial">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+        <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/tableOfContents -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/tableOfContents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/temporal">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dc:issued>
+        <rdfs:comment xml:lang="en">Temporal characteristics of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal Coverage</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/type">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/valid -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/valid">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lkg.lynx-project.eu/def/metadata -->
+
+
+    <owl:ObjectProperty rdf:about="http://lkg.lynx-project.eu/def/metadata">
+        <rdfs:domain rdf:resource="http://lkg.lynx-project.eu/def/LynxDocument"/>
+        <rdfs:range rdf:resource="http://lkg.lynx-project.eu/def/Metadata"/>
+        <rdfs:comment>Document metadata. See the properties under this elements in http://lynx-project.eu/doc/lkg/#idtablemetadataelements</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
+        <rdfs:label>metadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/audience -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/audience"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://schema.org/interactionStatistic -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/interactionStatistic">
+        <rdfs:comment>The number of interactions for the CreativeWork.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/interactionStatistic"/>
+        <rdfs:label>interaction statistic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/sharedContent -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/sharedContent">
+        <rdfs:comment>A CreativeWork such as an image, video, or audio clip shared as part of this posting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+        <rdfs:label>shared content</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#hasTarget">
+        <owl:inverseOf rdf:resource="http://w3id.org/podio#targetOf"/>
+        <rdfs:domain rdf:resource="http://w3id.org/podio#Discourse"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Target of the discourse.</rdfs:comment>
+        <rdfs:label>has target</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#proposedAsCandidateBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#proposedAsCandidateBy">
+        <owl:inverseOf rdf:resource="http://w3id.org/podio#proposesCandidate"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://w3id.org/podio#PartyManifesto"/>
+        <rdfs:comment>The political manifesto that presents this agent as candidate to the elections.</rdfs:comment>
+        <rdfs:label>proposed as candidate by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#proposesCandidate -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#proposesCandidate">
+        <rdfs:domain rdf:resource="http://w3id.org/podio#PartyManifesto"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>The political candidate presented by the political party in its manifesto for the electoral campaign.</rdfs:comment>
+        <rdfs:label>proposes candidate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#repost -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#repost">
+        <owl:inverseOf rdf:resource="http://w3id.org/podio#repostedBy"/>
+        <rdfs:domain rdf:resource="http://rdfs.org/sioc/ns#UserAccount"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+        <rdfs:comment>This account has reposted this post. A kind of sharing action.</rdfs:comment>
+        <rdfs:label>repost</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#repostedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#repostedBy">
+        <rdfs:domain rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#UserAccount"/>
+        <rdfs:comment>The  account that reposted this post.</rdfs:comment>
+        <rdfs:label>is reposted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/podio#targetOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/podio#targetOf">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://w3id.org/podio#Discourse"/>
+        <rdfs:comment>Discourse of which the agent is the target.</rdfs:comment>
+        <rdfs:label>target of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/accountServiceHomepage -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/accountServiceHomepage">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/holdsAccount -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/holdsAccount">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString -->
+
+
+    <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/type"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#links_to -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/sioc/ns#links_to"/>
+    
+
+
+    <!-- http://schema.org/wordCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/wordCount">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/podio#ideology -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/podio#ideology">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/podio#Discourse"/>
+                    <rdf:Description rdf:about="http://w3id.org/podio#PartyManifesto"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ideology to which the text is related</rdfs:comment>
+        <rdfs:label>ideology</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/podio#content -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/podio#content">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Container"/>
+                    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Item"/>
+                    <rdf:Description rdf:about="http://w3id.org/podio#Discourse"/>
+                    <rdf:Description rdf:about="http://w3id.org/podio#PartyManifesto"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lkg.lynx-project.eu/def/Legislation -->
+
+
+    <owl:Class rdf:about="http://lkg.lynx-project.eu/def/Legislation">
+        <rdfs:subClassOf rdf:resource="http://lkg.lynx-project.eu/def/LynxDocument"/>
+        <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
+        <rdfs:label>Legislation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://lkg.lynx-project.eu/def/LynxDocument -->
+
+
+    <owl:Class rdf:about="http://lkg.lynx-project.eu/def/LynxDocument">
+        <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
+        <rdfs:label>Lynx Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://lkg.lynx-project.eu/def/LynxDocumentPart -->
+
+
+    <owl:Class rdf:about="http://lkg.lynx-project.eu/def/LynxDocumentPart">
+        <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
+        <rdfs:label>Part of a LynxDocument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://lkg.lynx-project.eu/def/Metadata -->
+
+
+    <owl:Class rdf:about="http://lkg.lynx-project.eu/def/Metadata">
+        <rdfs:isDefinedBy rdf:resource="http://lkg.lynx-project.eu/def/"/>
+        <rdfs:label>Metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/BibliographicResource -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/BibliographicResource">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+        <rdfs:comment xml:lang="en">A book, article, or other documentary resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bibliographic Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Policy -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Policy">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Container -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Container"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Post"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#UserAccount -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#UserAccount"/>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork">
+        <rdfs:isDefinedBy rdf:resource="https://schema.org"/>
+        <rdfs:label>Creative Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/InteractionCounter -->
+
+
+    <owl:Class rdf:about="http://schema.org/InteractionCounter">
+        <rdfs:isDefinedBy rdf:resource="https://schema.org"/>
+        <rdfs:label>Interaction Counter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PoliticalParty -->
+
+
+    <owl:Class rdf:about="http://schema.org/PoliticalParty">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org"/>
+        <rdfs:label>Political Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SocialMediaPosting -->
+
+
+    <owl:Class rdf:about="http://schema.org/SocialMediaPosting">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org"/>
+        <rdfs:label>Social Media Posting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#ApprovedPolicy -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#ApprovedPolicy">
+        <owl:equivalentClass rdf:resource="http://lkg.lynx-project.eu/def/Legislation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Policy"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/podio#Expository"/>
+        <rdfs:comment>Plan or course of action in a legislative document approved by a competent authority.</rdfs:comment>
+        <rdfs:label>Approved Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#Conversational -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#Conversational">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/SocialMediaPosting"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/podio#Discourse"/>
+        <rdfs:comment>Discourse that enables direct replies and interactions with the audience.</rdfs:comment>
+        <rdfs:label>Conversational</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#Discourse -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#Discourse">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Atomic unit of political information that an agent can generate.</rdfs:comment>
+        <rdfs:label>Discourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#Expository -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#Expository">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/podio#Discourse"/>
+        <rdfs:comment>Discourse in which the content aims to inform about a specific topic with an ordered and hierarchical structure. It is not possible to reply or interact directly with the audience.</rdfs:comment>
+        <rdfs:label>Expository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#Hashtag -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#Hashtag">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Container"/>
+        <rdfs:comment>A word or phrase preceded by a hash sign (#) used to identify digital content on a specific topic</rdfs:comment>
+        <rdfs:label>Hashtag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#PartyManifesto -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#PartyManifesto">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment>Formal list of political goals that a political party or individual candidate seeks to enact. The goals are expressed as political proposals.</rdfs:comment>
+        <rdfs:label>Political Party Manifesto</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q1501855"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/podio#PolicyProposal -->
+
+
+    <owl:Class rdf:about="http://w3id.org/podio#PolicyProposal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Policy"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/podio#Expository"/>
+        <rdfs:comment>A not legally binding plan or course of action proposed by a Political Party.</rdfs:comment>
+        <rdfs:label>Policy Proposal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString -->
+
+
+    <owl:NamedIndividual rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString">
+        <owl:sameAs rdf:resource="https://w3id.org/podio#content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/podio#content -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#content -->
+
+
+    <owl:NamedIndividual rdf:about="http://rdfs.org/sioc/ns#content">
+        <owl:sameAs rdf:resource="https://w3id.org/podio#content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/podio#content -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
+    
+
+
+    <!-- https://w3id.org/podio#content -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/podio#content">
+        <owl:sameAs rdf:resource="nif-core:isString"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- nif-core:isString -->
+
+
+    <rdf:Description rdf:about="nif-core:isString"/>
+    
+
+
+    <!-- nif-core:isString -->
+
+
+    <owl:NamedIndividual rdf:about="nif-core:isString"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString">
+        <rdfs:isDefinedBy rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/audience">
+        <rdfs:comment>An entity responsible for making the resource available.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:comment>A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>has part</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:comment>A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+        <rdfs:label>is part of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:issued>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#block_of">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#has_block">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#has_quote">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#has_response">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#quote_of">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rdfs.org/sioc/quotes#response_of">
+        <rdfs:isDefinedBy rdf:resource="http://rdfs.org/sioc/quotes#"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Document</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Online Account</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/account">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/depiction">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/podio#content">
+        <rdfs:comment>Text that can discuss or be related to politics.</rdfs:comment>
+        <rdfs:label>content</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
