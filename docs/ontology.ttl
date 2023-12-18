@@ -604,7 +604,8 @@ xsd:date rdf:type rdfs:Datatype .
                                           ) ;
                        rdf:type owl:Class
                      ] ;
-         rdfs:range rdfs:Literal .
+         rdfs:range rdfs:Literal ;
+         owl:equivalentProperty <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> .
 
 
 #################################################################

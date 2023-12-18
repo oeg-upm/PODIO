@@ -526,6 +526,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rdfs.org/sioc/ns#Container> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/podio#content> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/podio#content> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> .
 # 
 # 
 # 
