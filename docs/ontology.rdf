@@ -1010,10 +1010,10 @@
     
 
 
-    <!-- https://w3id.org/podio#content -->
+    <!-- http://w3id.org/podio#content -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/podio#content">
+    <owl:DatatypeProperty rdf:about="http://w3id.org/podio#content">
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1276,15 +1276,15 @@
 
 
     <owl:NamedIndividual rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString">
-        <owl:sameAs rdf:resource="https://w3id.org/podio#content"/>
+        <owl:sameAs rdf:resource="http://w3id.org/podio#content"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/podio#content -->
+    <!-- http://w3id.org/podio#content -->
 
 
-    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
+    <rdf:Description rdf:about="http://w3id.org/podio#content"/>
     
 
 
@@ -1292,22 +1292,22 @@
 
 
     <owl:NamedIndividual rdf:about="http://rdfs.org/sioc/ns#content">
-        <owl:sameAs rdf:resource="https://w3id.org/podio#content"/>
+        <owl:sameAs rdf:resource="http://w3id.org/podio#content"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/podio#content -->
+    <!-- http://w3id.org/podio#content -->
 
 
-    <rdf:Description rdf:about="https://w3id.org/podio#content"/>
+    <rdf:Description rdf:about="http://w3id.org/podio#content"/>
     
 
 
-    <!-- https://w3id.org/podio#content -->
+    <!-- http://w3id.org/podio#content -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/podio#content">
+    <owl:NamedIndividual rdf:about="http://w3id.org/podio#content">
         <owl:sameAs rdf:resource="nif-core:isString"/>
     </owl:NamedIndividual>
     
@@ -1415,7 +1415,7 @@
     <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/depiction">
         <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/podio#content">
+    <rdf:Description rdf:about="http://w3id.org/podio#content">
         <rdfs:comment>Text that can discuss or be related to politics.</rdfs:comment>
         <rdfs:label>content</rdfs:label>
     </rdf:Description>

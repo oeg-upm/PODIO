@@ -595,7 +595,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:label "ideology" .
 
 
-###  https://w3id.org/podio#content
+###  http://w3id.org/podio#content
 :content rdf:type owl:DatatypeProperty ;
          rdfs:domain [ owl:intersectionOf ( <http://rdfs.org/sioc/ns#Container>
                                             <http://rdfs.org/sioc/ns#Item>
@@ -758,16 +758,16 @@ xsd:date rdf:type rdfs:Datatype .
                                                                           owl:sameAs :content .
 
 
-###  https://w3id.org/podio#content
+###  http://w3id.org/podio#content
 
 ###  http://rdfs.org/sioc/ns#content
 <http://rdfs.org/sioc/ns#content> rdf:type owl:NamedIndividual ;
                                   owl:sameAs :content .
 
 
-###  https://w3id.org/podio#content
+###  http://w3id.org/podio#content
 
-###  https://w3id.org/podio#content
+###  http://w3id.org/podio#content
 :content rdf:type owl:NamedIndividual ;
          owl:sameAs <nif-core:isString> .
 

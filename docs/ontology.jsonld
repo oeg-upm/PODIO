@@ -86,7 +86,7 @@
     "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
   } ],
   "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "https://w3id.org/podio#content"
+    "@id" : "http://w3id.org/podio#content"
   } ]
 }, {
   "@id" : "http://purl.org/dc/dcam/domainIncludes",
@@ -705,7 +705,7 @@
   "@id" : "http://rdfs.org/sioc/ns#content",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2002/07/owl#sameAs" : [ {
-    "@id" : "https://w3id.org/podio#content"
+    "@id" : "http://w3id.org/podio#content"
   } ]
 }, {
   "@id" : "http://rdfs.org/sioc/ns#links_to",
@@ -1131,7 +1131,7 @@
     "@value" : "v1.0"
   } ]
 }, {
-  "@id" : "https://w3id.org/podio#content",
+  "@id" : "http://w3id.org/podio#content",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Text that can discuss or be related to politics."
