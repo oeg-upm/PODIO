@@ -19,6 +19,9 @@
 | r17 | Speeches shared in digital communities should implement the basic mechanics of interaction (reply, mention, thread, hashtags, post, repost, follow, and share content). | 
 | r18 | The laws approved by political parties and their electoral proposals are speeches that do not allow for direct interaction with the audience. | 
 | r19 | It should be possible to explore the existing laws in the Lynx knowledge graph. | 
+
+| Identifier | Competency Question |
+| ---------- | ----------- |
 | CQ1 | What are the names of all political parties, when were they created and what is their ideology? | 
 | CQ2 | Which social media accounts does the PP have? | 
 | CQ3 | How many posts have political parties published on each of their social media accounts? | 
