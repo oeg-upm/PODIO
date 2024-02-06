@@ -1,26 +1,35 @@
 | Identifier | Requirement |
 | ---------- | ----------- |
-| r1 | An speech is attributed to an author |
-| r2 | An speech has a date associated |
-| r3 | An speech has a subject associated |
-| r4 | A political party has an ideology associated |
-| r5 | A political party has accounts in social networks associated |
-| r6 | A political party may have political manifestos |
-| r7 | A political party may have political proposal |
-| r8 | A political party may have a hashtag associated to a speech |
-| r9 | An speech may have interaction metrics |
-| r10 | Which are the posts of a political party related to the transport domain? |
-| r11 | A political party can be a subsidiary of another political party |
-| r12 | Which political party wrote the longest thread in the 2021 campaign? |
-| r13 | Which is the last tweet of the elections of Madrid in 2015? |
-| r14 | Which is the user most mentioned by a political party? |
-| r15 | Which is the user most quoted by a political party? |
-| r16 | Which is the tweet with more quotes of a political party? |
-| r17 | Which are the tweets and users quoted by at least two political parties? |
-| r18 | Which are the tweets and users retweeted by at least two political parties? |
-| r19 | Which are the tweets of a political party retweeted by another political party? |
-| r20 | Which is the hashtag most tweeted by a political party in the 2019 Madrid elections? |
-| r21 | Which is the most retweeted hashtag by a political party in the 2019 Madrid elections? |
-| r22 | Which is the political party that has tweeted the most in 2021? |
-| r23 | Which is the political party that has been retweeted the most in 2021? |
-| r24 | How have ODS changed in the proposals of a manifesto of a political party? |
+| r1 | Political discourse has different metrics (views, listeners, attendees, likes, etc.) | 
+| r2 | A speech is published by an agent who may not be the creator of the speech itself. | 
+| r3 | A speech has an audience. That is, the group of people who have received the message. | 
+| r4 | A speech has a target. That is, the group of people to whom the message is intended. This group does not necessarily have to coincide with the audience. | 
+| r5 | Both speeches and party manifestos are written in one or more languages. | 
+| r6 | Both speeches and party manifestos have a publication date. | 
+| r7 | Both speeches and party manifestos can have a description. | 
+| r8 | Both speeches and party manifestos have an ideology. | 
+| r9 | Both speeches and party manifestos should reference the source of information in the official channel. | 
+| r10 | A party manifesto has a textual content extracted from a document. | 
+| r11 | A party manifesto proposes a candidate for political position. | 
+| r12 | A party manifesto is published by the political party that drafts it. | 
+| r13 | A party manifesto has several policy proposals. | 
+| r14 | Political speech can have content in any format, both text and multimedia. | 
+| r15 | There are speeches that are shared in digital communities and allow direct interaction with the audience. | 
+| r16 | There are speeches that may be shared on channels that do not allow interaction with the audience. | 
+| r17 | Speeches shared in digital communities should implement the basic mechanics of interaction (reply, mention, thread, hashtags, post, repost, follow, and share content). | 
+| r18 | The laws approved by political parties and their electoral proposals are speeches that do not allow for direct interaction with the audience. | 
+| r19 | It should be possible to explore the existing laws in the Lynx knowledge graph. | 
+| CQ1 | What are the names of all political parties, when were they created and what is their ideology? | 
+| CQ2 | Which social media accounts does the PP have? | 
+| CQ3 | How many posts have political parties published on each of their social media accounts? | 
+| CQ4 | Which account and on which social media network is the most mentioned by each politician and political party? | 
+| CQ5 | What were the ten most used hashtags in political speech during 2020? | 
+| CQ6 | Which political party has generated the most speeches? | 
+| CQ7 | How many references to the LGTBI community have been made in each year's political speeches by the different political agents? | 
+| CQ8 | What were the five most shared speeches? | 
+| CQ9 | What are the ten authorities that have approved the most legislations? | 
+| CQ10 | How much legislations are available for each jurisdiction and year? | 
+| CQ11 | What is the year in which more legislations were approved by each jurisdiction? | 
+| CQ12 | What has been the latest legislation approved by each jurisdiction? | 
+| CQ13 | What was the last legislation approved by the government of the Community of Madrid? | 
+| CQ14 | What is the longest legislation? | 
