@@ -1,0 +1,19 @@
+version:  '3.7'
+
+services:
+  sparql-query-demo:
+    container_name: sparql-query-demo-PODIO
+    image: ibaiguillen/sparql-query-demo:v1.0
+    ports:
+      - '9900:9900'
+    volumes:
+      - ../:/sparql-query-demo/data
+    command:
+      - "--demo_title=PODIO: POlitical DIscourse Ontology"
+      - "--endpoint=https://graphdb.linkeddata.es/repositories/podio"
+      - "--include_example=False"
+      - "--requirements_file=ontology/requirements/requirements.csv"
+      - "--requirements_separator=,"
+      - "--identifier_columname=Identifier"
+      - "--requirement_columname=Requirement"
+      - "--query_path=queries"   
