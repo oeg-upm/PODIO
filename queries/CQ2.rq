@@ -1,0 +1,28 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcam: <http://purl.org/dc/dcam/>
+PREFIX eli: <http://data.europa.eu/eli/ontology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX lkg: <http://lkg.lynx-project.eu/def/>
+PREFIX nif-core: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX podio: <http://w3id.org/podio#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX terms: <http://purl.org/dc/terms/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+
+select ?socialMediaUserName ?socialMedia where { 
+    wd:Q185088 foaf:holdsAccount ?accounts .
+    ?accounts foaf:accountServiceHomepage ?socialMedia;
+              foaf:accountName ?socialMediaUserName.
+} 
