@@ -14,3 +14,6 @@ This repository contains the resources associated to the PODIO ontology.
 * [Carlos Badenes-Olmedo](https://github.com/cbadenes)
 * [Ana Iglesias-Molina](https://github.com/anaigmo)
 * [Oscar Corcho](https://github.com/ocorcho)
+
+## Akcnowledgement
+This work is supported by the Predoctoral Grant (PIPF-2022/COM-25947) of the Consejería de Educación, Ciencia y Universidades de la Comunidad de Madrid, Spain.
