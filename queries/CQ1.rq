@@ -21,22 +21,24 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 
-select ?name ?creationDate ?ideologyLabel where { 
 
-    select ?s (SAMPLE(?creation) as ?creationDate) (SAMPLE(?ideologyLabel) as ?ideologyLabel) (SAMPLE(?name) as ?name)
-    where { 
+select (SAMPLE(?nameEN) as ?PoliticalPartyEN) (SAMPLE(?nameES) as ?PoliticalPartyES) (SAMPLE(?creation) as ?creationDate) (SAMPLE(?ideologyLabel) as ?ideologyLabel)
+where {
 
-        ?s a foaf:Agent.
-        # Query Wikidata using federation
-        SERVICE <https://query.wikidata.org/sparql> {
-          ?s rdfs:label ?name;
-                       wdt:P31/wdt:P279* wd:Q7278;
-                       wdt:P571 ?creation;
-                       wdt:P1387 ?ideology.
-          ?ideology rdfs:label ?ideologyLabel.
-          FILTER(LANGMATCHES(LANG(?name), "en")).
-          FILTER(LANGMATCHES(LANG(?ideologyLabel), "en")).
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-        }
-    } group by ?s
-}
+    ?s a foaf:Agent.
+
+    # Query Wikidata using federation
+    SERVICE <https://query.wikidata.org/sparql> {
+      ?s  rdfs:label ?nameEN;
+          rdfs:label ?nameES;
+          wdt:P31/wdt:P279* wd:Q7278; # instance of Political Party
+          wdt:P571 ?creation;         # date of creation
+          wdt:P1387 ?ideology.        # ideological alignment
+      FILTER(LANGMATCHES(LANG(?nameEN), "en")). # Name in english
+      FILTER(LANGMATCHES(LANG(?nameES), "es")). # Name in spanish
+
+      ?ideology rdfs:label ?ideologyLabel.
+      FILTER(LANGMATCHES(LANG(?ideologyLabel), "en")). # Ideology in english
+    }
+} group by ?s
+order by asc(UCASE(str(?PoliticalPartyEN)))

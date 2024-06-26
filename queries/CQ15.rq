@@ -1,0 +1,103 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcam: <http://purl.org/dc/dcam/>
+PREFIX eli: <http://data.europa.eu/eli/ontology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX lkg: <http://lkg.lynx-project.eu/def/>
+PREFIX nif-core: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX podio: <http://w3id.org/podio#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX sioc: <http://rdfs.org/sioc/ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX terms: <http://purl.org/dc/terms/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT ?ppartyLabel (?startTime as ?inGovernmentSince) (?endTime AS ?inGovernmentUntil) ?legislatureLabel ?legislatureStartTime ?legislatureEndTime (COUNT(DISTINCT ?message) AS ?discourses) (COUNT(DISTINCT ?legis) AS ?legislations)
+WHERE {
+    BIND(wd:Q138198 AS ?pparty). #PSOE
+    {
+        SELECT (NOW() AS ?currentTime) WHERE {}
+    }
+    {
+        SERVICE <https://query.wikidata.org/sparql> {
+            ?pparty rdfs:label ?ppartyLabel.
+            FILTER(LANGMATCHES(LANG(?ppartyLabel), "es")).
+            wd:Q29 p:P6 ?statement.                                                  # España (Q29) con una declaración de jefe de gobierno (P6)
+            ?statement ps:P6 ?primeMinister.                                         # Primer ministro (P6)
+            ?statement pq:P580 ?startTime.                                           # Fecha de inicio del puesto
+            OPTIONAL { ?statement pq:P582 ?possibleEndTime. }                        # Fecha de fin del puesto (opcional)
+            ?primeMinister wdt:P102 ?pparty.                                         # Partido político del primer ministro es PSOE (Q138198)
+            BIND(IF(BOUND(?possibleEndTime), ?possibleEndTime, ?currentTime) AS ?endTime)   # Asigna NOW() si ?possibleEndTime no está definido
+
+
+          ?legislature p:P31 ?legislatureStatement.  # Declaración que la identifica como legislatura
+          ?legislatureStatement ps:P31 wd:Q15238777; # Instancia de 'legislatura'
+                                pq:P642 wd:Q219692.  # Qualificador: Cortes Generales
+
+          ?legislature wdt:P17 wd:Q29;                 # País: España
+                       wdt:P580 ?legislatureStartTime; # Fecha de inicio
+                       rdfs:label ?legislatureLabel.
+          FILTER(LANGMATCHES(LANG(?legislatureLabel), "es")).
+
+          OPTIONAL { ?legislature wdt:P582 ?possibleLegislatureEndTime. }  # Posible fecha de fin
+          BIND(IF(BOUND(?possibleLegislatureEndTime), ?possibleLegislatureEndTime, ?currentTime) AS ?legislatureEndTime)   # Asigna NOW() si ?possibleEndTime no está definido
+
+          FILTER (
+              (?legislatureStartTime >= ?startTime && ?legislatureStartTime <= ?endTime) ||
+              (?legislatureEndTime >= ?startTime && ?legislatureEndTime <= ?endTime) ||
+              (?startTime >= ?legislatureStartTime && ?endTime <= ?legislatureEndTime)
+            )
+        }
+    }
+
+    optional{
+        ?message a podio:Discourse;
+                terms:creator ?pparty;
+                dc:date ?created.
+
+        FILTER NOT EXISTS { ?message rdf:type podio:ApprovedPolicy }
+
+
+        FILTER (
+            (?created >= ?startTime && ?created <= ?endTime) &&
+            (?created >= ?legislatureStartTime && ?created <= ?legislatureEndTime)
+        )
+    }
+
+    optional{
+        {
+            ?legis a lkg:Legislation ;
+                lkg:metadata ?metadata .
+            ?metadata eli:jurisdiction ?juris ;
+                eli:version_date ?legisDate .
+        }
+        UNION{
+            SERVICE <http://sparql.lynx-project.eu/> {
+                ?legis a lkg:Legislation ;
+                    lkg:metadata ?metadata .
+                ?metadata eli:jurisdiction ?juris ;
+                    eli:version_date ?legisDate.
+            }
+        }
+        FILTER (
+            (?juris = "ES") &&
+            (?legisDate >= ?startTime && ?legisDate <= ?endTime) &&
+            (?legisDate >= ?legislatureStartTime && ?legisDate <= ?legislatureEndTime)
+        )
+    }
+
+}group by ?pparty ?ppartyLabel ?startTime ?endTime ?legislatureLabel ?legislatureStartTime ?legislatureEndTime
+ORDER BY desc(?legislatureStartTime)
+Limit 5

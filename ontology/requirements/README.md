@@ -22,7 +22,7 @@
 
 | Identifier | Competency Question |
 | ---------- | ----------- |
-| CQ1 | What are the names of all political parties, when were they created and what is their ideology? | 
+| CQ1 | What are the names of all political parties (in Spanish and English), when were they created and what is their ideology? |
 | CQ2 | Which social media accounts does the PP have? | 
 | CQ3 | How many posts have political parties published on each of their social media accounts? | 
 | CQ4 | Which account and on which social media network is the most mentioned by each politician and political party? | 
@@ -36,3 +36,4 @@
 | CQ12 | What has been the latest legislation approved by each jurisdiction? | 
 | CQ13 | What was the last legislation approved by the government of the Community of Madrid? | 
 | CQ14 | What is the longest legislation? | 
+| CQ15 | How much legislative and propaganda activity has the PSOE had during its governments in each legislature?

@@ -18,7 +18,7 @@ R16,There are speeches that may be shared on channels that do not allow interact
 R17,"Speeches shared in digital communities should implement the basic mechanics of interaction (reply, mention, thread, hashtags, post, repost, follow, and share content)."
 R18,The laws approved by political parties and their electoral proposals are speeches that do not allow for direct interaction with the audience.
 R19,It should be possible to explore the existing laws in the Lynx knowledge graph.
-CQ1,"What are the names of all political parties, when were they created and what is their ideology?"
+CQ1,"What are the names of all political parties (in Spanish and English), when were they created and what is their ideology?"
 CQ2,Which social media accounts does the PP have?
 CQ3,How many posts have political parties published on each of their social media accounts?
 CQ4,Which account and on which social media network is the most mentioned by each politician and political party?
@@ -32,3 +32,4 @@ CQ11,What is the year in which more legislations were approved by each jurisdict
 CQ12,What has been the latest legislation approved by each jurisdiction?
 CQ13,What was the last legislation approved by the government of the Community of Madrid?
 CQ14,What is the longest legislation?
+CQ15,How much legislative and propaganda activity has the PSOE had during its governments in each legislature?

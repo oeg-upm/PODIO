@@ -21,8 +21,8 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 
-select ?socialMediaUserName ?socialMedia where { 
+select ?socialMediaUserName ?socialMedia where {
     wd:Q185088 foaf:holdsAccount ?accounts .
     ?accounts foaf:accountServiceHomepage ?socialMedia;
               foaf:accountName ?socialMediaUserName.
-} 
+}
