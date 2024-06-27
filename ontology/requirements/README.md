@@ -36,4 +36,4 @@
 | CQ12 | What has been the latest legislation approved by each jurisdiction? | 
 | CQ13 | What was the last legislation approved by the government of the Community of Madrid? | 
 | CQ14 | What is the longest legislation? | 
-| CQ15 | How much legislative and propaganda activity has the PSOE had during its governments in each legislature?
+| CQ15 | How much legislative and propaganda activity have the spanish leftist parties had during their governments in each legislature?

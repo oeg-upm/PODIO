@@ -1,5 +1,5 @@
+![PODIO logo](resources/PODIO.svg)
 # PODIO
-
 This repository contains the resources associated to the PODIO ontology.
 
 ## Structure

@@ -791,30 +791,23 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 
 
-select (?name as ?PoliticalParty) ?socialMedia (?accname as ?accountName) ?numberOfpost where { 
+select (SAMPLE(?name) AS ?PoliticalParty) ?socialMedia (?accname AS ?accountName) (COUNT(DISTINCT(?discourse)) AS ?numberOfpost)
+where {
+    ?discourse a podio:Discourse;
+                    sioc:has_creator ?account.
+    ?s a foaf:Agent;
+        foaf:holdsAccount ?account .
+    ?account foaf:accountServiceHomepage ?socialMedia;
+                foaf:accountName ?accname.
 
-    select ?socialMedia ?accname
-        (SAMPLE(?name) AS ?name)
-        (COUNT(DISTINCT(?discourse)) AS ?numberOfpost) 
-    where { 
-        ?discourse a podio:Discourse;
-                     sioc:has_creator ?account.
-        ?s a foaf:Agent;
-            terms:identifier ?ids;
-            foaf:holdsAccount ?account .
-        ?account foaf:accountServiceHomepage ?socialMedia;
-                 foaf:accountName ?accname.
-        BIND(IRI(CONCAT("http://www.wikidata.org/entity/", str(?ids))) AS ?wikidataIri) .
-
-        # Query Wikidata using federation
-        SERVICE <https://query.wikidata.org/sparql> {
-          ?wikidataIri rdfs:label ?name;
-                       wdt:P31/wdt:P279* wd:Q7278.
-          FILTER(LANGMATCHES(LANG(?name), "en")).
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-        }
-    }  group by ?socialMedia ?accname
-}
+    # Query Wikidata using federation
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?s rdfs:label ?name;
+                    wdt:P31/wdt:P279* wd:Q7278.
+        FILTER(LANGMATCHES(LANG(?name), "en")).
+    }
+}  group by ?socialMedia ?accname
+order by asc(UCASE(str(?name)))
 ```
 
 ### CQ4: Which account and on which social media network is the most mentioned by each politician and political party?
@@ -1387,7 +1380,7 @@ WHERE {
 }
 ```
 
-### CQ15: How much legislative and propaganda activity has the PSOE had during its governments in each legislature?
+### CQ15: How much legislative and propaganda activity have the spanish leftist parties had during their governments in each legislature?
 
 ```
 PREFIX dc: <http://purl.org/dc/elements/1.1/>

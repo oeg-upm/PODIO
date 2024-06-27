@@ -24,35 +24,39 @@ PREFIX ps: <http://www.wikidata.org/prop/statement/>
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
 
-SELECT ?ppartyLabel (?startTime as ?inGovernmentSince) (?endTime AS ?inGovernmentUntil) ?legislatureLabel ?legislatureStartTime ?legislatureEndTime (COUNT(DISTINCT ?message) AS ?discourses) (COUNT(DISTINCT ?legis) AS ?legislations)
+SELECT ?ideologyLabel ?ppartyLabel (?startTime as ?inGovernmentSince) (?endTime AS ?inGovernmentUntil) ?legislatureLabel ?legislatureStartTime ?legislatureEndTime (COUNT(DISTINCT ?message) AS ?discourses) (COUNT(DISTINCT ?legis) AS ?legislations)
 WHERE {
-    BIND(wd:Q138198 AS ?pparty). #PSOE
     {
         SELECT (NOW() AS ?currentTime) WHERE {}
     }
     {
         SERVICE <https://query.wikidata.org/sparql> {
-            ?pparty rdfs:label ?ppartyLabel.
+            ?pparty rdfs:label ?ppartyLabel;
+					wdt:P1387 ?ideology.                            # has an ideological alignment
+            VALUES ?ideology { wd:Q737014 wd:Q164597 wd:Q1129409 }  # Restriction of ideology to the left
+            ?ideology rdfs:label ?ideologyLabel.                    # get ideology label
+            FILTER(LANG(?ideologyLabel) = "en").                    # in english
+
             FILTER(LANGMATCHES(LANG(?ppartyLabel), "es")).
-            wd:Q29 p:P6 ?statement.                                                  # España (Q29) con una declaración de jefe de gobierno (P6)
-            ?statement ps:P6 ?primeMinister.                                         # Primer ministro (P6)
-            ?statement pq:P580 ?startTime.                                           # Fecha de inicio del puesto
-            OPTIONAL { ?statement pq:P582 ?possibleEndTime. }                        # Fecha de fin del puesto (opcional)
-            ?primeMinister wdt:P102 ?pparty.                                         # Partido político del primer ministro es PSOE (Q138198)
-            BIND(IF(BOUND(?possibleEndTime), ?possibleEndTime, ?currentTime) AS ?endTime)   # Asigna NOW() si ?possibleEndTime no está definido
+            wd:Q29 p:P6 ?statement.                                                  # Spain (Q29) with a head of government declaration (Q6)
+            ?statement ps:P6 ?primeMinister.                                         # Prime Minister (P6)
+            ?statement pq:P580 ?startTime.                                           # Start date of post
+            OPTIONAL { ?statement pq:P582 ?possibleEndTime. }                        # End date of post (optional)
+            ?primeMinister wdt:P102 ?pparty.                                         # The prime minister's political party is left-wing (previously leaked).
+            BIND(IF(BOUND(?possibleEndTime), ?possibleEndTime, ?currentTime) AS ?endTime)   # Assign NOW() if ?possibleEndTime is not defined
 
 
-          ?legislature p:P31 ?legislatureStatement.  # Declaración que la identifica como legislatura
-          ?legislatureStatement ps:P31 wd:Q15238777; # Instancia de 'legislatura'
-                                pq:P642 wd:Q219692.  # Qualificador: Cortes Generales
+          ?legislature p:P31 ?legislatureStatement.  # Declaration identifying it as a legislature
+          ?legislatureStatement ps:P31 wd:Q15238777; # Instance of legislature
+                                pq:P642 wd:Q219692.  # Qualifier: Cortes Generales
 
-          ?legislature wdt:P17 wd:Q29;                 # País: España
-                       wdt:P580 ?legislatureStartTime; # Fecha de inicio
-                       rdfs:label ?legislatureLabel.
-          FILTER(LANGMATCHES(LANG(?legislatureLabel), "es")).
+          ?legislature wdt:P17 wd:Q29;                  # Country: Spain
+                       wdt:P580 ?legislatureStartTime;  # Start date
+                       rdfs:label ?legislatureLabel.    # Legislature name
+          FILTER(LANGMATCHES(LANG(?legislatureLabel), "en")).
 
-          OPTIONAL { ?legislature wdt:P582 ?possibleLegislatureEndTime. }  # Posible fecha de fin
-          BIND(IF(BOUND(?possibleLegislatureEndTime), ?possibleLegislatureEndTime, ?currentTime) AS ?legislatureEndTime)   # Asigna NOW() si ?possibleEndTime no está definido
+          OPTIONAL { ?legislature wdt:P582 ?possibleLegislatureEndTime. }  # Possible end date
+          BIND(IF(BOUND(?possibleLegislatureEndTime), ?possibleLegislatureEndTime, ?currentTime) AS ?legislatureEndTime)   # Assign NOW() if ?possibleEndTime is not defined
 
           FILTER (
               (?legislatureStartTime >= ?startTime && ?legislatureStartTime <= ?endTime) ||
@@ -66,10 +70,7 @@ WHERE {
         ?message a podio:Discourse;
                 terms:creator ?pparty;
                 dc:date ?created.
-
         FILTER NOT EXISTS { ?message rdf:type podio:ApprovedPolicy }
-
-
         FILTER (
             (?created >= ?startTime && ?created <= ?endTime) &&
             (?created >= ?legislatureStartTime && ?created <= ?legislatureEndTime)
@@ -97,7 +98,6 @@ WHERE {
             (?legisDate >= ?legislatureStartTime && ?legisDate <= ?legislatureEndTime)
         )
     }
-
-}group by ?pparty ?ppartyLabel ?startTime ?endTime ?legislatureLabel ?legislatureStartTime ?legislatureEndTime
+}group by ?pparty ?ppartyLabel ?startTime ?endTime ?legislatureLabel ?legislatureStartTime ?legislatureEndTime ?ideologyLabel
 ORDER BY desc(?legislatureStartTime)
 Limit 5
