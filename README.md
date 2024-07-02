@@ -1,6 +1,6 @@
-![PODIO logo](resources/PODIO_LOGO.svg)
 # PODIO
 This repository contains the resources associated to the PODIO ontology.
+![PODIO logo](resources/PODIO_LOGO.svg)
 
 ## Structure
 * `ontology/` contains the PODIO ontology, its requirements and the resources to generate its documentation
