@@ -11,8 +11,8 @@ This repository contains the resources associated to the PODIO ontology.
 
 ## Authors
 * [Ibai Guillén-Pacho](https://github.com/Ibaii99) ([ibai.guillen@upm.es](mailto:ibai.guillen@upm.es))
-* [Carlos Badenes-Olmedo](https://github.com/cbadenes)
 * [Ana Iglesias-Molina](https://github.com/anaigmo)
+* [Carlos Badenes-Olmedo](https://github.com/cbadenes)
 * [Oscar Corcho](https://github.com/ocorcho)
 
 ## Akcnowledgement
