@@ -1,6 +1,7 @@
 # PODIO
-This repository contains the resources associated to the PODIO ontology.
+This repository contains the resources associated to the PODIO ontology. For the documentation visit: [https://w3id.org/podio](https://w3id.org/podio)
 ![PODIO logo](resources/PODIO_LOGO.svg)
+![PODIO ontology](resources/DocumentOntology.png)
 
 ## Structure
 * `ontology/` contains the PODIO ontology, its requirements and the resources to generate its documentation
