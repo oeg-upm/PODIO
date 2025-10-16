@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "podio"
 version = "1.0.0"
-description = "Ontology designed to formalize the dissemination of political discourse in digital media.\u001b[D\u001b"
-authors = ["Your Name <you@example.com>"]
-license = "CC-BY-4.0"
+description = "Ontology designed to formalize the dissemination of political discourse in digital media."
+authors = ["Ibai Guillén-Pacho <ibai.guillen@upm.es>", "Ana Iglesias-Molina", "Carlos Badenes-Olmedo", "Oscar Corcho"]
+license = "LICENSE"
 readme = "README.md"
 
 [tool.poetry.dependencies]
