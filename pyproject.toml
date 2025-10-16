@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "podio"
+version = "1.0.0"
+description = "Ontology designed to formalize the dissemination of political discourse in digital media.\u001b[D\u001b"
+authors = ["Your Name <you@example.com>"]
+license = "CC-BY-4.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.12.2"
+SPARQLWrapper = "^2.0.0"
+kaggle = "^1.7.4.5"
+pandas = "^2.3.3"
+PyMuPDF = "^1.26.5"
+GitPython = "^3.1.45"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+package-mode = false
