@@ -48,7 +48,7 @@ WHERE {
 
           ?legislature p:P31 ?legislatureStatement.  # Declaration identifying it as a legislature
           ?legislatureStatement ps:P31 wd:Q15238777; # Instance of legislature
-                                pq:P642 wd:Q219692.  # Qualifier: Cortes Generales
+                                pq:P13188 wd:Q219692.  # Qualifier: Cortes Generales
 
           ?legislature wdt:P17 wd:Q29;                  # Country: Spain
                        wdt:P580 ?legislatureStartTime;  # Start date
