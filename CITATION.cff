@@ -17,3 +17,22 @@ title: "PODIO: POlitical DIscourse Ontology"
 version: v1.0
 date-released: 2024-2-8
 url: "https://w3id.org/podio/v1.0"
+
+preferred-citation:
+  type: conference-paper
+  title: "PODIO: A Political Discourse Ontology"
+  authors:
+  - family-names: "Guillén-Pacho"
+    given-names: "Ibai"
+    orcid: "https://orcid.org/0000-0001-7801-8815"
+  - family-names: "Badenes-Olmedo"
+    given-names: "Carlos"
+    orcid: "https://orcid.org/0000-0002-2753-9917"
+  - family-names: "Iglesias-Molina"
+    given-names: "Ana"
+    orcid: "https://orcid.org/0000-0001-5375-8024"
+  - family-names: "Corcho"
+    given-names: "Oscar"
+    orcid: "https://orcid.org/0000-0002-9260-0753" 
+  year: 2024
+  url: "https://ceur-ws.org/Vol-3967/PD_paper_159.pdf"
